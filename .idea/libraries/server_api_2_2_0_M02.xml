@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="server-api-2.2.0-M02">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../sparql-plugin-master/sparql-plugin-master/libs/server-api-2.2.0-M02.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../sparql-plugin-master/sparql-plugin-master/libs/server-api-2.2.0-M02.jar!/" />
+    </SOURCES>
+  </library>
+</component>

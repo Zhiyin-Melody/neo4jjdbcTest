@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="blueprints-graph-sail-2.6.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../sparql-plugin-master/sparql-plugin-master/libs/blueprints-graph-sail-2.6.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

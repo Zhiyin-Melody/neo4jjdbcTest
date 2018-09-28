@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="neo4j-harness-test-2.3.11">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../sparql-plugin-master/sparql-plugin-master/libs/neo4j-harness-test-2.3.11.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

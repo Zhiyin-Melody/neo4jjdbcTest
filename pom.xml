@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 这里是maven项目名称的配置-->
+    <groupId>com.org.neo4j</groupId>
+    <artifactId>neo4j-jdbc</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>Maven Webapp</name>
+    <url>http://maven.apache.org</url>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>6</source>
+                    <target>6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <packaging>jar</packaging>
+
+    <name>TurtleLoader</name>
+    <url>http://maven.apache.org</url>
+
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!-- 以下要配置一些neo4j的依赖-->
+    <!--对于支持Bolt和HTTP的all-in-one模块，您可以简单地使用：-->
+    <dependencies>
+        <!--<dependency>-->
+            <!--<groupId>org.neo4j.driver</groupId>-->
+            <!--<artifactId>neo4j-java-driver</artifactId>-->
+            <!--<version>3.3.3</version>-->
+        <!--</dependency>-->
+
+        <!--**这是导入.ttl的依赖关系**-->
+        <dependency>
+            <groupId>org.neo4j</groupId>
+            <artifactId>neo4j-enterprise</artifactId>
+            <version>2.0.0-M02</version>
+        </dependency>
+        <dependency>
+            <groupId>org.neo4j</groupId>
+            <artifactId>neo4j-enterprise</artifactId>
+            <version>3.3.3</version>
+        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.neo4j</groupId>-->
+            <!--<artifactId>neo4j-enterprise</artifactId>-->
+            <!--<version>2.0-SNAPSHOT</version>-->
+        <!--</dependency>-->
+        <!--这个版本的可以没有-->
+        <dependency>
+            <groupId>org.openrdf.sesame</groupId>
+            <artifactId>sesame-rio-turtle</artifactId>
+            <version>2.7.1</version>
+            <!--<version>2.6.10</version>-->
+        </dependency>
+
+        <dependency>
+            <groupId>org.mapdb</groupId>
+            <artifactId>mapdb</artifactId>
+            <version>3.0.5</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.openrdf/rio -->
+        <!--自己又新加入的-->
+        <dependency>
+            <groupId>org.openrdf</groupId>
+            <artifactId>rio</artifactId>
+            <version>1.0.10</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openrdf.sesame</groupId>
+            <artifactId>sesame-model</artifactId>
+            <version>4.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.neo4j</groupId>
+            <artifactId>neo4j-kernel</artifactId>
+            <version>2.2.8</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-servlet-api</artifactId>
+            <version>7.0.37</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-servlet-api</artifactId>
+            <version>7.0.37</version>
+        </dependency>
+
+        <!--**这是daoru.ttl的依赖关系，到此结束**-->
+
+    </dependencies>
+
+    <!--以下是关于将.ttl文件导入进neo4j数据库中的一些依赖，这里使用了一些sesame的内容-->
+    <repositories>
+        <repository>
+            <id>neo4jRepo</id>
+            <url>http://m2.neo4j.org</url>
+        </repository>
+        <repository>
+            <id>Sun</id>
+            <url>http://download.java.net/maven/2</url>
+        </repository>
+        <repository>
+            <id>sesame</id>
+            <url>http://repo.aduna-software.org/maven2/releases/</url>
+        </repository>
+    </repositories>
+    <!--**这是daoru.ttl的依赖关系，到此结束**-->
+    <description>A simple tool to load RDF ontologies in turtle format into Neo4j Databases.</description>
+
+</project>

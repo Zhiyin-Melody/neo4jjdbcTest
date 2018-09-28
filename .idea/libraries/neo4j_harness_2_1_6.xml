@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="neo4j-harness-2.1.6">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../sparql-plugin-master/sparql-plugin-master/libs/neo4j-harness-2.1.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

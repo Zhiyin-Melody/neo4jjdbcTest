@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="sesame-queryalgebra-model-2.6.10">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../sparql-plugin-master/sparql-plugin-master/libs/sesame-queryalgebra-model-2.6.10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

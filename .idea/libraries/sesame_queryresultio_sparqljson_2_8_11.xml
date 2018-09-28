@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="sesame-queryresultio-sparqljson-2.8.11">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../sparql-plugin-master/sparql-plugin-master/libs/sesame-queryresultio-sparqljson-2.8.11.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

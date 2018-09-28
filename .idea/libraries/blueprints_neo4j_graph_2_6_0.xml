@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="blueprints-neo4j-graph-2.6.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../sparql-plugin-master/sparql-plugin-master/libs/neo4j-server-2.2.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../sparql-plugin-master/sparql-plugin-master/libs/neo4j-server-2.2.5.jar!/version" />
+    </SOURCES>
+  </library>
+</component>

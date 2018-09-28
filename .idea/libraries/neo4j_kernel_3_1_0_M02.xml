@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="neo4j-kernel-3.1.0-M02">
+    <ANNOTATIONS>
+      <root url="file://$PROJECT_DIR$/../sparql-plugin-master/sparql-plugin-master" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../sparql-plugin-master/sparql-plugin-master/libs/neo4j-kernel-3.1.0-M02.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

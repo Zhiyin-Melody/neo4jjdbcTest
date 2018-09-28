@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/libs" />
+      <root url="file://D:/APP/apache-jena-3.4.0/lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/libs" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/neo4j-kernel-2.2.8-sources.jar!/" />
+      <root url="file://D:/APP/apache-jena-3.4.0/lib-src" />
+    </SOURCES>
+    <jarDirectory url="file://D:/APP/apache-jena-3.4.0/lib" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/libs" recursive="false" />
+    <jarDirectory url="file://D:/APP/apache-jena-3.4.0/lib-src" recursive="false" type="SOURCES" />
+    <jarDirectory url="file://$PROJECT_DIR$/libs" recursive="false" type="SOURCES" />
+  </library>
+</component>
