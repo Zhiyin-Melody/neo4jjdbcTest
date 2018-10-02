@@ -11,11 +11,11 @@ import TransTest.Sparql2CypherQuery;
  */
 public class BaseRDFPattern2Cypher {
     public static String BaseRDFPattern2Cypher(String RDFGraphPattern) {
-        RDFGraphPattern="0 ."+RDFGraphPattern;
-        String[] s = RDFGraphPattern.split(" .");
+        RDFGraphPattern="0 . "+RDFGraphPattern;//将s[0]占据位置，避免后面转换出现冲突；
+        String[] s = RDFGraphPattern.split(" . ");
         StringBuffer C1=new StringBuffer();
         StringBuffer C2=new StringBuffer();
-        //这里处理的地方有点儿问题；
+
         StringBuffer CypherStr =new Sparql2CypherQuery().MatchStringConstruct(C1,C2,s);
         return CypherStr.toString();
     }
