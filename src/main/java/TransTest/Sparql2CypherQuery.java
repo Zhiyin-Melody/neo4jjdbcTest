@@ -91,7 +91,7 @@ public class Sparql2CypherQuery {
             //这里随机给谓语关系增加标签；
             String RelationshipLable = getRelLable();
 
-            matchStringp.append("("+ arr[0]+")-[");
+            matchStringp.append("("+ arr[0].substring(arr[0].lastIndexOf("/")+1)+")-[");
             for (int j = i; j <i+5 ; j++) {
                 if(brk[j].contains(arr[1])){
                     String [] pb =Pattern.compile("[?<>()\n]").matcher(brk[j]).replaceAll("").trim().split(" ");
