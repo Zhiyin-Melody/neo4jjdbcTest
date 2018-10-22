@@ -1,0 +1,92 @@
+#title{
+    text-align: center;
+    size: A3;
+}
+#head{
+    size: A5;
+    color: blue;
+}
+#head1{
+    size: A5;
+    position: absolute;
+    left: 20px;
+}
+.datasets{
+    height: 570px;
+    width: 1325px;
+    background-color: aquamarine;
+}
+.endpointText form-control selectized{
+    tab-index: "-1";
+    height: 20px;
+    left: 100px;
+    position: absolute;
+    left: 30px;
+}
+.selectized-dropdown single endpointText form-control plugin-allowRegularTextInput{
+    width: 400px;
+    top: 36px;
+    left: 0px;
+    visibility: visible;
+}
+.optgroup1{
+    data-group:"catalogue";
+}
+.optgroup2{
+    data-group:"catalogue";
+}
+.IntroductionDataset{
+    height: 470px;
+    width: 500px;
+    position: absolute;
+    left: 20px;
+    top: 130px;
+    background-color: #c81623;
+}
+.information{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    right: 30px;
+}
+.information table td{
+    border-left: 1px solid #F00;
+    border-top: 1px solid #F00;
+    border-right: 1px solid #F00;
+    border-bottom: 1px solid #F00;
+}
+.viewData{
+    height: 530px;
+    width: 720px;
+    background-color: darkorange;
+    position: absolute;
+    left: 600px;
+    top: 60px;
+}
+.query{
+    height: 500px;
+    width: 1320px;
+    background-color: darkorchid;
+}
+.queryAnnotation{
+    size: B5;
+    color: #666666;
+}
+.RUN{
+    height: 40px;
+    width: 100px;
+    color: blue;
+    position: absolute;
+    left: 645px;
+    top: 655px;
+}
+.ResultView{
+    height: 500px;
+    width: 1320px;
+    background-color: chartreuse;
+}
+textarea{
+    position: absolute;
+    top: 10px;
+    left: 30px;
+}
