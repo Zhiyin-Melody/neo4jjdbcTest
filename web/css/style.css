@@ -86,7 +86,7 @@
     background-color: chartreuse;
 }
 textarea{
-    position: absolute;
+    position: relative;
     top: 10px;
     left: 30px;
 }

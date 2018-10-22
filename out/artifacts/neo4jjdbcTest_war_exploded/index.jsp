@@ -1,18 +1,262 @@
 <%--
   Created by IntelliJ IDEA.
   User: lizhiyin
-  Date: 2018/4/25
-  Time: 21:59
+  Date: 2018/10/22
+  Time: 10:59
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>RDFt时序数据查询样例</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/DatasetIntroduction.js"></script>
+    <title>RDFt时序数据查询示例</title>
 </head>
 <body>
-<p>RDFt时序数据查询示例</p>
-这里可以根据需要设置一个界面，提供用户查询和搜索的功能；
-需要举出6-8个具有代表性的例子吧；
+<H3 id="title">RDFt时序数据查询示例</H3>
+
+<div class="datasets">
+    <div class="endpointWrapper">
+        <p id="head">选择数据集</p>
+        <select name="select" id="select" class="endpointText form-control selectized" onchange="show(this.value)">
+            <option value="datasets" selected="selected">-请选择-</option>
+            <div class="selectize-control endpointText form-control single plugin-allowRegularTextInput">
+                <div class="optgroup" >
+                    <option value="dataset1">
+                        <div class="endpointOptionRow selected" data-selectable="" data-value="dataset1">
+                            <div class="endpointUrl">dataset1：</div>
+                            <div class="endpointTitle">NBA篮球运动员个人职业生涯信息</div>
+                        </div>
+                    </option>
+                    <option value="dataset2">
+                        <div class="endpointOptionRow selected" data-selectable="" data-value="dataset2">
+                            <div class="endpointUrl">dataset2：</div>
+                            <div class="endpointTitle">YAGO时序部分数据集</div>
+                        </div>
+                    </option>
+                </div>
+            </div>
+        </select>
+    </div>
+
+    <div class="IntroductionDataset">
+        <p id="head1">数据集介绍</p>
+        <div class="information" >
+            <p id="info1" style="display: none">    dataset1数据集，主要介绍了NBA篮球运动员个人信息以及历届比赛（常规赛）成绩信息。
+                从官方网站上爬取了约4,000个NBA球星的基本信息，构造了125,793条RDFt数据模型的三元组。
+                主要包括10中谓语关系，其中，包括不带有时间信息的基本的三元组，带有时间点的RDFt三元组以及带有时间间隔的RDFt三元组。
+                具体如下表：
+            <table border="1" cellspacing="0" cellpadding="0">
+                <tr >
+                    <td>关系</td><td>数量</td>
+                </tr>
+                <tr>
+                    <td>Name</td><td>4592</td>
+                </tr>
+                <tr>
+                    <td>hasBirthCity</td><td>3519</td>
+                </tr>
+                <tr>
+                    <td>Stature</td><td>4579</td>
+                </tr>
+                <tr>
+                    <td>Weight</td><td>4573</td>
+                </tr>
+                <tr>
+                    <td>High_School</td><td>3855</td>
+                </tr>
+                <tr>
+                    <td>Position</td><td>5658</td>
+                </tr>
+                <tr>
+                    <td>Plays_For</td><td>24761</td>
+                </tr>
+                <tr>
+                    <td>Rebound</td><td>24761</td>
+                </tr>
+                <tr>
+                    <td>Assist</td><td>24761</td>
+                </tr>
+                <tr>
+                    <td>Score1</td><td>24761</td>
+                </tr>
+            </table>
+            </p>
+            <p id="info2" style="display: none">
+                dataset2数据集，是YAGO数据集。主要是集成了Wikipedia，WordNet和GeoNames三个来源的数据集，
+                大约1.2亿条三元组知识。还包括了表示时间和空间的数据集，从而完成了yago2的构建，
+                又利用相同的方法对10种语言对维基百科的进行抽取整理，构建了yago3，大约有459万个实体，
+                2400万个Facts。对于表示时空关系的数据集有约200万条三元组。具体如下表：
+            <table border="1" cellspacing="0" cellpadding="0">
+                <tr >
+                    <td>关系</td><td>数量</td>
+                </tr>
+                <tr>
+                    <td>DiedIn</td><td>22274</td>
+                </tr>
+                <tr>
+                    <td>diedOnDate</td><td>315528</td>
+                </tr>
+                <tr>
+                    <td>happenedIn</td><td>5192</td>
+                </tr>
+                <tr>
+                    <td>happenedOnDate</td><td>22039</td>
+                </tr>
+                <tr>
+                    <td>occursSince/Until2</td><td>9840</td>
+                </tr>
+                <tr>
+                    <td>isLocatedIn</td><td>95327</td>
+                </tr>
+                <tr>
+                    <td>livesIn</td><td>16405</td>
+                </tr>
+                <tr>
+                    <td>wasBornIn</td><td>56415</td>
+                </tr>
+                <tr>
+                    <td>wasBornOnDate</td><td>685746</td>
+                </tr>
+                <tr>
+                    <td>wasCreatedOnDate</td><td>467194</td>
+                </tr>
+                <tr>
+                    <td>wasDestoryedOnDate</td><td>24218</td>
+                </tr>
+            </table>
+            </p>
+        </div>
+    </div>
+
+    <div class="viewData">
+        <p>Neo4J存储形式</p>
+        <img id="NBA" src="img/运动员数据集2.png" style="display: none">
+        <img id="YAGO" src="img/运动员数据集图片.png" style="display: none">
+
+    </div>
+</div>
+
+<div class="query">
+    <p>SPARQL[t]查询语言示例</p>
+    <select id="selectStr" class="endpointText form-control selectized" onchange="showqueryString(this.value)">
+        <option value="queryString" selected="selected">SPARQL[t]查询语言示例-请选择-</option>
+        <div class="selectize-control endpointText form-control single plugin-allowRegularTextInput">
+            <div class="optgroup1">
+                <option value="queryString1">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString1">
+                        <div class="queryAnnotation">SELECT查询姚明出生时间和地点。</div>
+                    </div>
+                </option>
+                <option value="queryString2">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString2">
+                        <div class="queryAnnotation">SELECT查询1992年到2001年A.C. 格林.的职业生涯信息。</div>
+                    </div>
+                </option>
+                <option value="queryString3">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString3">
+                        <div class="queryAnnotation">SELECT查询沙奎尔-奥尼尔的历史记录信息,选取前20条记录。</div>
+                    </div>
+                </option>
+                <option value="queryString4">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString4">
+                        <div class="queryAnnotation">SELECT查询阿伦-艾弗森在2006年到2007之间分别在费城76人和丹佛掘金两个队中的得分成绩。</div>
+                    </div>
+                </option>
+                <option value="queryString5">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString5">
+                        <div class="queryAnnotation">SELECT查询运动员信息，出生城市作为可选属性（OPTIONAL），结果集约束到5-15条数据。</div>
+                    </div>
+                </option>
+                <option value="queryString6">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString6">
+                        <div class="queryAnnotation">SELECT查询林书豪在火箭队或者在湖人队中最高总成绩（UNION）。</div>
+                    </div>
+                </option>
+                <option value="queryString7">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString7">
+                        <div class="queryAnnotation">ASK查询科比在1996到2016年是否效力湖人</div>
+                    </div>
+                </option>
+                <option value="queryString8">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString8">
+                        <div class="queryAnnotation">CONSTRUCT构建构造一个新的关系两个运动员是队友info:isTeammate。</div>
+                    </div>
+                </option>
+                <option value="queryString9">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString9">
+                        <div class="queryAnnotation">DESCRIBE查询2018年勇士的所有球员个人信息。</div>
+                    </div>
+                </option>
+            </div>
+
+            <div class="optgroup2">
+                <option value="queryString1">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString1">
+                        <div class="queryAnnotation">SELECT</div>
+                    </div>
+                </option>
+                <option value="queryString2">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString2">
+                        <div class="queryAnnotation">SELECT</div>
+                    </div>
+                </option>
+                <option value="queryString3">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString3">
+                        <div class="queryAnnotation">SELECT</div>
+                    </div>
+                </option>
+                <option value="queryString4">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString4">
+                        <div class="queryAnnotation">SELECT</div>
+                    </div>
+                </option>
+                <option value="queryString5">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString5">
+                        <div class="queryAnnotation">SELECT</div>
+                    </div>
+                </option>
+                <option value="queryString6">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString6">
+                        <div class="queryAnnotation">SELECT</div>
+                    </div>
+                </option>
+                <option value="queryString7">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString7">
+                        <div class="queryAnnotation">ASK</div>
+                    </div>
+                </option>
+                <option value="queryString8">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString8">
+                        <div class="queryAnnotation">CONSTRUCT</div>
+                    </div>
+                </option>
+                <option value="queryString9">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString9">
+                        <div class="queryAnnotation">DESCRIBE</div>
+                    </div>
+                </option>
+            </div>
+        </div>
+    </select>
+    <div>
+          <textarea id="queryStringTextarea" style="height: 400px; width: 1000px">
+@base <http://www.neu.edu/2018/NBA_Sportinfo#> .
+@prefix dbp: <http://dbpedia.org/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdft: <http://www.neu.edu/2018/rdft-syntax-ns#> .
+          </textarea>
+    </div>
+    <button class="RUN">执行查询</button>
+</div>
+
+<div class="ResultView">
+    <p>查询结果展示</p>
+
+</div>
 </body>
 </html>
