@@ -51,27 +51,7 @@ public class RDFtSaveToNeo4J {
 
 
             String predicateStr=getPredicate(predicate);
-         //生成Cypher查询语句；
-            if (isExistSubject(subsubject, statement)) {//匹配到该节点作为节点增加新的关系；
-                if (isExistObject(objectStr, statement)) { //判断object 节点在数据库中是否存在；
-                    CypherString = "MATCH ("+subsubject+":" + subsubject + "{name:'"+subsubject+"'}),(objects:`" + objectStr + "`{name:'"+objectStr+"'})\n" +"WITH ("+subsubject+"),(objects)\n"+
-                            " CREATE ("+subsubject+")"+predicateStr+"(objects)";
-                }else{ //执行创建语句建立新的节点和关系；
-                    CypherString = "MATCH ("+subsubject+":" + subsubject + "{name:'"+subsubject+"'})\n" +"WITH ("+subsubject+")\n"+
-                            " CREATE ("+subsubject+")"+predicateStr+"(objects:`" + objectStr + "`{name:'"+objectStr+"'})";
-                }
-            }else{//匹配到该节点增加新的属性关系；
-            if (isExistObject(objectStr, statement)) { //判断object 节点在数据库中是否存在；
-                CypherString = "MATCH (objects:`" + objectStr + "`{name:'"+objectStr+"'})\n" +"WITH (objects)\n"+
-                        " CREATE ("+subsubject+":" + subsubject + "{name:'"+subsubject+"'})"+predicateStr+"(objects)";
-                //匹配到该节点作为节点增加新的关系；
-            }else{ //执行创建语句建立新的节点和关系；
-                CypherString = " CREATE ("+subsubject+":" + subsubject + "{name:'"+subsubject+"'})"+predicateStr+"(objects:`" + objectStr + "`{name:'"+objectStr+"'})";
-            }
-            }
-            /*CypherString = "CREATE (subject:" + subsubject + ")-[subPredicate:" + subPredicate + "{rdft_hasSrartTime:'" + hasStartTime
-                        + "',rdft_hasEndTime:'" + hasEndTime + "',rdft_hasNumUpdate:" + hasNumUpdate + "}" + "]->(object:`" + object + "`)";
-*/
+            CypherString = getCypherStr(statement, subsubject, objectStr, predicateStr);
                 System.out.println("返回的查询语句是" + CypherString);
 
                 ResultSet resultSet = statement.executeQuery(CypherString);
@@ -81,6 +61,28 @@ public class RDFtSaveToNeo4J {
             }
 
         }
+    //生成Cypher查询语句；
+    private static String getCypherStr(Statement statement, String subsubject, String objectStr, String predicateStr) throws SQLException {
+        String CypherString;
+        if (isExistSubject(subsubject, statement)) {//匹配到该节点作为节点增加新的关系；
+            if (isExistObject(objectStr, statement)) { //判断object 节点在数据库中是否存在；
+                CypherString = "MATCH ("+subsubject+":" + subsubject + "{name:'"+subsubject+"'}),(objects:`" + objectStr + "`{name:'"+objectStr+"'})\n" +"WITH ("+subsubject+"),(objects)\n"+
+                        " CREATE ("+subsubject+")"+predicateStr+"(objects)";
+            }else{ //执行创建语句建立新的节点和关系；
+                CypherString = "MATCH ("+subsubject+":" + subsubject + "{name:'"+subsubject+"'})\n" +"WITH ("+subsubject+")\n"+
+                        " CREATE ("+subsubject+")"+predicateStr+"(objects:`" + objectStr + "`{name:'"+objectStr+"'})";
+            }
+        }else{//匹配到该节点增加新的属性关系；
+        if (isExistObject(objectStr, statement)) { //判断object 节点在数据库中是否存在；
+            CypherString = "MATCH (objects:`" + objectStr + "`{name:'"+objectStr+"'})\n" +"WITH (objects)\n"+
+                    " CREATE ("+subsubject+":" + subsubject + "{name:'"+subsubject+"'})"+predicateStr+"(objects)";
+            //匹配到该节点作为节点增加新的关系；
+        }else{ //执行创建语句建立新的节点和关系；
+            CypherString = " CREATE ("+subsubject+":" + subsubject + "{name:'"+subsubject+"'})"+predicateStr+"(objects:`" + objectStr + "`{name:'"+objectStr+"'})";
+        }
+        }
+        return CypherString;
+    }
 
     //连接Neo4J数据库；
         private static Statement connectNeo4j () throws ClassNotFoundException, IllegalAccessException, InstantiationException, SQLException {
