@@ -18,7 +18,6 @@ public class BaseRDFt2RDFPattern {
         ArrayList<ArrayList<String>> lsls = new SparqlT2SparqlQuery().RDFt2RDFTriple(statementRDFt);
 
         StringBuilder sparqlPatternSTR =new StringBuilder();
-
         //将lsls中转换成字符串输出；
         for (int i = 0; i <lsls.size() ; i++) {//3
             ArrayList<String> ls = new ArrayList<String>();

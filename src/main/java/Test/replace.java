@@ -18,5 +18,6 @@ public class replace {
         System.out.println(p);
        String n = s0.substring(s0.indexOf("-")+1,s0.length());
         System.out.println(n);
+
     }
 }
