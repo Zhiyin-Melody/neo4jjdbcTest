@@ -77,7 +77,7 @@ public class Sparql2CypherQuery {
                 }
         return cypherString.toString();
     }
-
+//构造Cypher语句进行查询；
     public StringBuffer MatchStringConstruct(StringBuffer matchStringp, StringBuffer matchStringpro, String[] brk) {
         int k = 1;
         for (int i = 1; i <brk.length ; i+=k) {
@@ -125,7 +125,7 @@ public class Sparql2CypherQuery {
         return matchStringp;
     }
 
-    //得到标签的随机表示形式;先就用relationship这个标签；
+    //得到标签的随机表示形式;先就用relationship这个标签；这个好像不用了；
     private String getRelLable() {
         String sLale="Relationship";
         return sLale;

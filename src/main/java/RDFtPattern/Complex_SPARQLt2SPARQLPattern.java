@@ -20,10 +20,10 @@ public class Complex_SPARQLt2SPARQLPattern{
             for (int i = 0; i <rdfgrapgStr.length ; i++) {
                 String s=rdfgrapgStr[i].substring(rdfgrapgStr[i].indexOf("{")+1,rdfgrapgStr[i].lastIndexOf("}"));
                 if(i==rdfgrapgStr.length-1){
-                    SPARQLString.append("{"+BaseRDFt2RDFPattern.BaseRDFt2RDFPattern(s)+"}");
+                    SPARQLString.append("{"+BaseRDFt2RDFPattern.BaseRDFt2RDFPattern(s)+"}\n");
 
                 }else {
-                    SPARQLString.append("{"+BaseRDFt2RDFPattern.BaseRDFt2RDFPattern(s)+"}");
+                    SPARQLString.append("{"+BaseRDFt2RDFPattern.BaseRDFt2RDFPattern(s)+"}\n");
                     SPARQLString.append(" OPTIONAL ");
                 }
             }
@@ -33,9 +33,9 @@ public class Complex_SPARQLt2SPARQLPattern{
             for (int i = 0; i <rdfgrapgStr.length;i++){
                 String s=rdfgrapgStr[i].substring(rdfgrapgStr[i].indexOf("{")+1,rdfgrapgStr[i].lastIndexOf("}"));
                 if(i == rdfgrapgStr.length-1){
-                    SPARQLString.append("{"+BaseRDFt2RDFPattern.BaseRDFt2RDFPattern(s)+"}");
+                    SPARQLString.append("{"+BaseRDFt2RDFPattern.BaseRDFt2RDFPattern(s)+"}\n");
                 }else {
-                    SPARQLString.append("{"+BaseRDFt2RDFPattern.BaseRDFt2RDFPattern(s)+"}");
+                    SPARQLString.append("{"+BaseRDFt2RDFPattern.BaseRDFt2RDFPattern(s)+"}\n");
                     SPARQLString.append(" UNION ");
                 }
             }
@@ -63,7 +63,7 @@ public class Complex_SPARQLt2SPARQLPattern{
     }
 
     //判断是否是多图；
-    private static boolean isMuiltyGrapgh(String sparqltString) {
+    public static boolean isMuiltyGrapgh(String sparqltString) {
         sparqltString=sparqltString.replaceAll("\n","");
         Pattern pattern = Pattern.compile(".*\\{.*\\}\\{.*\\}+.*");
         Matcher matcher = pattern.matcher(sparqltString);
@@ -84,7 +84,7 @@ public class Complex_SPARQLt2SPARQLPattern{
                 "{S1 P1[ts1,te1]-n1 ?O1 .}\nUNION" +
                 "{S2 P2[ts2,te2]-n2 ?O2 .}\nUNION"+
                 "{S3 P3[ts3,te3]-n3 ?O3 .}\n";
-        //多图模式；
+        //组图模式；
         String graphPattern3 =
                 "{S1 P1[ts1,te1]-n1 ?O1 .}\n" +
                 "{S2 P2[ts2,te2]-n2 ?O2 .}\n" +
@@ -92,6 +92,8 @@ public class Complex_SPARQLt2SPARQLPattern{
 
         System.out.println("输入的组图模式是：" + graphPattern1);
         System.out.println("将SPARQL[t]复杂图模式转换成SPARQL模式：");
+        System.out.println(Complex_SPARQLt2SPARQLPattern(graphPattern1));
+        System.out.println(Complex_SPARQLt2SPARQLPattern(graphPattern2));
         System.out.println(Complex_SPARQLt2SPARQLPattern(graphPattern3));
     }
 }
