@@ -1,12 +1,17 @@
 package ModifierQuery;
 
 import DB.ConnectNeo4J;
+import TransTest.Sparql2CypherQuery;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
+import static RDFtPattern.BaseRDFPattern2Cypher.BaseRDFPattern2Cypher;
 import static RDFtPattern.BaseRDFt2RDFPattern.BaseRDFt2RDFPattern;
+import static RDFtPattern.Complex_SPARQL2CypherPattern.Complex_SPARQL2CypherPattern;
 import static RDFtPattern.Complex_SPARQLt2SPARQLPattern.Complex_SPARQLt2SPARQLPattern;
 
 /**
@@ -42,28 +47,31 @@ public class ASKQuery {
             sparqlStringSub1 = BaseRDFt2RDFPattern(sparqltStringSub1);
         }
 
-        sparqlS="ASK {"+sparqlStringSub1+sparqltStringSub2;
+        sparqlS="ASK {"+sparqlStringSub1+"\n"+sparqltStringSub2;
         return sparqlS;
     }
 //SPARQL语言转换成Cypher;
     private static String transToCypher(String sparqlStr) {
         String CypherS="";
-        String sparqlStrSub1=sparqlStr.substring(sparqlStr.indexOf("{"),sparqlStr.indexOf("FILTER"));
+        String sparqlStrSub1=sparqlStr.substring(sparqlStr.indexOf("{")+1,sparqlStr.indexOf("FILTER"));
         String sparqlStrSub2=sparqlStr.substring(sparqlStr.indexOf("FILTER")+6);
         String cypherStringSub1="";//处理模式的函数；
         if(sparqlStr.contains("OPTIONAL")||sparqlStr.contains("UNION")||sparqlStr.contains("\\}\\{")){//复杂图模式处理；
-            cypherStringSub1 = Complex_SPARQLt2SPARQLPattern(sparqlStrSub1).toString();
+            cypherStringSub1 = Complex_SPARQL2CypherPattern(sparqlStrSub1).toString();
         }else{//基本图模式处理；
-            cypherStringSub1 = BaseRDFt2RDFPattern(sparqlStrSub1);
+            cypherStringSub1 = BaseRDFPattern2Cypher(sparqlStrSub1);
         }
 
         String sparqlStrSub3=getFilter(sparqlStrSub2);//处理过滤条件的函数；
-        return CypherS="MATCH "+cypherStringSub1+"\nWHERE "+sparqlStrSub3+"\nRETURN [Relationship]";
+        CypherS ="MATCH "+cypherStringSub1+"\nWHERE "+sparqlStrSub3+"\nRETURN [Relationship]";
+        return CypherS;
     }
     //处理过滤条件；等会儿再处理；
     private static String getFilter(String sparqlStrSub2) {
-        String whereStr="";
-
+        Pattern compileP = Pattern.compile("[\\{\\}\n]");
+        Matcher m = compileP.matcher(sparqlStrSub2);
+        String sparqlStr = m.replaceAll("").trim();//处理一下字符串；
+        String whereStr=new Sparql2CypherQuery().getWhereString(sparqlStr);
         return whereStr;
     }
 

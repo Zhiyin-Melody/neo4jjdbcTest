@@ -154,7 +154,7 @@ public class Sparql2CypherQuery {
     }
 
     //处理过滤器中的条件;WHERE语句后面的内容；
-    private String getWhereString(String whereS) {
+    public String getWhereString(String whereS) {
         StringBuffer sb = new StringBuffer();
         Stack<String> stack = new Stack<String>();
         ArrayList<String> ls = new ArrayList<String>(); //存放每个filter句子;
@@ -196,7 +196,7 @@ public class Sparql2CypherQuery {
     }
 
     //将得到的每个约束中的内容进行调整；将准确的Cypher语言形式返回；
-    private void wheresubSeq(StringBuffer sb, ArrayList<String> ls) {
+    public void wheresubSeq(StringBuffer sb, ArrayList<String> ls) {
         for (int i = 0; i <ls.size() ; i++) {
             List<String> list=new ArrayList<String>();
             String sls = ls.get(i);
