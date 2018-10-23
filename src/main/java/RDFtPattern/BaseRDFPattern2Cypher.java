@@ -12,7 +12,16 @@ import TransTest.Sparql2CypherQuery;
 public class BaseRDFPattern2Cypher {
     public static String BaseRDFPattern2Cypher(String RDFGraphPattern) {
         RDFGraphPattern="0 . "+RDFGraphPattern;//将s[0]占据位置，避免后面转换出现冲突；
-        String[] s = RDFGraphPattern.split(" . ");
+
+        String[] s = RDFGraphPattern.split(" \\. ");
+        for (int i = 0; i <s.length ; i++) {
+            if (s[i].contains("rdft:")){
+                s[i]=s[i].replaceAll("rdft:","");
+            }
+            if(s[i].contains("rdf:")){
+                s[i]=s[i].replaceAll("rdf:","");
+            }
+        }
         StringBuffer C1=new StringBuffer();
         StringBuffer C2=new StringBuffer();
 

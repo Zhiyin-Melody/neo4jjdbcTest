@@ -103,7 +103,7 @@ public class Sparql2CypherQuery {
                             matchStringpro.append(pb[1].substring(pb[1].lastIndexOf("#") + 1) + ":'" + pb[2].substring(pb[2].lastIndexOf("#") + 1)+"'");
                         }
                         else if(pb[1].contains("hasNumUpdate")){
-                            matchStringpro.append(pb[1].substring(pb[1].lastIndexOf("#") + 1) + ":" + pb[2].substring(pb[2].lastIndexOf("#") + 1));
+                            matchStringpro.append("rdft_"+pb[1].substring(pb[1].lastIndexOf("#") + 1) + ":" + pb[2].substring(pb[2].lastIndexOf("#") + 1));
                         }else{
                             matchStringpro.append(pb[1].substring(pb[1].lastIndexOf("#") + 1) + ":`" + pb[2].substring(pb[2].lastIndexOf("#") + 1)+"`");
                         }
