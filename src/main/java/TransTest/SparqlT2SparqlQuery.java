@@ -94,7 +94,7 @@ public class SparqlT2SparqlQuery {
         String p = a[1].substring(0,a[1].indexOf("["))+">";
         String ts = a[1].substring(a[1].indexOf("[")+1,a[1].indexOf(","));
         String te = a[1].substring(a[1].indexOf(",")+1,a[1].indexOf("]"));
-        String n = a[1].substring(a[1].lastIndexOf("-")+1,a[1].length()-1);
+        String n = a[1].substring(a[1].lastIndexOf("-")+1);
 
         predicateString.add(" "+a[0]+" ?p "+a[2]+" .");
         predicateString.add(" ?p rdf:type rdft:property .");
