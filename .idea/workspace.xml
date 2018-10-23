@@ -11,10 +11,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5ba76624-19e3-41d5-9337-1c2678cd7d8a" name="Default" comment="Commit Success!!!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TransTest/SparqlT2SparqlQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TransTest/SparqlT2SparqlQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RDFtPattern/Complex_SPARQL2CypherPattern.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RDFtPattern/Complex_SPARQL2CypherPattern.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RDFtPattern/Complex_SPARQLt2SPARQLPattern.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RDFtPattern/Complex_SPARQLt2SPARQLPattern.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TransTest/SparqlT2SparqlQuery.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TransTest/SparqlT2SparqlQuery.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DB/ConnectNeo4J.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DB/ConnectNeo4J.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -109,33 +108,33 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="2" />
-          <entry key="java" value="26" />
+          <entry key="css" value="3" />
+          <entry key="java" value="35" />
           <entry key="js" value="1" />
-          <entry key="jsp" value="1" />
+          <entry key="jsp" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="2" />
-          <entry key="JAVA" value="26" />
-          <entry key="JSP" value="1" />
+          <entry key="CSS" value="3" />
+          <entry key="JAVA" value="35" />
+          <entry key="JSP" value="2" />
           <entry key="JavaScript" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="705" />
+          <entry key="css" value="786" />
           <entry key="dummy" value="15" />
-          <entry key="java" value="2210" />
-          <entry key="jsp" value="31" />
+          <entry key="java" value="2991" />
+          <entry key="jsp" value="98" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="705" />
-          <entry key="JAVA" value="2209" />
-          <entry key="JSP" value="31" />
+          <entry key="CSS" value="786" />
+          <entry key="JAVA" value="2990" />
+          <entry key="JSP" value="98" />
           <entry key="PLAIN_TEXT" value="15" />
           <entry key="SQL" value="1" />
         </counts>
@@ -147,11 +146,87 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/RDFtPattern/Complex_SPARQLt2SPARQLPattern.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/DB/ConnectNeo4J.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="146">
+              <caret line="29" column="51" lean-forward="true" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/TransTest/Sparql2CypherQuery.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="164" column="56" selection-start-line="164" selection-start-column="56" selection-end-line="164" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ModifierQuery/ASKQuery.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="67" column="5" lean-forward="true" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+              <folding>
+                <element signature="n#style#0;n#textarea#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1460">
+              <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/RDFtPattern/BaseRDFt2RDFPattern.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#732#740#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/TransTest/SparqlT2SparqlQuery.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="129" column="5" lean-forward="true" selection-start-line="129" selection-start-column="5" selection-end-line="129" selection-end-column="5" />
+            <state relative-caret-position="142">
+              <caret line="98" selection-start-line="98" selection-end-line="98" />
             </state>
           </provider>
         </entry>
@@ -213,7 +288,6 @@
         <option value="$PROJECT_DIR$/src/main/java/Data/queryTestttl2rdf.java" />
         <option value="$PROJECT_DIR$/src/main/java/Data/RDF2RDFt.java" />
         <option value="$PROJECT_DIR$/src/main/java/DB/ConnectDB.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DB/ConnectNeo4J.java" />
         <option value="$PROJECT_DIR$/src/main/java/Data/RDFtSaveNeo4j.java" />
         <option value="$PROJECT_DIR$/src/main/java/TransTest/SparqlT2Sparql.java" />
         <option value="$PROJECT_DIR$/src/main/java/TransTest/Sparql2Cypher1.java" />
@@ -226,21 +300,22 @@
         <option value="$PROJECT_DIR$/src/main/java/DB/writePrefix.java" />
         <option value="$PROJECT_DIR$/src/main/java/RDFtPattern/BaseSPARQLt2SPARQLPattern.java" />
         <option value="$PROJECT_DIR$/src/main/java/RDFtPattern/SPARQLPattern2Cypher.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ModifierQuery/ASKQuery.java" />
         <option value="$PROJECT_DIR$/src/main/java/ModifierQuery/ConstructQuery.java" />
         <option value="$PROJECT_DIR$/src/main/java/ModifierQuery/DescribeQuery.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/css/style.css" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/web/css/style.css" />
         <option value="$PROJECT_DIR$/src/main/java/RDFtPattern/BaseRDFt2RDFPattern.java" />
         <option value="$PROJECT_DIR$/src/main/java/Test/replace.java" />
         <option value="$PROJECT_DIR$/src/main/java/TransTest/Sparql2CypherQuery.java" />
         <option value="$PROJECT_DIR$/src/main/java/RDFtPattern/BaseRDFPattern2Cypher.java" />
         <option value="$PROJECT_DIR$/src/main/java/Test/split.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Data/RDFtSaveToNeo4J.java" />
         <option value="$PROJECT_DIR$/src/main/java/RDFtPattern/Complex_SPARQL2CypherPattern.java" />
         <option value="$PROJECT_DIR$/src/main/java/TransTest/SparqlT2SparqlQuery.java" />
         <option value="$PROJECT_DIR$/src/main/java/RDFtPattern/Complex_SPARQLt2SPARQLPattern.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Data/RDFtSaveToNeo4J.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DB/ConnectNeo4J.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ModifierQuery/ASKQuery.java" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/web/css/style.css" />
       </list>
     </option>
   </component>
@@ -282,8 +357,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="width" value="697" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1209" />
     <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -324,14 +400,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="neo4jjdbcTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="neo4jjdbcTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="DB" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -356,7 +424,18 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Test" type="462c0819:PsiDirectoryNode" />
+              <item name="TransTest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="neo4jjdbcTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="neo4jjdbcTest" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="neo4jjdbcTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="neo4jjdbcTest" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -377,7 +456,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540265641317" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540283679900" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$/libs" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -420,20 +499,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Complex_SPARQLt2SPARQLPattern">
+  <component name="RunManager" selected="Tomcat Server.Tomcat8">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BaseRDFPattern2Cypher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="RDFtPattern.BaseRDFPattern2Cypher" />
+    <configuration name="ASKQuery" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ModifierQuery.ASKQuery" />
       <module name="neo4jjdbcTest" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="RDFtPattern.*" />
+          <option name="PATTERN" value="ModifierQuery.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -629,17 +708,17 @@
       <item itemvalue="Tomcat Server.Tomcat8" />
       <item itemvalue="Application.Complex_SPARQLt2SPARQLPattern" />
       <item itemvalue="Application.Complex_SPARQL2CypherPattern" />
-      <item itemvalue="Application.BaseRDFPattern2Cypher" />
       <item itemvalue="Application.RDFtSaveToNeo4J" />
       <item itemvalue="Application.split" />
+      <item itemvalue="Application.ASKQuery" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Complex_SPARQLt2SPARQLPattern" />
-        <item itemvalue="Application.Complex_SPARQL2CypherPattern" />
+        <item itemvalue="Application.ASKQuery" />
         <item itemvalue="Application.RDFtSaveToNeo4J" />
+        <item itemvalue="Application.Complex_SPARQL2CypherPattern" />
+        <item itemvalue="Application.Complex_SPARQLt2SPARQLPattern" />
         <item itemvalue="Application.split" />
-        <item itemvalue="Application.BaseRDFPattern2Cypher" />
       </list>
     </recent_temporary>
   </component>
@@ -705,7 +784,7 @@
       <workItem from="1538121005761" duration="15013000" />
       <workItem from="1540189102671" duration="37000" />
       <workItem from="1540189206392" duration="25874000" />
-      <workItem from="1540258343282" duration="7274000" />
+      <workItem from="1540258343282" duration="17710000" />
     </task>
     <task id="LOCAL-00001" summary="Commit Success!!!">
       <created>1538116760083</created>
@@ -826,7 +905,21 @@
       <option name="project" value="LOCAL" />
       <updated>1540263819848</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Commit Success!!!">
+      <created>1540265650833</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1540265650833</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Commit Success!!!">
+      <created>1540276061284</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1540276061284</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -862,7 +955,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="425576000" />
+    <option name="totallyTimeSpent" value="436012000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -874,10 +967,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="697" height="735" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4987715" visible="true" weight="0.06122449" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4987715" visible="true" weight="0.14901665" />
       <window_info id="Structure" order="1" sideWeight="0.5012285" side_tool="true" weight="0.29198185" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Web" order="3" side_tool="true" />
@@ -887,8 +980,8 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290938" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49633968" visible="true" weight="0.1594203" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3897436" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49633968" visible="true" weight="0.47179487" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.37606838" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49853587" weight="0.31452993" />
@@ -897,7 +990,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.6043873" weight="0.47692308" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.4969743" weight="0.16755792" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.4969743" weight="0.2837607" />
       <window_info anchor="bottom" id="Dependency Viewer" order="13" sideWeight="0.49707174" weight="0.3296355" />
       <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.4977307" weight="0.36752138" />
       <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.3863275" />
@@ -1028,39 +1121,9 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Data/RDFtSaveToNeo4J.java</url>
-          <line>48</line>
-          <properties />
-          <option name="timeStamp" value="64" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Data/RDFtSaveToNeo4J.java</url>
-          <line>52</line>
-          <properties />
-          <option name="timeStamp" value="65" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Data/RDFtSaveToNeo4J.java</url>
-          <line>125</line>
-          <properties />
-          <option name="timeStamp" value="66" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Data/RDFtSaveToNeo4J.java</url>
-          <line>131</line>
-          <properties />
-          <option name="timeStamp" value="68" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Data/RDFtSaveToNeo4J.java</url>
           <line>136</line>
           <properties />
           <option name="timeStamp" value="70" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Data/RDFtSaveToNeo4J.java</url>
-          <line>140</line>
-          <properties />
-          <option name="timeStamp" value="71" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Data/RDFtSaveToNeo4J.java</url>
@@ -1075,46 +1138,10 @@
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Data/RDFtSaveToNeo4J.java</url>
-          <line>56</line>
-          <properties />
-          <option name="timeStamp" value="79" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Data/RDFtSaveToNeo4J.java</url>
-          <line>54</line>
-          <properties />
-          <option name="timeStamp" value="80" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/RDFtPattern/Complex_SPARQLt2SPARQLPattern.java</url>
           <line>37</line>
           <properties />
           <option name="timeStamp" value="86" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/RDFtPattern/Complex_SPARQLt2SPARQLPattern.java</url>
-          <line>80</line>
-          <properties />
-          <option name="timeStamp" value="89" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/RDFtPattern/Complex_SPARQLt2SPARQLPattern.java</url>
-          <line>45</line>
-          <properties />
-          <option name="timeStamp" value="92" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/RDFtPattern/Complex_SPARQLt2SPARQLPattern.java</url>
-          <line>48</line>
-          <properties />
-          <option name="timeStamp" value="93" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/RDFtPattern/Complex_SPARQLt2SPARQLPattern.java</url>
-          <line>52</line>
-          <properties />
-          <option name="timeStamp" value="96" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/RDFtPattern/Complex_SPARQL2CypherPattern.java</url>
@@ -1153,34 +1180,16 @@
           <option name="timeStamp" value="108" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/RDFtPattern/BaseRDFt2RDFPattern.java</url>
-          <line>17</line>
+          <url>file://$PROJECT_DIR$/src/main/java/ModifierQuery/ASKQuery.java</url>
+          <line>37</line>
           <properties />
-          <option name="timeStamp" value="109" />
+          <option name="timeStamp" value="114" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/TransTest/SparqlT2SparqlQuery.java</url>
-          <line>68</line>
+          <url>file://$PROJECT_DIR$/src/main/java/ModifierQuery/ASKQuery.java</url>
+          <line>44</line>
           <properties />
-          <option name="timeStamp" value="110" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/TransTest/SparqlT2SparqlQuery.java</url>
-          <line>71</line>
-          <properties />
-          <option name="timeStamp" value="111" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/TransTest/SparqlT2SparqlQuery.java</url>
-          <line>96</line>
-          <properties />
-          <option name="timeStamp" value="112" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/TransTest/SparqlT2SparqlQuery.java</url>
-          <line>98</line>
-          <properties />
-          <option name="timeStamp" value="113" />
+          <option name="timeStamp" value="115" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/Data/RDFtSaveToNeo4J.java</url>
@@ -1197,14 +1206,6 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="76" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/RDFtPattern/Complex_SPARQLt2SPARQLPattern.java</url>
-          <line>76</line>
-          <properties class="RDFtPattern.Complex_SPARQLt2SPARQLPattern" method="isMuiltyGrapgh">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="88" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/TransTest/Sparql2CypherQuery.java</url>
@@ -1437,33 +1438,6 @@
     <entry file="file://$PROJECT_DIR$/web/js/DatasetIntroduction.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="87" column="9" lean-forward="true" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DB/ConnectNeo4J.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Data/RDFtSaveNeo4j.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/DB/WritePrefix.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1493,30 +1467,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/RDFtPattern/Complex_SPARQL2CypherPattern.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TransTest/Sparql2CypherQuery.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1361">
-          <caret line="231" column="41" selection-start-line="231" selection-start-column="41" selection-end-line="231" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Data/RDFtSaveToNeo4J.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="137" column="45" selection-start-line="137" selection-start-column="45" selection-end-line="137" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/RDFtPattern/BaseRDFPattern2Cypher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="52">
@@ -1524,17 +1474,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ModifierQuery/ASKQuery.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/RDFtPattern/Complex_SPARQL2CypherPattern.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+        <state relative-caret-position="24">
+          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/RDFtPattern/Complex_SPARQLt2SPARQLPattern.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Data/RDFtSaveToNeo4J.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="50" column="24" lean-forward="true" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
+        <state relative-caret-position="121">
+          <caret line="140" selection-start-line="140" selection-end-line="140" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1554,8 +1504,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/TransTest/SparqlT2SparqlQuery.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="129" column="5" lean-forward="true" selection-start-line="129" selection-start-column="5" selection-end-line="129" selection-end-column="5" />
+        <state relative-caret-position="142">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DB/ConnectNeo4J.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="29" column="51" lean-forward="true" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/RDFtPattern/Complex_SPARQLt2SPARQLPattern.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TransTest/Sparql2CypherQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="164" column="56" selection-start-line="164" selection-start-column="56" selection-end-line="164" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ModifierQuery/ASKQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="67" column="5" lean-forward="true" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1460">
+          <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -4,7 +4,7 @@
 }
 #head{
     size: A5;
-    color: blue;
+    color: black;
 }
 #head1{
     size: A5;
@@ -65,7 +65,7 @@
 }
 .query{
     height: 500px;
-    width: 1320px;
+    width: 660px;
     background-color: darkorchid;
 }
 .queryAnnotation{
@@ -74,19 +74,29 @@
 }
 .RUN{
     height: 40px;
-    width: 100px;
+    width: 50px;
     color: blue;
     position: absolute;
-    left: 645px;
+    left: 610px;
     top: 655px;
 }
 .ResultView{
     height: 500px;
-    width: 1320px;
+    width: 660px;
+    position: absolute;
+    top: 639px;
+    left: 670px;
     background-color: chartreuse;
 }
-textarea{
+#queryStringTextarea{
     position: relative;
     top: 10px;
     left: 30px;
+}
+#resultViewtextarea{
+    height: 430px;
+    width: 620px;
+    position: relative;
+    top: 10px;
+    left: 20px;
 }

@@ -10,10 +10,10 @@
 <head>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script type="text/javascript" src="js/DatasetIntroduction.js"></script>
-    <title>RDFt时序数据查询示例</title>
+    <title>RDFt时序数据查询原型系统</title>
 </head>
 <body>
-<H3 id="title">RDFt时序数据查询示例</H3>
+<H3 id="title">RDFt时序数据查询原型系统</H3>
 
 <div class="datasets">
     <div class="endpointWrapper">
@@ -44,7 +44,7 @@
         <div class="information" >
             <p id="info1" style="display: none">    dataset1数据集，主要介绍了NBA篮球运动员个人信息以及历届比赛（常规赛）成绩信息。
                 从官方网站上爬取了约4,000个NBA球星的基本信息，构造了125,793条RDFt数据模型的三元组。
-                主要包括10中谓语关系，其中，包括不带有时间信息的基本的三元组，带有时间点的RDFt三元组以及带有时间间隔的RDFt三元组。
+                主要包括10种谓语关系，其中，包括不带有时间信息的基本的三元组，带有时间点的RDFt三元组以及带有时间间隔的RDFt三元组。
                 具体如下表：
             <table border="1" cellspacing="0" cellpadding="0">
                 <tr >
@@ -240,7 +240,7 @@
         </div>
     </select>
     <div>
-          <textarea id="queryStringTextarea" style="height: 400px; width: 1000px">
+          <textarea id="queryStringTextarea" style="height: 430px; width: 600px">
 @base <http://www.neu.edu/2018/NBA_Sportinfo#> .
 @prefix dbp: <http://dbpedia.org/ontology/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -251,12 +251,14 @@
 @prefix rdft: <http://www.neu.edu/2018/rdft-syntax-ns#> .
           </textarea>
     </div>
-    <button class="RUN">执行查询</button>
+    <button class="RUN">查询</button>
 </div>
 
 <div class="ResultView">
     <p>查询结果展示</p>
-
+<textarea id="resultViewtextarea" >
+    展示。。。
+</textarea>
 </div>
 </body>
 </html>
