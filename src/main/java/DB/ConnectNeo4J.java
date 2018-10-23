@@ -26,14 +26,14 @@ public class ConnectNeo4J {
         return statement;
     }
         public static void main (String[]args) throws ClassNotFoundException, SQLException, InstantiationException, IllegalAccessException {
-        ConnectNeo4J connectNeo4J = new ConnectNeo4J();
+        /*ConnectNeo4J connectNeo4J = new ConnectNeo4J();
         Statement stm= connectNeo4J.ConnectNeo4J();
 
         String queryString_04 = "match (n) return (n)";
 
             ResultSet resultSet = stm.executeQuery(queryString_04);
             while(resultSet.next()){
-                System.out.print(resultSet.getString("n"));}
+                System.out.print(resultSet.getString("n"));}*/
         }
     }
 
