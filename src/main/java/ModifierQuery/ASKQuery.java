@@ -54,12 +54,15 @@ public class ASKQuery {
     private static String transToCypher(String sparqlStr) {
         String CypherS="";
         String sparqlStrSub1=sparqlStr.substring(sparqlStr.indexOf("{")+1,sparqlStr.indexOf("FILTER"));
+        Pattern compileP = Pattern.compile("[\"]");
+        Matcher m = compileP.matcher(sparqlStrSub1);
+        String sparqlStrsub1 = m.replaceAll("").trim();
         String sparqlStrSub2=sparqlStr.substring(sparqlStr.indexOf("FILTER")+6);
         String cypherStringSub1="";//处理模式的函数；
         if(sparqlStr.contains("OPTIONAL")||sparqlStr.contains("UNION")||sparqlStr.contains("\\}\\{")){//复杂图模式处理；
-            cypherStringSub1 = Complex_SPARQL2CypherPattern(sparqlStrSub1).toString();
+            cypherStringSub1 = Complex_SPARQL2CypherPattern(sparqlStrsub1).toString();
         }else{//基本图模式处理；
-            cypherStringSub1 = BaseRDFPattern2Cypher(sparqlStrSub1);
+            cypherStringSub1 = BaseRDFPattern2Cypher(sparqlStrsub1);
         }
 
         String sparqlStrSub3=getFilter(sparqlStrSub2);//处理过滤条件的函数；
@@ -80,7 +83,7 @@ public class ASKQuery {
         Statement stm= new ConnectNeo4J().ConnectNeo4J();
         //ASK查询函数；
         String SPARQLTString="ASK {\"Kobe_Bean_Bryant\" info:Plays_For[?ts,?te]-?n \"Los_Angeles_Lakers\" .\n" +
-                "FILTER ?ts >= “1996-01-01“ and ?te <= ”2016-12-30“\n" +
+                "FILTER ?ts >= '1996-01-01' and ?te <= '2016-12-30'\n" +
                 "}\n";
         boolean value=ASKQuery(SPARQLTString,stm);
         System.out.println(value);

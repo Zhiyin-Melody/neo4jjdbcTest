@@ -183,6 +183,8 @@ public class Sparql2CypherQuery {
                 }
                 ls.add(stringBuffer.toString());
                 }
+            }else{//单独的约束条件的时候；
+
             }
             String whereSS = whereS.substring(i+1);
             s=whereS.substring(i+1,isIndex(whereSS)+i+1);
