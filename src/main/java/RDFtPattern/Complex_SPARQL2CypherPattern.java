@@ -39,13 +39,8 @@ public class Complex_SPARQL2CypherPattern {
             String [] rdfgrapgStr = SPARQL_Pattern1.split("\\}\\{");
             for (int i = 0; i <rdfgrapgStr.length; i++) {
                 String str="";
-                if(rdfgrapgStr[i].contains("{")){
-                    str=rdfgrapgStr[i].substring(rdfgrapgStr[i].indexOf("{")+1);
-                }else if(rdfgrapgStr[i].contains("}")){
-                    str=rdfgrapgStr[i].substring(0,rdfgrapgStr[i].indexOf("}"));
-                }else{
-                    str=rdfgrapgStr[i];
-                }
+                //去除掉{}；
+                str = new Complex_SPARQLt2SPARQLPattern().getTriples(rdfgrapgStr[i]);
                 if(i==rdfgrapgStr.length-1){
                     cypher_graphStr.append(BaseRDFPattern2Cypher.BaseRDFPattern2Cypher(str));
                 }else {

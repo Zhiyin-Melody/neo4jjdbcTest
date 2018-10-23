@@ -11,6 +11,9 @@ import java.util.regex.Pattern;
  * @Pram:
  */
 public class Complex_SPARQLt2SPARQLPattern{
+    public  Complex_SPARQLt2SPARQLPattern(){
+
+    }
     public static StringBuffer Complex_SPARQLt2SPARQLPattern(String SPARQLTString) {
         StringBuffer SPARQLString = new StringBuffer();
         ArrayList<String> list= new ArrayList<String>();
@@ -44,22 +47,30 @@ public class Complex_SPARQLt2SPARQLPattern{
             SPARQLTString = SPARQLTString.replaceAll("\n","");
             String [] rdfgrapgStr = SPARQLTString.split("\\}\\{");
             for (int i = 0; i <rdfgrapgStr.length; i++) {
-                String s="";
-                if(rdfgrapgStr[i].contains("{")){
-                      s=rdfgrapgStr[i].substring(rdfgrapgStr[i].indexOf("{")+1);
-                }else if(rdfgrapgStr[i].contains("}")){
-                      s=rdfgrapgStr[i].substring(0,rdfgrapgStr[i].indexOf("}"));
-                }else{
-                      s=rdfgrapgStr[i];
-                }
+                String str="";
+                //去除掉{}；
+                str = getTriples(rdfgrapgStr[i]);
                 if(i==rdfgrapgStr.length-1){
-                    SPARQLString.append("{" + BaseRDFt2RDFPattern.BaseRDFt2RDFPattern(s)+"}");
+                    SPARQLString.append("{" + BaseRDFt2RDFPattern.BaseRDFt2RDFPattern(str)+"}");
                 }else {
-                    SPARQLString.append("{" + BaseRDFt2RDFPattern.BaseRDFt2RDFPattern(s) + "}\n");
+                    SPARQLString.append("{" + BaseRDFt2RDFPattern.BaseRDFt2RDFPattern(str) + "}\n");
                 }
             }
         }
         return SPARQLString;
+    }
+
+    //去除掉{}；
+    public static String getTriples(String s) {
+        String str;
+        if(s.contains("{")){
+            str= s.substring(s.indexOf("{")+1);
+        }else if(s.contains("}")){
+            str= s.substring(0, s.indexOf("}"));
+        }else{
+            str= s;
+        }
+        return str;
     }
 
     //判断是否是多图；
