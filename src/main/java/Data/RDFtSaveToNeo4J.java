@@ -132,10 +132,10 @@ public class RDFtSaveToNeo4J {
             if (hasTime.contains(",")) {
                 hasStartTime = hasTime.substring(hasTime.indexOf('[') + 1, hasTime.indexOf(','));
                 hasEndTime = hasTime.substring(hasTime.indexOf(',') + 1, hasTime.indexOf(']'));
-                predicateStr = "-[subPredicate:" + subPredicate + "{rdft_hasSrartTime:'" + hasStartTime
+                predicateStr = "-[subPredicate:" + subPredicate + "{rdf_type:'rdft_property',rdft_hasSrartTime:'" + hasStartTime
                         + "',rdft_hasEndTime:'" + hasEndTime + "',rdft_hasNumUpdate:" + hasNumUpdate + "}" + "]->";
             } else {
-                predicateStr = "-[subPredicate:" + subPredicate + "{rdft_hasTime:'" + hasTime
+                predicateStr = "-[subPredicate:" + subPredicate + "{rdf_type:'rdft_property',rdft_hasTime:'" + hasTime
                         + "',rdft_hasNumUpdate:" + hasNumUpdate + "}" + "]->";
             }
         }else{
