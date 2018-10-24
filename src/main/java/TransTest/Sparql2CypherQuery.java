@@ -97,7 +97,7 @@ public class Sparql2CypherQuery {
                     String [] pb =Pattern.compile("[?<>()\n]").matcher(brk[j]).replaceAll("").trim().split(" ");
                     if(pb[0].equals(arr[1])){
                         if(pb[1].contains("hasTime")||pb[1].contains("hasStartTime")||pb[1].contains("hasEndTime")){//如果是hasTime,hasStartTime，hasEndTime时加上rdft_和双引号；
-                            matchStringpro.append("rdft_"+pb[1].substring(pb[1].lastIndexOf("#")+1)+":'"+pb[2].substring(pb[2].lastIndexOf("#") + 1)+"'^^xsd:date");
+                            matchStringpro.append("rdft_"+pb[1].substring(pb[1].lastIndexOf("#")+1)+":'"+pb[2].substring(pb[2].lastIndexOf("#") + 1)+"'");
                         }
                         else if(pb[1].contains("type")){
                             matchStringpro.append(pb[1].substring(pb[1].lastIndexOf("#") + 1) + ":'" + pb[2].substring(pb[2].lastIndexOf("#") + 1)+"'");

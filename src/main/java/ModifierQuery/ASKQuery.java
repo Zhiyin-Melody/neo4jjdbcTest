@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -27,6 +26,8 @@ public class ASKQuery {
     public static boolean ASKQuery(String sparqltString,Statement statement) throws SQLException {
         String sparqlStr = transToSparql(sparqltString);
         String CypherStr = transToCypher(sparqlStr);
+       // String s="MATCH (Kobe_Bean_Bryant)-[Relationship:Plays_For]->(Los_Angeles_Lakers) WHERE Relationship.rdft_hasSrartTime>='1996-01-01' and Relationship.rdft_hasEndTime<='2016-12-30' RETURN [Relationship]";
+         String s1="MATCH (Kobe_Bean_Bryant)-[Relationship:Plays_For]->(Los_Angeles_Lakers) WHERE Relationship.rdft_hasStartTime>='1996-01-01' and Relationship.rdft_hasEndTime<='2016-12-30' RETURN [Relationship]";
         ResultSet resultSet = statement.executeQuery(CypherStr);
         while(resultSet.next()){
             resultSet.getRow();
@@ -54,6 +55,7 @@ public class ASKQuery {
 //SPARQL语言转换成Cypher;
     private static String transToCypher(String sparqlStr) {
         String CypherS="";
+        String CypherS1="";
         String sparqlStrSub1=sparqlStr.substring(sparqlStr.indexOf("{")+1,sparqlStr.indexOf("FILTER"));
         Pattern compileP = Pattern.compile("[\"]");
         Matcher m = compileP.matcher(sparqlStrSub1);
@@ -67,7 +69,12 @@ public class ASKQuery {
         }
 
         String sparqlStrSub3=getFilter(sparqlStrSub2);//处理过滤条件的函数；
-        CypherS ="MATCH "+cypherStringSub1+"\nWHERE "+sparqlStrSub3+"\nRETURN [Relationship]";
+        CypherS1 ="MATCH "+cypherStringSub1+"\nWHERE "+sparqlStrSub3+"\nRETURN [Relationship]";
+        if(CypherS1.contains("{")){
+            CypherS=CypherS1.substring(0,CypherS1.indexOf("{"))+CypherS1.substring(CypherS1.indexOf("}")+1);
+        }else{
+            CypherS=CypherS1;
+        }
         return CypherS;
     }
     //处理过滤条件；
@@ -87,20 +94,34 @@ public class ASKQuery {
         return whereS;
     }
 //调整约束语句中的顺序；
-    private static StringBuffer wheresubSeqmodify(ArrayList<String> ls) {
+    private static StringBuffer wheresubSeqmodify(ArrayList<String> list) {
         StringBuffer sb = new StringBuffer();
-        for (int i = 0; i <ls.size() ; i++) {
-            List<String> list=new ArrayList<String>();
+
         for (int j = 0; j < list.size() ; j++) {
-            StringBuffer sf= new StringBuffer();
-            String[] sarr = list.get(j).split(" ");
-            sf.append("Relationship"+"."+sarr[1]).append(sarr[0]).append("'"+sarr[2].substring(1,sarr[2].indexOf("^")-1)+"'");
-            if(j<list.size()-1){
-                sb.append(sf).append(" ").append(ls.get(i).substring(2,5));
-            }else {
-                sb.append(sf).append(" ");
+            StringBuffer sf = new StringBuffer();
+            if(list.get(j).contains("and")){//表示时间段的约束条件，或者有其他的约束条件；
+                String[] a =list.get(j).split("and");
+                ArrayList<String> ls=new ArrayList<String>();
+                for (int i = 0; i <a.length ; i++) {
+                    ls.add(a[i].trim().replace("?",""));
+                    for (int k = i; k <ls.size(); k++) {
+                        String [] s=ls.get(k).split(" ");
+                        if(s[0].equals("ts")){
+                            sf.append("Relationship.rdft_hasStartTime").append(s[1]).append("'"+s[2].substring(1));
+                        }if(s[0].equals("te")){
+                        sf.append("Relationship.rdft_hasEndTime").append(s[1]).append("'"+s[2].substring(1));
+                        }
+                        if (i!=a.length-1) {
+                            sf.append(" and ");
+                        }
+                    }
+
+                }
+            }else{//只有一个约束条件；
+                String[] sarr = list.get(0).split(" ");
+                sf.append("Relationship.rdft_hasTime").append(sarr[1]).append("'"+sarr[2].substring(1));
             }
-        }
+sb.append(sf);
         }
         return sb;
 
@@ -110,9 +131,12 @@ public class ASKQuery {
         //连接数据库；
         Statement stm= new ConnectNeo4J().ConnectNeo4J();
         //ASK查询函数；
-        String SPARQLTString="ASK {\"Kobe_Bean_Bryant\" info:Plays_For[?ts,?te]-?n \"Los_Angeles_Lakers\" .\n" +
+        String SPARQLTString="ASK {\"Kobe_Bean_Bryant\" info:Plays_For[?ts,?te]-1 \"Los_Angeles_Lakers\" .\n" +
                 "FILTER ?ts >= '1996-01-01' and ?te <= '2016-12-30'\n" +
                 "}\n";
+        /*MATCH (Kobe_Bean_Bryant)-[Relationship:Plays_For]->(Los_Angeles_Lakers) WHERE Relationship.rdft_hasSrartTime>='1996-01-01' and Relationship.rdft_hasEndTime>='2016-12-30' RETURN [Relationship]
+        这句话能够查出来的；返回true;
+        * */
         boolean value=ASKQuery(SPARQLTString,stm);
         System.out.println(value);
     }

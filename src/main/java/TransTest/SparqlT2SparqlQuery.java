@@ -95,16 +95,16 @@ public class SparqlT2SparqlQuery {
         String ts = a[1].substring(a[1].indexOf("[")+1,a[1].indexOf(","));
         String te = a[1].substring(a[1].indexOf(",")+1,a[1].indexOf("]"));
         String n = a[1].substring(a[1].lastIndexOf("-")+1);
-
-        predicateString.add(" "+a[0]+" ?p "+a[2]+" .");
-        predicateString.add(" ?p rdf:type rdft:property .");
+        String predicate= p.substring(p.indexOf(":")+1,p.indexOf(">"));
+        predicateString.add(" "+a[0]+" ?"+predicate+" "+a[2]+" .");
+        predicateString.add(" ?"+predicate+" rdf:type rdft:property .");
         if(ts.equals(te)){  //当ts=te时，
-            predicateString.add(" ?p rdft:hasTime" + ts + "^^xsd:date .");
-            predicateString.add(" ?p rdft:hasNumUpdate" + n + " .");
+            predicateString.add(" ?"+predicate+" rdft:hasTime" + ts + "^^xsd:date .");
+            predicateString.add(" ?"+predicate+" rdft:hasNumUpdate" + n + " .");
         }else {  //当ts!=te时，
-            predicateString.add(" ?p rdft:hasStartTime " + ts + "^^xsd:date .");
-            predicateString.add(" ?p rdft:hasEndTime " + te + "^^xsd:date .");
-            predicateString.add(" ?p rdft:hasNumUpdate " + n + " .");
+            predicateString.add(" ?"+predicate+" rdft:hasStartTime " + ts + "^^xsd:date .");
+            predicateString.add(" ?"+predicate+" rdft:hasEndTime " + te + "^^xsd:date .");
+            predicateString.add(" ?"+predicate+" rdft:hasNumUpdate " + n + " .");
         }
         return predicateString;
     }
