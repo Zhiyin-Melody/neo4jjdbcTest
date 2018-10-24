@@ -1,6 +1,7 @@
 package ModifierQuery;
 
 import DB.ConnectNeo4J;
+import RDFtPattern.BaseRDFt2RDFPattern;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -31,7 +32,8 @@ public class ConstructQuery {
             whereStrSub = whereStr.substring(0,whereStr.indexOf("FILTER"));//三元组模式；
             filterStr =whereStr.substring(whereStr.indexOf("FILTER"));//FILTER语句中的内容；
             getSparqlWhereStr = getWhereStr(whereStrSub);//处理约束条件中的返回值，两个已经存在的节点；
-
+            String SPARQLStr="CONSTRUCT {"+getSparqlconStr+"}\nWHERE{"+getSparqlWhereStr+"\n"+filterStr+"}";
+            System.out.println(SPARQLStr);
             //再由sparql语言转换到cypher语言；
             getCypherWhereStr = getCypherWhereStr(getSparqlWhereStr)+getFilter(filterStr);
             getCypherConStr = getCypherConStr(getSparqlconStr);
@@ -39,15 +41,12 @@ public class ConstructQuery {
         }else{
             //先由sparql[t]转换到sparql语言；
             getSparqlWhereStr = getWhereStr(whereStr);//处理约束条件中的返回值，两个已经存在的节点；
+            String SPARQLStr="CONSTRUCT {"+getSparqlconStr+"}\nWHERE{"+getSparqlWhereStr+"}";
+            System.out.println(SPARQLStr);
             //再由sparql语言转换到cypher语言；
-            getCypherWhereStr = getCypherWhereStr(getSparqlWhereStr);
+            getCypherWhereStr = getCypherWhereStr(getSparqlWhereStr);//这里再进行处理吧；
             getCypherConStr = getCypherConStr(getSparqlconStr);
         }
-
-
-        String SPARQLStr=getSparqlconStr+getSparqlWhereStr+filterStr;
-        System.out.println("转换后的语句是："+SPARQLStr);
-
 
         //先执行getCypherWhereStr返回两个节点；作为新的关系的两个节点存在；
         ResultSet resultSetMatch = statement.executeQuery(getCypherWhereStr);
@@ -82,14 +81,14 @@ public class ConstructQuery {
     //转换到sparql语言中的约束条件语句，找到符合的主语和宾语返回；
     private String getWhereStr(String whereStr) {
         String sparqlwhereStr="";
-
+        sparqlwhereStr = BaseRDFt2RDFPattern.BaseRDFt2RDFPattern(whereStr);
         return sparqlwhereStr;
     }
 
     //转换到sparql语言中构造RDF三元组集合；
     private String getSparqlConStr(String constructStr) {
         String sparqlConStr="";
-
+        sparqlConStr= BaseRDFt2RDFPattern.BaseRDFt2RDFPattern(constructStr);
         return sparqlConStr;
     }
 

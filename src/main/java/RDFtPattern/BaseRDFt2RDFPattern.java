@@ -29,7 +29,6 @@ public class BaseRDFt2RDFPattern {
     }
 
     public static void main(String[] args) {
-        BaseRDFt2RDFPattern baseRDFt2RDFPattern =new BaseRDFt2RDFPattern();
         System.out.println("输入的RDFt基本图模式是：" );
         String s = "<http://yago-knowledge.org/resource/china> <http://yago-knowledge.org/resource/haspopulation[?ts,?te]-?n> ?count . \n\r"+
                 "<http://yago-knowledge.org/resource/America> <http://yago-knowledge.org/resource/haspopulation[?ts0,?te0]-?n0> ?count0 .";

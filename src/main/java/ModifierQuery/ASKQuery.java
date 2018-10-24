@@ -78,7 +78,7 @@ public class ASKQuery {
         return CypherS;
     }
     //处理过滤条件；
-    private static String getFilter(String sparqlStrSub2) {
+    public static String getFilter(String sparqlStrSub2) {
         Pattern compileP = Pattern.compile("[\\{\\}\n]");
         Matcher m = compileP.matcher(sparqlStrSub2);
         String sparqlStr = m.replaceAll("").trim();//处理一下字符串；
@@ -119,9 +119,13 @@ public class ASKQuery {
                 }
             }else{//只有一个约束条件；
                 String[] sarr = list.get(0).split(" ");
+                if(list.get(0).contains("hasTime")){
                 sf.append("Relationship.rdft_hasTime").append(sarr[1]).append("'"+sarr[2].substring(1));
+            }else if(list.get(0).contains("hasNumUpdate")){
+                    sf.append("Relationship.rdft_hasNumUpdate").append(sarr[2]);
+                }
             }
-sb.append(sf);
+          sb.append(sf);
         }
         return sb;
 
