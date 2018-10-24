@@ -148,8 +148,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ModifierQuery/ConstructQuery.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="67" column="23" lean-forward="true" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
+            <state relative-caret-position="157">
+              <caret line="50" column="8" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -389,7 +389,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540373647249" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540373759467" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$/libs" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -718,7 +718,7 @@
       <workItem from="1540189102671" duration="37000" />
       <workItem from="1540189206392" duration="25874000" />
       <workItem from="1540258343282" duration="18360000" />
-      <workItem from="1540291172693" duration="29983000" />
+      <workItem from="1540291172693" duration="30093000" />
     </task>
     <task id="LOCAL-00001" summary="Commit Success!!!">
       <created>1538116760083</created>
@@ -895,7 +895,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540372302231</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Commit Success!!!">
+      <created>1540373654645</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1540373654645</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -931,7 +938,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="466645000" />
+    <option name="totallyTimeSpent" value="466755000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -957,7 +964,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290938" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49633968" weight="0.4051282" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.16410257" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3794872" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49853587" weight="0.31452993" />
@@ -966,7 +973,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.6043873" weight="0.47692308" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.4969743" weight="0.2820513" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.4969743" visible="true" weight="0.2820513" />
       <window_info anchor="bottom" id="Dependency Viewer" order="13" sideWeight="0.49707174" weight="0.3296355" />
       <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.4977307" weight="0.36752138" />
       <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.3863275" />
@@ -1682,8 +1689,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ModifierQuery/ConstructQuery.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="67" column="23" lean-forward="true" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
+        <state relative-caret-position="157">
+          <caret line="50" column="8" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -49,15 +49,13 @@ public class ConstructQuery {
         System.out.println("转换后的语句是："+SPARQLStr);
 
 
-
-        String CypherStr=getCypherWhereStr+getCypherConStr;
         //先执行getCypherWhereStr返回两个节点；作为新的关系的两个节点存在；
-        ResultSet resultSetMatch = statement.executeQuery(CypherStr);
+        ResultSet resultSetMatch = statement.executeQuery(getCypherWhereStr);
         while(resultSetMatch.next()){
             resultSetMatch.getRow();
         }
         //得到的结果将再使用进行构建节点-关系-节点的图形式；
-        ResultSet resultSetCreate = statement.executeQuery(CypherStr);
+        ResultSet resultSetCreate = statement.executeQuery(getCypherConStr);
         while(resultSetCreate.next()){
             resultSetCreate.getRow();
         }
