@@ -1,6 +1,7 @@
 package ModifierQuery;
 
 import DB.ConnectNeo4J;
+import RDFtPattern.BaseRDFPattern2Cypher;
 import RDFtPattern.BaseRDFt2RDFPattern;
 
 import java.sql.ResultSet;
@@ -27,6 +28,22 @@ public class ConstructQuery {
 
         String getSparqlconStr = getSparqlConStr(constructStr);//处理构造新的三元组集合；
 
+        String predicate="";
+        String t="";
+        String ts="";
+        String te="";
+        if(constructStr.contains("[")){//有时间信息；
+            if(constructStr.contains(",")){//表示有ts,te
+                predicate=constructStr.substring(constructStr.indexOf(":")+1,constructStr.indexOf("["));
+                ts=constructStr.substring(constructStr.indexOf("[")+1,constructStr.indexOf(","));
+                te=constructStr.substring(constructStr.indexOf(",")+1,constructStr.indexOf("]"));
+            }else{//表示只有t;
+                predicate=constructStr.substring(constructStr.indexOf(":")+1,constructStr.indexOf("["));
+                t=constructStr.substring(constructStr.indexOf("[")+1,constructStr.indexOf("]"));
+            }
+        }else{//正常三元组；
+            predicate=constructStr.substring(constructStr.indexOf(":")+1,constructStr.substring(0,constructStr.indexOf(":")+1).length()+constructStr.substring(constructStr.indexOf(":")+1).indexOf(" "));
+        }
         if(whereStr.contains("FILTER")){//处理约束条件；
             //先由sparql[t]转换到sparql语言；
             whereStrSub = whereStr.substring(0,whereStr.indexOf("FILTER"));//三元组模式；
@@ -35,8 +52,20 @@ public class ConstructQuery {
             String SPARQLStr="CONSTRUCT {"+getSparqlconStr+"}\nWHERE{"+getSparqlWhereStr+"\n"+filterStr+"}";
             System.out.println(SPARQLStr);
             //再由sparql语言转换到cypher语言；
-            getCypherWhereStr = getCypherWhereStr(getSparqlWhereStr)+getFilter(filterStr);
-            getCypherConStr = getCypherConStr(getSparqlconStr);
+            getCypherWhereStr = "MATCH "+getCypherWhereStr(getSparqlWhereStr)+"\n"+getFilter(filterStr)+"RETURN S1,S2";
+            //先执行getCypherWhereStr返回两个节点；作为新的关系的两个节点存在；
+            ResultSet resultSetMatch = statement.executeQuery(getCypherWhereStr);
+            String resmatch ="";//存放查询的两个节点；
+            while(resultSetMatch.next()){//这个查询结果返回有问题；
+                resmatch = resultSetMatch.getString("n");
+            }
+
+            getCypherConStr = getCypherConStr(resmatch,predicate,ts,te);
+            //得到的结果将再使用进行构建节点-关系-节点的图形式；
+            ResultSet resultSetCreate = statement.executeQuery(getCypherConStr);
+            while(resultSetCreate.next()){//研究一下返回的结果怎么显示好，最好是字符串；
+                String resCreate=resultSetCreate.getString("n");
+            }
 
         }else{
             //先由sparql[t]转换到sparql语言；
@@ -44,30 +73,39 @@ public class ConstructQuery {
             String SPARQLStr="CONSTRUCT {"+getSparqlconStr+"}\nWHERE{"+getSparqlWhereStr+"}";
             System.out.println(SPARQLStr);
             //再由sparql语言转换到cypher语言；
-            getCypherWhereStr = getCypherWhereStr(getSparqlWhereStr);//这里再进行处理吧；
-            getCypherConStr = getCypherConStr(getSparqlconStr);
+            getCypherWhereStr = "MATCH "+getCypherWhereStr(getSparqlWhereStr)+"RETURN S1,S2";//这里再进行处理吧；
+            //先执行getCypherWhereStr返回两个节点；作为新的关系的两个节点存在；
+            ResultSet resultSetMatch = statement.executeQuery(getCypherWhereStr);
+            String resmatch ="";//存放查询的两个节点；
+            while(resultSetMatch.next()){
+                resmatch = resultSetMatch.getString("n");
+            }
+            getCypherConStr = getCypherConStr(resmatch,predicate,ts,te);//这里先考虑ts,te的吧；
+            //得到的结果将再使用进行构建节点-关系-节点的图形式；
+            ResultSet resultSetCreate = statement.executeQuery(getCypherConStr);
+            System.out.println(resultSetCreate);
+            while(resultSetCreate.next()){
+                String resCreate=resultSetCreate.getString("n");
+            }
         }
 
-        //先执行getCypherWhereStr返回两个节点；作为新的关系的两个节点存在；
-        ResultSet resultSetMatch = statement.executeQuery(getCypherWhereStr);
-        while(resultSetMatch.next()){
-            resultSetMatch.getRow();
-        }
-        //得到的结果将再使用进行构建节点-关系-节点的图形式；
-        ResultSet resultSetCreate = statement.executeQuery(getCypherConStr);
-        while(resultSetCreate.next()){
-            resultSetCreate.getRow();
-        }
     }
-//处理filter中的语句；
+    //处理filter中的语句；这个filter需要自己重新写；
     private String getFilter(String filterStr) {
         String filters="";
+
         return filters;
     }
 
     //转换到cypher语言中的时候处理的构造语句；
-    private String getCypherConStr(String getSparqlconStr) {
+    private String getCypherConStr(String getSparqlconStr,String predicate,String ts,String te) {
         String cypherconStr="";
+        String[] a=getSparqlconStr.split(" ");
+        String object1 =a[0];
+        String object2 =a[1];
+        //CREATE (Kobe_Bean_Bryant:Kobe_Bean_Bryant)-[ Relationship0: isTeammate {type:'property',rdft_hasStartTime:Ts1,rdft_hasEndTime:Te1,rdft_hasNumUpdate:1}]- (Shaquille_Rashaun_ONeal: Shaquille_Rashaun_ONeal)
+
+        cypherconStr="CREATE ("+object1+"[ Relationship:"+predicate+"{type:'property',rdft_hasStartTime:"+ts+",rdft_hasEndTime:"+te+",rdft_hasNumUpdate:1}]- ("+object2+")";
         return cypherconStr;
     }
 
@@ -75,6 +113,7 @@ public class ConstructQuery {
     //转换到Cypher语言中的约束条件语句；
     private String getCypherWhereStr(String getSparqlWhereStr) {
         String cypherwhereStr="";
+        cypherwhereStr= BaseRDFPattern2Cypher.BaseRDFPattern2Cypher(getSparqlWhereStr);
         return cypherwhereStr;
     }
 
