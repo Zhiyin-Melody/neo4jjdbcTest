@@ -11,10 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5ba76624-19e3-41d5-9337-1c2678cd7d8a" name="Default" comment="Commit Success!!!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ModifierQuery/ASKQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModifierQuery/ASKQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ModifierQuery/ConstructQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModifierQuery/ConstructQuery.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ModifierQuery/DescribeQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModifierQuery/DescribeQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RDFtPattern/BaseRDFt2RDFPattern.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RDFtPattern/BaseRDFt2RDFPattern.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -129,14 +126,14 @@
         <counts>
           <entry key="css" value="786" />
           <entry key="dummy" value="15" />
-          <entry key="java" value="5987" />
+          <entry key="java" value="6016" />
           <entry key="jsp" value="98" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="786" />
-          <entry key="JAVA" value="5986" />
+          <entry key="JAVA" value="6015" />
           <entry key="JSP" value="98" />
           <entry key="PLAIN_TEXT" value="15" />
           <entry key="SQL" value="1" />
@@ -164,8 +161,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ModifierQuery/DescribeQuery.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="44" column="79" selection-start-line="44" selection-start-column="79" selection-end-line="44" selection-end-column="79" />
+            <state relative-caret-position="72">
+              <caret line="64" column="44" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -449,7 +446,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540397426197" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540397522093" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$/libs" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -779,7 +776,7 @@
       <workItem from="1540189206392" duration="25874000" />
       <workItem from="1540258343282" duration="18360000" />
       <workItem from="1540291172693" duration="30144000" />
-      <workItem from="1540378636986" duration="7933000" />
+      <workItem from="1540378636986" duration="8030000" />
     </task>
     <task id="LOCAL-00001" summary="Commit Success!!!">
       <created>1538116760083</created>
@@ -970,7 +967,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540373783408</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Commit Success!!!">
+      <created>1540397501308</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1540397501309</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1006,7 +1010,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="474739000" />
+    <option name="totallyTimeSpent" value="474836000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1018,7 +1022,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="109" y="0" width="1216" height="735" extended-state="0" />
+    <frame x="258" y="0" width="1216" height="735" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49747476" visible="true" weight="0.14619377" />
@@ -1031,8 +1035,8 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290938" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49633968" weight="0.30729166" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.359375" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49633968" visible="true" weight="0.4079861" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.359375" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49853587" weight="0.31452993" />
@@ -1737,8 +1741,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ModifierQuery/DescribeQuery.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="44" column="79" selection-start-line="44" selection-start-column="79" selection-end-line="44" selection-end-column="79" />
+        <state relative-caret-position="72">
+          <caret line="64" column="44" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

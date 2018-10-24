@@ -62,7 +62,7 @@ public class DescribeQuery {
         }
         System.out.println(Cypherdes);
 
-        //查询数据库中的结果；
+        //查询数据库中的结果；这个查询的结果怎么展示还是个问题，有待研究一下；
         ResultSet resultSetMatch = stm.executeQuery(Cypherdes);
         while(resultSetMatch.next()){
             resStr=resultSetMatch.getString("n");
