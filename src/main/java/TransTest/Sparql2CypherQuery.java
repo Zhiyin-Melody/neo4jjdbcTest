@@ -97,7 +97,7 @@ public class Sparql2CypherQuery {
                     String [] pb =Pattern.compile("[?<>()\n]").matcher(brk[j]).replaceAll("").trim().split(" ");
                     if(pb[0].equals(arr[1])){
                         if(pb[1].contains("hasTime")||pb[1].contains("hasStartTime")||pb[1].contains("hasEndTime")){//如果是hasTime,hasStartTime，hasEndTime时加上rdft_和双引号；
-                            matchStringpro.append("rdft_"+pb[1].substring(pb[1].lastIndexOf("#")+1)+":'"+pb[2].substring(pb[2].lastIndexOf("#") + 1)+"'");
+                            matchStringpro.append("rdft_"+pb[1].substring(pb[1].lastIndexOf("#")+1)+":'"+pb[2].substring(pb[2].lastIndexOf("#") + 1)+"'^^xsd:date");
                         }
                         else if(pb[1].contains("type")){
                             matchStringpro.append(pb[1].substring(pb[1].lastIndexOf("#") + 1) + ":'" + pb[2].substring(pb[2].lastIndexOf("#") + 1)+"'");
@@ -183,7 +183,7 @@ public class Sparql2CypherQuery {
                 }
                 ls.add(stringBuffer.toString());
                 }
-            }else{//单独的约束条件的时候；
+            }else{//单独的约束条件的时候；不包括括号的情况下；
 
             }
             String whereSS = whereS.substring(i+1);
@@ -198,7 +198,7 @@ public class Sparql2CypherQuery {
     }
 
     //将得到的每个约束中的内容进行调整；将准确的Cypher语言形式返回；
-    public void wheresubSeq(StringBuffer sb, ArrayList<String> ls) {
+    private void wheresubSeq(StringBuffer sb, ArrayList<String> ls) {
         for (int i = 0; i <ls.size() ; i++) {
             List<String> list=new ArrayList<String>();
             String sls = ls.get(i);
@@ -210,7 +210,7 @@ public class Sparql2CypherQuery {
                     list.add( m.group().substring(1, m.group().length()-1));
                 }
 
-              for (int j = 0; j <list.size() ; j++) {
+              for (int j = 0; j < list.size() ; j++) {
                 StringBuffer sf= new StringBuffer();
                 String[] sarr = list.get(j).split(" ");
                 sf.append("Relationship"+"."+sarr[1]).append(sarr[0]).append("'"+sarr[2].substring(1,sarr[2].indexOf("^")-1)+"'");
