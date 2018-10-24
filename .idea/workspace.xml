@@ -12,7 +12,6 @@
     <list default="true" id="5ba76624-19e3-41d5-9337-1c2678cd7d8a" name="Default" comment="Commit Success!!!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ModifierQuery/ConstructQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModifierQuery/ConstructQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TransTest/SparqlT2SparqlQuery.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TransTest/SparqlT2SparqlQuery.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -126,14 +125,14 @@
         <counts>
           <entry key="css" value="786" />
           <entry key="dummy" value="15" />
-          <entry key="java" value="4846" />
+          <entry key="java" value="5101" />
           <entry key="jsp" value="98" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="786" />
-          <entry key="JAVA" value="4845" />
+          <entry key="JAVA" value="5100" />
           <entry key="JSP" value="98" />
           <entry key="PLAIN_TEXT" value="15" />
           <entry key="SQL" value="1" />
@@ -149,20 +148,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ModifierQuery/ConstructQuery.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="33" column="36" lean-forward="true" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ModifierQuery/ASKQuery.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="25" column="75" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="75" />
+            <state relative-caret-position="165">
+              <caret line="67" column="23" lean-forward="true" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -402,7 +389,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540372289013" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540373647249" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$/libs" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -445,7 +432,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ASKQuery">
+  <component name="RunManager" selected="Application.ConstructQuery">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -480,13 +467,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Complex_SPARQL2CypherPattern" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="RDFtPattern.Complex_SPARQL2CypherPattern" />
+    <configuration name="ConstructQuery" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ModifierQuery.ConstructQuery" />
       <module name="neo4jjdbcTest" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="RDFtPattern.*" />
+          <option name="PATTERN" value="ModifierQuery.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -652,19 +639,19 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.Tomcat8" />
-      <item itemvalue="Application.Complex_SPARQL2CypherPattern" />
       <item itemvalue="Application.RDFtSaveToNeo4J" />
       <item itemvalue="Application.ASKQuery" />
       <item itemvalue="Application.Sparql2CypherQuery" />
       <item itemvalue="Application.BaseRDFPattern2Cypher" />
+      <item itemvalue="Application.ConstructQuery" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ConstructQuery" />
         <item itemvalue="Application.ASKQuery" />
         <item itemvalue="Application.BaseRDFPattern2Cypher" />
         <item itemvalue="Application.Sparql2CypherQuery" />
         <item itemvalue="Application.RDFtSaveToNeo4J" />
-        <item itemvalue="Application.Complex_SPARQL2CypherPattern" />
       </list>
     </recent_temporary>
   </component>
@@ -731,7 +718,7 @@
       <workItem from="1540189102671" duration="37000" />
       <workItem from="1540189206392" duration="25874000" />
       <workItem from="1540258343282" duration="18360000" />
-      <workItem from="1540291172693" duration="28628000" />
+      <workItem from="1540291172693" duration="29983000" />
     </task>
     <task id="LOCAL-00001" summary="Commit Success!!!">
       <created>1538116760083</created>
@@ -901,7 +888,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540370178720</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Commit Success!!!">
+      <created>1540372302230</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1540372302231</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -937,7 +931,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="465290000" />
+    <option name="totallyTimeSpent" value="466645000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -952,7 +946,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49747476" visible="true" weight="0.0892587" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49747476" visible="true" weight="0.09228442" />
       <window_info id="Structure" order="1" sideWeight="0.5012285" side_tool="true" weight="0.29198185" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Web" order="3" sideWeight="0.50252527" side_tool="true" weight="0.12859304" />
@@ -963,7 +957,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290938" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49633968" weight="0.4051282" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.41538462" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.16410257" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49853587" weight="0.31452993" />
@@ -972,7 +966,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.6043873" weight="0.47692308" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.4969743" visible="true" weight="0.16752137" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.4969743" weight="0.2820513" />
       <window_info anchor="bottom" id="Dependency Viewer" order="13" sideWeight="0.49707174" weight="0.3296355" />
       <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.4977307" weight="0.36752138" />
       <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.3863275" />
@@ -1232,6 +1226,24 @@
           <line>75</line>
           <properties />
           <option name="timeStamp" value="142" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ModifierQuery/ConstructQuery.java</url>
+          <line>46</line>
+          <properties />
+          <option name="timeStamp" value="144" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ModifierQuery/ConstructQuery.java</url>
+          <line>18</line>
+          <properties />
+          <option name="timeStamp" value="145" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ModifierQuery/ConstructQuery.java</url>
+          <line>17</line>
+          <properties />
+          <option name="timeStamp" value="146" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/Data/RDFtSaveToNeo4J.java</url>
@@ -1660,8 +1672,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ModifierQuery/ASKQuery.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="25" column="75" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="75" />
+        <state relative-caret-position="104">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1670,8 +1682,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ModifierQuery/ConstructQuery.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="33" column="36" lean-forward="true" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+        <state relative-caret-position="165">
+          <caret line="67" column="23" lean-forward="true" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

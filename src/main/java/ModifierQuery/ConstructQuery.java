@@ -16,15 +16,40 @@ public class ConstructQuery {
     //构造方法；
     public ConstructQuery(String sparqltString,Statement statement) throws SQLException {
         String constructStr = sparqltString.substring(sparqltString.indexOf("{")+1,sparqltString.indexOf("}"));
-        String whereStr = sparqltString.substring(sparqltString.indexOf("WHERE{")+6,sparqltString.indexOf("}"));
-        //先由sparql[t]转换到sparql语言；
-        String getSparqlWhereStr = getWhereStr(whereStr);//处理约束条件中的返回值，两个已经存在的节点；
+        String whereStr = sparqltString.substring(sparqltString.indexOf("WHERE{")+6,sparqltString.lastIndexOf("}"));
+        String whereStrSub ="";
+        String filterStr="";
+        String getSparqlWhereStr ="";
+
+        String getCypherWhereStr="";
+        String getCypherConStr ="";
+
         String getSparqlconStr = getSparqlConStr(constructStr);//处理构造新的三元组集合；
-        String SPARQLStr=getSparqlWhereStr+getSparqlconStr;
+
+        if(whereStr.contains("FILTER")){//处理约束条件；
+            //先由sparql[t]转换到sparql语言；
+            whereStrSub = whereStr.substring(0,whereStr.indexOf("FILTER"));//三元组模式；
+            filterStr =whereStr.substring(whereStr.indexOf("FILTER"));//FILTER语句中的内容；
+            getSparqlWhereStr = getWhereStr(whereStrSub);//处理约束条件中的返回值，两个已经存在的节点；
+
+            //再由sparql语言转换到cypher语言；
+            getCypherWhereStr = getCypherWhereStr(getSparqlWhereStr)+getFilter(filterStr);
+            getCypherConStr = getCypherConStr(getSparqlconStr);
+
+        }else{
+            //先由sparql[t]转换到sparql语言；
+            getSparqlWhereStr = getWhereStr(whereStr);//处理约束条件中的返回值，两个已经存在的节点；
+            //再由sparql语言转换到cypher语言；
+            getCypherWhereStr = getCypherWhereStr(getSparqlWhereStr);
+            getCypherConStr = getCypherConStr(getSparqlconStr);
+        }
+
+
+        String SPARQLStr=getSparqlconStr+getSparqlWhereStr+filterStr;
         System.out.println("转换后的语句是："+SPARQLStr);
-        //再由sparql语言转换到cypher语言；
-        String getCypherWhereStr = getCypherWhereStr(getSparqlWhereStr);
-        String getCypherConStr = getCypherConStr(getSparqlconStr);
+
+
+
         String CypherStr=getCypherWhereStr+getCypherConStr;
         //先执行getCypherWhereStr返回两个节点；作为新的关系的两个节点存在；
         ResultSet resultSetMatch = statement.executeQuery(CypherStr);
@@ -36,6 +61,11 @@ public class ConstructQuery {
         while(resultSetCreate.next()){
             resultSetCreate.getRow();
         }
+    }
+//处理filter中的语句；
+    private String getFilter(String filterStr) {
+        String filters="";
+        return filters;
     }
 
     //转换到cypher语言中的时候处理的构造语句；
@@ -71,10 +101,10 @@ public class ConstructQuery {
         Statement stm= new ConnectNeo4J().ConnectNeo4J();
         //Construct查询函数；
         //构建构造一个新的关系两个运动员是队友info:isTeammate
-        String SPARQLTString="CONSTRUCT {“Kobe_Bean_Bryant“ info:isTeammate[?ts1,?te1]-1 ”Shaquille_Rashaun_O'Neal“ .}\n" +
+        String SPARQLTString="CONSTRUCT {\"Kobe_Bean_Bryant\" info:isTeammate[?ts1,?te1]-1 \"Shaquille_Rashaun_ONeal\" .}\n" +
                 "WHERE{\n" +
-                "“Kobe_Bean_Bryant“ info:Plays_For[?ts1,?te1]-?n1 \"Los_Angeles_Lakers\" .\n" +
-                "“Shaquille_Rashaun_ONeal“ info:Plays_For[?ts2,?te2]-?n2 \"Los_Angeles_Lakers\" .\n" +
+                "\"Kobe_Bean_Bryant\" info:Plays_For[?ts1,?te1]-?n1 \"Los_Angeles_Lakers\" .\n" +
+                "\"Shaquille_Rashaun_ONeal\" info:Plays_For[?ts2,?te2]-?n2 \"Los_Angeles_Lakers\" .\n" +
                 "FILTER (?ts1 >= ?ts2 and ?te1 <= ?te2) or (?ts1 <= ?ts2 and ?te1 >= ?te2)}\n";
         new ConstructQuery(SPARQLTString,stm);
     }
