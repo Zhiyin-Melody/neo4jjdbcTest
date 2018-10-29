@@ -27,7 +27,7 @@ public class RDFtSaveToNeo4J {
     private static void ReadIntoRDFt(Statement statement) throws SQLException {
         String CypherString = "";
         Model model = ModelFactory.createDefaultModel();
-        String inputFileName = "D:\\a\\nba.ttl";//这个是RDFt数据形式的数据集；
+        String inputFileName = "D:\\a\\nbaEX.ttl";//这个是RDFt数据形式的数据集；
         InputStream in = FileManager.get().open(inputFileName);
         if (in == null) {
             throw new IllegalArgumentException("File: " + inputFileName
