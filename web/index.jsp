@@ -12,7 +12,7 @@
     <script type="text/javascript" src="js/DatasetIntroduction.js"></script>
     <title>RDFt时序数据查询原型系统</title>
 </head>
-<body>
+<body style="background: #e8eeed">
 <H3 id="title">RDFt时序数据查询原型系统</H3>
 
 <div class="datasets">
@@ -256,9 +256,21 @@
 
 <div class="ResultView">
     <p>查询结果展示</p>
-<textarea id="resultViewtextarea" >
-
-</textarea>
+<%--<textarea id="resultViewtextarea" >--%>
+    <table class="restable">
+        <tr><td>ts,te,n</td><td>Team</td></tr>
+        <tr><td>[1992-03-15,1993-07-21]-8</td><td> "Los_Angeles_Lakers" .</td></tr>
+<tr><td>[1993-01-23,1994-11-16]-1 </td><td>"Phoenix_Sun" .</td></tr>
+<tr><td>[1994-08-17,1995-10-21]-2 </td><td>"Phoenix_Sun" .</td></tr>
+<tr><td>[1995-03-21,1996-01-09]-3 </td><td>"Phoenix_Sun" .</td></tr>
+<tr><td>[1996-01-25,1997-06-13]-4 </td><td>"Phoenix_Sun" .</td></tr>
+<tr><td>[1996-03-07,1997-03-10]-1 </td><td>"Dallas_Mavericks" .</td></tr>
+<tr><td>[1997-08-27,1998-11-27]-2 </td><td>"Dallas_Mavericks" .</td></tr>
+<tr><td>[1998-03-22,1999-01-10]-3 </td><td>"Dallas_Mavericks" .</td></tr>
+<tr><td>[1999-02-08,2000-05-26]-9 </td><td>"Los_Angeles_Lakers" .</td></tr>
+<tr><td>[2000-03-24,2001-07-02]-1 </td><td>"Miami_Heat" .</td></tr>
+    </table>
+<%--</textarea>--%>
 </div>
 </body>
 </html>
