@@ -9,6 +9,7 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/codemirror.css">
     <script type="text/javascript" src="js/DatasetIntroduction.js"></script>
     <title>RDFt时序数据查询原型系统</title>
 </head>
@@ -250,8 +251,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdft: <http://www.neu.edu/2018/rdft-syntax-ns#> .
           </textarea>
-    </div>
-    <button class="RUN">查询</button>
+    <button class="RUN" onclick="SPARQLTQueryRunning()">查询</button>
 </div>
 
 <div class="ResultView">

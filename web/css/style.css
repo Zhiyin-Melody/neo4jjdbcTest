@@ -93,6 +93,19 @@
     position: relative;
     top: 10px;
     left: 30px;
+
+    -webkit-appearance: textarea;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    flex-direction: column;
+    cursor: text;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    border-width: 1px;
+    border-style: solid;
+    border-color: initial;
+    border-image: initial;
+    padding: 2px;
 }
 #resultViewtextarea{
     height: 430px;
