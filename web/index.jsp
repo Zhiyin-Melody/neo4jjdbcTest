@@ -257,7 +257,7 @@
 <div class="ResultView">
     <p>查询结果展示</p>
 <textarea id="resultViewtextarea" >
-    展示。。。
+
 </textarea>
 </div>
 </body>

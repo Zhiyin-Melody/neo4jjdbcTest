@@ -36,15 +36,15 @@ function showqueryString(){
             "SELECT ?t ?BirthCity \n" +
             "WHERE {\n" +
             "?People info:hasBirthCity[?t]-1 ?BirthCity .\n" +
-            "FILTER ?People=“Yao_Ming”}\n";
+            "FILTER ?People=\"Yao_Ming\"}\n";
     }
     if(selectNode.value=="queryString2"){
         queryStringTextarea.value=prefix+
-            "SELECT ?ts ?te DISTINCT(?team) \n" +
+            "SELECT ?ts ?te ?team \n" +
             "WHERE{\n" +
             "?People info:Plays_For[?ts,?te]-?n ?team .\n" +
-            "FILTER ?ts >= “1992-01-01” and ?te <= “2001-01-01”\n" +
-            "FILTER ?People=“A.C._Green_Jr.”\n" +
+            "FILTER ?ts >= \"1992-01-01\" and ?te <= \"2001-01-01\"\n" +
+            "FILTER ?People=\"AC_Green_Jr\"\n" +
             "}\n";
     }
     if(selectNode.value=="queryString3"){
@@ -53,7 +53,7 @@ function showqueryString(){
             "WHERE{\n" +
             "?s info:Name ?name\n" +
             "?s ?p[?ts,?te]-?n ?o .\n" +
-            "FILTER ?name =“Shaquille_Rashaun_O'Neal”\n" +
+            "FILTER ?name =\"Shaquille_Rashaun_ONeal\"\n" +
             "} \n" +
             "LIMIT 20\n";
     }
@@ -61,14 +61,14 @@ function showqueryString(){
         queryStringTextarea.value=prefix+
             "SELECT ?Team ?Score\n" +
             "WHERE{\n" +
-            "{“Allen_Ezail_Iverson“ info:Plays_For[?ts1,?te1]-?n11 ?Team .\n" +
-            "“Allen_Ezail_Iverson“ info:Score1[?ts1,?te1]-?n12 ?Score .\n" +
+            "{\"Allen_Ezail_Iverson\" info:Plays_For[?ts1,?te1]-?n11 ?Team .\n" +
+            "\"Allen_Ezail_Iverson\" info:Score1[?ts1,?te1]-?n12 ?Score .\n" +
             "FILTER ?Team =\"Philadelphia_76ers\" \n" +
-            "FILTER ?ts1 >= “2006-01-01” and ?te1 <= “2007-01-01”}\n" +
-            "{“Allen_Ezail_Iverson“ info:Plays_For[?ts2,?te2]-?n21 ?Team .\n" +
-            "“Allen_Ezail_Iverson“ info:Score1[?ts2,?te2]-?n22 ?Score .\n" +
+            "FILTER ?ts1 >= \"2006-01-01\" and ?te1 <= \"2007-01-01\"}\n" +
+            "{\"Allen_Ezail_Iverson\" info:Plays_For[?ts2,?te2]-?n21 ?Team .\n" +
+            "\"Allen_Ezail_Iverson\" info:Score1[?ts2,?te2]-?n22 ?Score .\n" +
             "FILTER ?Team =\"Denver_Nuggets\"\n" +
-            "FILTER ?ts2 >= “2006-01-01” and ?te2 <= “2007-01-01”}\n" +
+            "FILTER ?ts2 >= \"2006-01-01\" and ?te2 <= \"2007-01-01\"}\n" +
             "}\n";
     }
     if(selectNode.value=="queryString5"){
@@ -85,29 +85,29 @@ function showqueryString(){
         queryStringTextarea.value=prefix+
             "SELECT (MAX(?Grade1) AS ?Score) (MAX(?Grade2) AS ?Score) \n" +
             "WHERE{\n" +
-            "{“Jeremy_ShuHow_Lin“ info:Plays_For[?ts1,?te1]-?n11> \"Houston_Rockets\" .\n" +
-            "“Jeremy_ShuHow_Lin“ info:Score1[?ts1, ?te1]-?n12> ?Grade1 .}\n" +
+            "{\"Jeremy_ShuHow_Lin\" info:Plays_For[?ts1,?te1]-?n11> \"Houston_Rockets\" .\n" +
+            "\"Jeremy_ShuHow_Lin\" info:Score1[?ts1, ?te1]-?n12> ?Grade1 .}\n" +
             "UNION\n" +
-            "{“Jeremy_ShuHow_Lin“ info:Plays_For[?ts2,?te2]-?n21> \" Los_Angeles_Lakers \" . “Jeremy_ShuHow_Lin“ info:Score1[?ts2, ?te2]-?n22> ?Grade2 .}}\n";
+            "{\"Jeremy_ShuHow_Lin\" info:Plays_For[?ts2,?te2]-?n21> \"Los_Angeles_Lakers\" . \"Jeremy_ShuHow_Lin\" info:Score1[?ts2, ?te2]-?n22> ?Grade2 .}}\n";
     }
     if(selectNode.value=="queryString7"){
         queryStringTextarea.value=prefix+
-            "ASK {“Kobe_Bean_Bryant” info:Plays_For[?ts,?te]-?n \"Los_Angeles_Lakers\" .\n" +
-            "FILTER ?ts >= “1996-01-01“ and ?te <= ”2016-12-30“\n" +
+            "ASK {\"Kobe_Bean_Bryant\" info:Plays_For[?ts,?te]-?n \"Los_Angeles_Lakers\" .\n" +
+            "FILTER ?ts >= \"1996-01-01\" and ?te <= \"2016-12-30\"\n" +
             "}\n";
     }
     if(selectNode.value=="queryString8"){
         queryStringTextarea.value=prefix+
-            "CONSTRUCT {“Kobe_Bean_Bryant“ info:isTeammate[?ts1,?te1]-1 ”Shaquille_Rashaun_O'Neal“ .}\n" +
+            "CONSTRUCT {\"Kobe_Bean_Bryant\" info:isTeammate[?ts1,?te1]-1 \"Shaquille_Rashaun_ONeal\" .}\n" +
             "WHERE{\n" +
-            "“Kobe_Bean_Bryant“ info:Plays_For[?ts1,?te1]-?n1 \"Los_Angeles_Lakers\" .\n" +
-            "“Shaquille_Rashaun_O'Neal“ info:Plays_For[?ts2,?te2]-?n2 \"Los_Angeles_Lakers\" .\n" +
+            "\"Kobe_Bean_Bryant\" info:Plays_For[?ts1,?te1]-?n1 \"Los_Angeles_Lakers\" .\n" +
+            "\"Shaquille_Rashaun_ONeal\" info:Plays_For[?ts2,?te2]-?n2 \"Los_Angeles_Lakers\" .\n" +
             "FILTER (?ts1 >= ?ts2 and ?te1 <= ?te2) or (?ts1 <= ?ts2 and ?te1 >= ?te2)}\n";
     }
     if(selectNode.value=="queryString9"){
         queryStringTextarea.value=prefix+
             "DESCRIBE ?People {?People info:Plays_For[?ts,?te]-?n \"Golden_State_Warriors\" . \n" +
-            "FILTER ?ts >= “2017-12-30“ and ?te <= ”2018-12-30“\n" +
+            "FILTER ?ts >= \"2017-12-30\" and ?te <= \"2018-12-30\"\n" +
             "}\n";
     }
 }
