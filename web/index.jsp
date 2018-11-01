@@ -52,9 +52,6 @@
                     <td>关系</td><td>数量</td>
                 </tr>
                 <tr>
-                    <td>Name</td><td>4592</td>
-                </tr>
-                <tr>
                     <td>hasBirthCity</td><td>3519</td>
                 </tr>
                 <tr>
