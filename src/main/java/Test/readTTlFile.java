@@ -10,6 +10,7 @@ import java.io.*;
  */
 public class readTTlFile {
     public static void readTxtFile(String filePath){
+        int count=0;
         try {
             String encoding="UTF-8";
             File file=new File(filePath);
@@ -17,15 +18,19 @@ public class readTTlFile {
                 InputStreamReader read = new InputStreamReader( new FileInputStream(file),encoding);//考虑到编码格式
                 BufferedReader bufferedReader = new BufferedReader(read);
                 String lineTxt = null;//<id_y8wzee_1ul_t19226>	<extractionSource>	<http://en.wikipedia.org/wiki/Juan_Mauricio_Soler>-.
-                String finds="Chukwuma_Akabueze";
+                String finds="isAffiliatedTo";
                         //"<http://en.wikipedia.org/wiki/Juan_Mauricio_Soler>";//"<id_y8wzee_1ul_t19226>"
                 while((lineTxt = bufferedReader.readLine()) != null){
                     if(lineTxt.contains(finds)){
                         System.out.println("true");
                         System.out.println(lineTxt);
+
+                        count++;
+
                     }
 
                 }
+                System.out.println("总数是："+count);
                 read.close();
             }else{
                 System.out.println("找不到指定的文件");
@@ -40,7 +45,7 @@ public class readTTlFile {
     public static void main(String[] args) throws IOException {
         BufferedReader bfr = new BufferedReader(new FileReader("D:\\DataSet\\yago_no01\\yagoGeonamesOnlyData.ttl"));
         String str = null;
-        String filePath ="D:\\DataSet\\yago_no\\yagoConteXtFacts_en.ttl";//<Ian_Rodgerson>occursSince<id_y8wzee_1ul_t19226>
+        String filePath ="D:\\DataSet\\yago_en\\yagoFacts.ttl";//<Ian_Rodgerson>occursSince<id_y8wzee_1ul_t19226>
         int lineNumber = 0;
        /* while ((str = bfr.readLine()) != null) {
             lineNumber++;

@@ -52,9 +52,6 @@
                     <td>关系</td><td>数量</td>
                 </tr>
                 <tr>
-                    <td>Name</td><td>4592</td>
-                </tr>
-                <tr>
                     <td>hasBirthCity</td><td>3519</td>
                 </tr>
                 <tr>
@@ -251,25 +248,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdft: <http://www.neu.edu/2018/rdft-syntax-ns#> .
           </textarea>
-        <div class="CodeMirror cm-s-default CodeMirror-wrap" style="width: 650px; height: 220px;"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 4px; left: 34px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true" style="bottom: 0px; display: block;"><div style="min-width: 1px; height: 233px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1">
-            <div class="CodeMirror-sizer" style="margin-left: 30px; margin-bottom: -17px; border-right-width: 13px; min-height: 233px; padding-right: 17px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines">
-                <div style="position: relative; outline: none;">
-                    <div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
-                        <div class="CodeMirror-linenumber CodeMirror-gutter-elt">
-                        </div></div><div class="CodeMirror-measure"></div>
-                    <div style="position: relative; z-index: 1;"></div>
-                    <div class="CodeMirror-cursors">
-                        <div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 15px;">&nbsp;</div></div>
-                    <div class="CodeMirror-code" style="">
-                        <div class="CodeMirror-activeline" style="position: relative;">
-                            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
-                            <div class="CodeMirror-gutter-wrapper" style="left: -30px;">
-                                <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">
-                           <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">
-                        <span cm-text="">​</span></span></pre></div></div></div></div></div></div>
-            <div style="position: absolute; height: 13px; width: 1px; top: 233px;"></div><div class="CodeMirror-gutters" style="height: 246px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div></div></div></div>
-        </div>
-    <button class="RUN">查询</button>
+    <button class="RUN" onclick="SPARQLTQueryRunning()">查询</button>
 </div>
 
 <div class="ResultView">
