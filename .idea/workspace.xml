@@ -11,8 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5ba76624-19e3-41d5-9337-1c2678cd7d8a" name="Default" comment="Commit Success!!!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/neo4jjdbcTest_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/neo4jjdbcTest_war_exploded/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/readTTlFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/readTTlFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Data/RDFtSaveToNeo4J.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/RDFtSaveToNeo4J.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -104,19 +103,19 @@
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.21" value="1" />
-          <entry key="project.open.time.22" value="1" />
+          <entry key="project.open.time.22" value="2" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.28" value="2" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.42" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="5" />
-          <entry key="java" value="66" />
+          <entry key="java" value="67" />
           <entry key="js" value="4" />
           <entry key="jsp" value="4" />
         </counts>
@@ -124,7 +123,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="5" />
-          <entry key="JAVA" value="66" />
+          <entry key="JAVA" value="67" />
           <entry key="JSP" value="4" />
           <entry key="JavaScript" value="4" />
         </counts>
@@ -133,7 +132,7 @@
         <counts>
           <entry key="css" value="885" />
           <entry key="dummy" value="15" />
-          <entry key="java" value="6794" />
+          <entry key="java" value="6808" />
           <entry key="js" value="53" />
           <entry key="jsp" value="294" />
         </counts>
@@ -141,7 +140,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="885" />
-          <entry key="JAVA" value="6793" />
+          <entry key="JAVA" value="6807" />
           <entry key="JSP" value="294" />
           <entry key="JavaScript" value="53" />
           <entry key="PLAIN_TEXT" value="15" />
@@ -164,11 +163,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Test/readTTlFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="532">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
             </state>
           </provider>
         </entry>
@@ -213,6 +212,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="418">
               <caret line="22" column="24" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Data/RDFtSaveToNeo4J.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -300,13 +311,13 @@
         <option value="$PROJECT_DIR$/src/main/java/ModifierQuery/ASKQuery.java" />
         <option value="$PROJECT_DIR$/src/main/java/ModifierQuery/DescribeQuery.java" />
         <option value="$PROJECT_DIR$/src/main/java/ModifierQuery/ConstructQuery.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Data/RDFtSaveToNeo4J.java" />
         <option value="$PROJECT_DIR$/web/js/DatasetIntroduction.js" />
         <option value="$PROJECT_DIR$/web/css/style.css" />
         <option value="$PROJECT_DIR$/web/js/getDataToWeb.jsp" />
         <option value="$PROJECT_DIR$/web/js/getDataToWeb.js" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/Test/readTTlFile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Data/RDFtSaveToNeo4J.java" />
       </list>
     </option>
   </component>
@@ -348,8 +359,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="128" />
-    <option name="y" value="21" />
+    <option name="x" value="172" />
+    <option name="y" value="2" />
     <option name="width" value="1216" />
     <option name="height" value="735" />
   </component>
@@ -360,7 +371,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -461,6 +471,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -475,7 +486,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541088320752" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542188132910" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$/libs" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -518,7 +529,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.readTTlFile">
+  <component name="RunManager" selected="Application.RDFtSaveToNeo4J">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -733,8 +744,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.readTTlFile" />
         <item itemvalue="Application.RDFtSaveToNeo4J" />
+        <item itemvalue="Application.readTTlFile" />
         <item itemvalue="Application.ConstructQuery" />
         <item itemvalue="Application.DescribeQuery" />
         <item itemvalue="Application.ASKQuery" />
@@ -812,7 +823,8 @@
       <workItem from="1541084958989" duration="7000" />
       <workItem from="1541085060941" duration="471000" />
       <workItem from="1541086151423" duration="935000" />
-      <workItem from="1542180628026" duration="339000" />
+      <workItem from="1542180628026" duration="4633000" />
+      <workItem from="1542201337840" duration="41000" />
     </task>
     <task id="LOCAL-00001" summary="Commit Success!!!">
       <created>1538116760083</created>
@@ -1066,7 +1078,14 @@
       <option name="project" value="LOCAL" />
       <updated>1541085126769</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Commit Success!!!">
+      <created>1542180989644</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1542180989645</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1102,7 +1121,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="505305000" />
+    <option name="totallyTimeSpent" value="509640000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1117,7 +1136,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4961637" visible="true" weight="0.23298033" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4961637" visible="true" weight="0.18683812" />
       <window_info id="Structure" order="1" sideWeight="0.5012285" side_tool="true" weight="0.29198185" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Web" order="3" sideWeight="0.50383633" side_tool="true" weight="0.17560554" />
@@ -1127,7 +1146,7 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290938" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49633968" weight="0.31965813" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49633968" visible="true" weight="0.21880342" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.30208334" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1137,7 +1156,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.6043873" weight="0.47692308" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.4969743" weight="0.328125" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.4969743" weight="0.46666667" />
       <window_info anchor="bottom" id="Dependency Viewer" order="13" sideWeight="0.49707174" weight="0.3296355" />
       <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.4977307" weight="0.36752138" />
       <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.3863275" />
@@ -1799,21 +1818,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Data/RDFtSaveToNeo4J.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="36" column="50" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/getDataToWeb.jsp" />
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1216">
           <caret line="64" column="21" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Test/readTTlFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
@@ -1851,10 +1867,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Test/readTTlFile.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Data/RDFtSaveToNeo4J.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="114">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
