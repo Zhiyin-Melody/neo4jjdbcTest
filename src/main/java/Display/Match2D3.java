@@ -14,7 +14,6 @@ import java.util.List;
 public class Match2D3 {
     Driver driver;
 
-
     public Match2D3(String uri, String user, String password){
         driver = GraphDatabase.driver(uri, AuthTokens.basic(user,password));
     }

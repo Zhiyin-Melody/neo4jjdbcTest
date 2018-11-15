@@ -11,12 +11,16 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/codemirror.css">
     <script type="text/javascript" src="js/DatasetIntroduction.js"></script>
+    <script type="text/javascript" src="js/zoomcharts.js"></script>
+    <script type="text/javascript" src="js/dispalyByZoomCharts.js"></script>
     <title>RDFt时序数据查询原型系统</title>
 </head>
 <body style="background: #e8eeed">
 <H3 id="title">RDFt时序数据查询原型系统</H3>
+<div id="demo">
 
-<div class="datasets">
+</div>
+<%--<div class="datasets">
     <div class="endpointWrapper">
         <p id="head">选择数据集</p>
         <select name="select" id="select" class="endpointText form-control selectized" onchange="show(this.value)">
@@ -253,7 +257,7 @@
 
 <div class="ResultView">
     <p>查询结果展示</p>
-<%--<textarea id="resultViewtextarea" >--%>
+&lt;%&ndash;<textarea id="resultViewtextarea" >&ndash;%&gt;
     <table class="restable">
         <tr><td>ts,te,n</td><td>Team</td></tr>
         <tr><td>[1992-03-15,1993-07-21]-8</td><td> "Los_Angeles_Lakers" .</td></tr>
@@ -267,7 +271,7 @@
 <tr><td>[1999-02-08,2000-05-26]-9 </td><td>"Los_Angeles_Lakers" .</td></tr>
 <tr><td>[2000-03-24,2001-07-02]-1 </td><td>"Miami_Heat" .</td></tr>
     </table>
-<%--</textarea>--%>
-</div>
+&lt;%&ndash;</textarea>&ndash;%&gt;
+</div>--%>
 </body>
 </html>
