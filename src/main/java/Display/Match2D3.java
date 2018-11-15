@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * @Author:lizhiyin；
- * @Description:将Neo4J数据库中的数据用可视化展现在页面上的代码；
+ * @Description:将Neo4J数据库中的数据用可视化展现在页面上的代码；根据视频得到的部分代码；
  * @Date: Created in 2018/11/14 22:13
  * @Pram:
  */
