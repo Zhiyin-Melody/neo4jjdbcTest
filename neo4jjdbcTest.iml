@@ -50,5 +50,6 @@
     <orderEntry type="library" name="jython-standalone-2.7.0" level="project" />
     <orderEntry type="library" name="javax.servlet" level="project" />
     <orderEntry type="library" name="servlet-api" level="project" />
+    <orderEntry type="library" name="neo4j-java-driver-1.0.0" level="project" />
   </component>
 </module>

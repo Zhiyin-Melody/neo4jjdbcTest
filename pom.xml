@@ -125,5 +125,12 @@
     </repositories>
     <!--**这是daoru.ttl的依赖关系，到此结束**-->
     <description>A simple tool to load RDF ontologies in turtle format into Neo4j Databases.</description>
+<!--导入Neo4j的依赖-->
+    <dependency>
+        <groupId>org.neo4j.driver</groupId>
+        <artifactId>neo4j-java-driver</artifactId>
+        <version>1.0.0</version>
+    </dependency>
+
 
 </project>
