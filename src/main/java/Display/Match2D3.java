@@ -2,7 +2,6 @@ package Display;
 
 import org.neo4j.driver.v1.*;
 import org.neo4j.driver.v1.types.Path;
-
 import java.util.List;
 
 /**
