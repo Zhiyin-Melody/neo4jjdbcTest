@@ -43,7 +43,7 @@ public class Match2D3 {
 
     public static void main(String[] args) {
 
-       Match2D3 example = new Match2D3("bolt:neo4j://202.199.6.64:7474/", "neo4j", "123456");
+       Match2D3 example = new Match2D3("jdbc:neo4j://202.199.6.64:7474/", "neo4j", "123456");
        example.gernerateJsonFiles();
     }
 }

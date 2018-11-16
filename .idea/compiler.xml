@@ -10,8 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="neo4j-sparql-plugin" target="8" />
-      <module name="neo4jjdbcTest" target="1.5" />
+      <module name="neo4jjdbcTest" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
