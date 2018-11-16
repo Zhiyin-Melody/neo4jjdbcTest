@@ -117,7 +117,6 @@
                 <tr>
                     <td>occursSince/Until2</td><td>9,840</td>
                 </tr>
-
                 <tr>
                     <td>wasBornIn</td><td>56,415</td>
                 </tr>
