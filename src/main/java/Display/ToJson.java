@@ -48,7 +48,7 @@ public class ToJson {
 
         try {
 
-            FileOutputStream fileOutputStream = new FileOutputStream("D:\\Idea\\Workspace\\TestTraining\\web\\data.json");
+            FileOutputStream fileOutputStream = new FileOutputStream("D:\\IDEA Workspace\\neo4jjdbcTest\\web\\Data\\NBAdata.json");
 
             fileOutputStream.write(json.getBytes());
 
@@ -75,4 +75,5 @@ public class ToJson {
         return json;
 
     }
+
 }

@@ -19,7 +19,7 @@ import java.util.*;
         static Driver driver = null;
 
         public static void getDriver(){
-            String uri = "jdbc:neo4j://202.199.6.64:7687";
+            String uri = "bolt://202.199.6.64:7687";
             String user = "neo4j";//写你自己的neo4j的用户名
             String password = "123456";//写你自己的neo4j的密码
             driver = GraphDatabase.driver(uri, AuthTokens.basic(user,password));
@@ -61,14 +61,16 @@ import java.util.*;
                             Iterator<String> relKeys = relationship.keys().iterator();
 
                             relationBuffer.append("{");
-                            relationBuffer.append("\"source\":");
+                            relationBuffer.append("\"from\":");//source
                             relationBuffer.append(startNodeId);
                             relationBuffer.append(",");
-                            relationBuffer.append("\"target\":");
+                            relationBuffer.append("\"to\":");//target
                             relationBuffer.append(endNodeId);
                             relationBuffer.append(",");
                             relationBuffer.append("\"type\":");
                             relationBuffer.append("\""+relType+"\"");
+                            relationBuffer.append(",");
+                            relationBuffer.append("\"style\":{\"fillColor\":\"rgba(28,124,213,1)\", \"toDecoration\":\"arrow\"}");
 
                             //这里处理关系属性
                             while(relKeys.hasNext()){
@@ -166,6 +168,8 @@ import java.util.*;
                             relationNodesBuffer.append(",");
                             relationNodesBuffer.append("\"type\":");
                             relationNodesBuffer.append("\""+nodeType+"\"");
+                            relationNodesBuffer.append(",");
+                            relationNodesBuffer.append("\"style\":{ \"fillColor\": \"rgba(28,124,213,0.8)\"");
 
                             //将节点添加到set集合中
                             nodeSet.add(node.id());
@@ -193,10 +197,12 @@ import java.util.*;
 
         public static void main(String... args){
 
-            String cypher = "match p=(:数据库课程)-[*..1]-() return p";
+            String cypher = "match p=(n)-[*..1]-(m) return p";
 
             StringBuffer relationBuffer = executeFindRelationCypher(cypher);
             StringBuffer relationNodesBuffer = executeFindRelationNodesCypher(cypher);
+            System.out.println("关系是："+relationBuffer);
+            System.out.println("节点是："+relationNodesBuffer);
             ToJson toJson = new ToJson(relationNodesBuffer,relationBuffer);
 
             toJson.writeJson();

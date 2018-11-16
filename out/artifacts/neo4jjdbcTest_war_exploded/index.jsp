@@ -8,45 +8,54 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/codemirror.css">
     <script type="text/javascript" src="js/DatasetIntroduction.js"></script>
-    <script type="text/javascript" src="js/zoomcharts.js"></script>
+
+    <script type="text/javascript" src="js/jquery-2.1.4.js"></script><%--记住最先引用--%>
+    <script type="text/javascript" src="zoomcharts/zoomcharts.js"></script>
     <script type="text/javascript" src="js/dispalyByZoomCharts.js"></script>
+
+    <script type="text/javascript" src="js/jQuery.js"></script>
+    <script type="text/javascript" src="js/d3.js"></script>
+    <script type="text/javascript" src="js/d3.min.js"></script>
+
     <title>RDFt时序数据查询原型系统</title>
 </head>
-<body style="background: #e8eeed">
+<body >
 <H3 id="title">RDFt时序数据查询原型系统</H3>
-<div id="demo">
 
-</div>
-<%--<div class="datasets">
-    <div class="endpointWrapper">
-        <p id="head">选择数据集</p>
-        <select name="select" id="select" class="endpointText form-control selectized" onchange="show(this.value)">
-            <option value="datasets" selected="selected">-请选择-</option>
-            <div class="selectize-control endpointText form-control single plugin-allowRegularTextInput">
-                <div class="optgroup" >
-                    <option value="dataset1">
-                        <div class="endpointOptionRow selected" data-selectable="" data-value="dataset1">
-                            <div class="endpointUrl">dataset1：</div>
-                            <div class="endpointTitle">NBA篮球运动员个人职业生涯信息</div>
-                        </div>
-                    </option>
-                    <option value="dataset2">
-                        <div class="endpointOptionRow selected" data-selectable="" data-value="dataset2">
-                            <div class="endpointUrl">dataset2：</div>
-                            <div class="endpointTitle">YAGO时序部分数据集</div>
-                        </div>
-                    </option>
-                </div>
-            </div>
-        </select>
-    </div>
+<div class="datasets">
+
 
     <div class="IntroductionDataset">
-        <p id="head1">数据集介绍</p>
+
         <div class="information" >
+            <div class="endpointWrapper">
+                <p id="head">数据集介绍</p>
+                <select name="select" id="select" class="endpointText form-control selectized" onchange="show(this.value)">
+                    <option value="datasets" selected="selected">-请选择-</option>
+                    <div class="selectize-control endpointText form-control single plugin-allowRegularTextInput">
+                        <div class="optgroup" >
+                            <option value="dataset1">
+                                <div class="endpointOptionRow selected" data-selectable="" data-value="dataset1">
+                                    <div class="endpointUrl">dataset1：</div>
+                                    <div class="endpointTitle">NBA篮球运动员个人职业生涯信息</div>
+                                </div>
+                            </option>
+                            <option value="dataset2">
+                                <div class="endpointOptionRow selected" data-selectable="" data-value="dataset2">
+                                    <div class="endpointUrl">dataset2：</div>
+                                    <div class="endpointTitle">YAGO时序部分数据集</div>
+                                </div>
+                            </option>
+                        </div>
+                    </div>
+                </select>
+            </div>
             <p id="info1" style="display: none">    dataset1数据集，主要介绍了NBA篮球运动员个人信息以及历届比赛（常规赛）成绩信息。
                 从官方网站上爬取了约4,000个NBA球星的基本信息，构造了125,793条RDFt数据模型的三元组。
                 主要包括10种谓语关系，其中，包括不带有时间信息的基本的三元组，带有时间点的RDFt三元组以及带有时间间隔的RDFt三元组。
@@ -56,31 +65,31 @@
                     <td>关系</td><td>数量</td>
                 </tr>
                 <tr>
-                    <td>hasBirthCity</td><td>3519</td>
+                    <td>hasBirthCity</td><td>3,519</td>
                 </tr>
                 <tr>
-                    <td>Stature</td><td>4579</td>
+                    <td>Stature</td><td>4,579</td>
                 </tr>
                 <tr>
-                    <td>Weight</td><td>4573</td>
+                    <td>Weight</td><td>4,573</td>
                 </tr>
                 <tr>
-                    <td>High_School</td><td>3855</td>
+                    <td>High_School</td><td>3,855</td>
                 </tr>
                 <tr>
-                    <td>Position</td><td>5658</td>
+                    <td>Position</td><td>5,658</td>
                 </tr>
                 <tr>
-                    <td>Plays_For</td><td>24761</td>
+                    <td>Plays_For</td><td>24,761</td>
                 </tr>
                 <tr>
-                    <td>Rebound</td><td>24761</td>
+                    <td>Rebound</td><td>24,761</td>
                 </tr>
                 <tr>
-                    <td>Assist</td><td>24761</td>
+                    <td>Assist</td><td>24,761</td>
                 </tr>
                 <tr>
-                    <td>Score1</td><td>24761</td>
+                    <td>Score1</td><td>24,761</td>
                 </tr>
             </table>
             </p>
@@ -94,37 +103,38 @@
                     <td>关系</td><td>数量</td>
                 </tr>
                 <tr>
-                    <td>DiedIn</td><td>22274</td>
+                    <td>DiedIn</td><td>22,274</td>
                 </tr>
                 <tr>
-                    <td>diedOnDate</td><td>315528</td>
+                    <td>diedOnDate</td><td>315,528</td>
                 </tr>
                 <tr>
-                    <td>happenedIn</td><td>5192</td>
+                    <td>happenedIn</td><td>5,192</td>
                 </tr>
                 <tr>
-                    <td>happenedOnDate</td><td>22039</td>
+                    <td>happenedOnDate</td><td>22,039</td>
                 </tr>
                 <tr>
-                    <td>occursSince/Until2</td><td>9840</td>
+                    <td>occursSince/Until2</td><td>9,840</td>
+                </tr>
+
+                <tr>
+                    <td>wasBornIn</td><td>56,415</td>
                 </tr>
                 <tr>
-                    <td>isLocatedIn</td><td>95327</td>
+                    <td>wasBornOnDate</td><td>685,746</td>
                 </tr>
                 <tr>
-                    <td>livesIn</td><td>16405</td>
+                    <td>wasCreatedOnDate</td><td>467,194</td>
                 </tr>
                 <tr>
-                    <td>wasBornIn</td><td>56415</td>
+                    <td>wasDestoryedOnDate</td><td>24,218</td>
                 </tr>
                 <tr>
-                    <td>wasBornOnDate</td><td>685746</td>
+                    <td>playsFor</td><td>525,374</td>
                 </tr>
                 <tr>
-                    <td>wasCreatedOnDate</td><td>467194</td>
-                </tr>
-                <tr>
-                    <td>wasDestoryedOnDate</td><td>24218</td>
+                    <td>isAffiliatedTo</td><td>579,397</td>
                 </tr>
             </table>
             </p>
@@ -133,10 +143,16 @@
 
     <div class="viewData">
         <p>Neo4J存储形式</p>
-        <img id="NBA" src="img/运动员数据集2.png" style="display: none">
-        <img id="YAGO" src="img/运动员数据集图片.png" style="display: none">
+        <%--<img id="NBA" src="img/运动员数据集2.png" style="display: none">
+        <img id="YAGO" src="img/运动员数据集图片.png" style="display: none">--%>
 
+        <%--Neo4J数据库展示部分；style="background: #e8eeed"--%>
+        <div id="echartDemo" >
+
+        </div>
     </div>
+
+
 </div>
 
 <div class="query">
@@ -257,7 +273,7 @@
 
 <div class="ResultView">
     <p>查询结果展示</p>
-&lt;%&ndash;<textarea id="resultViewtextarea" >&ndash;%&gt;
+<%--<textarea id="resultViewtextarea" >--%>
     <table class="restable">
         <tr><td>ts,te,n</td><td>Team</td></tr>
         <tr><td>[1992-03-15,1993-07-21]-8</td><td> "Los_Angeles_Lakers" .</td></tr>
@@ -271,7 +287,7 @@
 <tr><td>[1999-02-08,2000-05-26]-9 </td><td>"Los_Angeles_Lakers" .</td></tr>
 <tr><td>[2000-03-24,2001-07-02]-1 </td><td>"Miami_Heat" .</td></tr>
     </table>
-&lt;%&ndash;</textarea>&ndash;%&gt;
-</div>--%>
+<%--</textarea>--%>
+</div>
 </body>
 </html>

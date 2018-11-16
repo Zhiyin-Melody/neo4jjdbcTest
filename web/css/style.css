@@ -35,17 +35,18 @@
 .optgroup2{
     data-group:"catalogue";
 }
+
 .IntroductionDataset{
-    height: 490px;
-    width: 500px;
+    height: 460px;
+    width: 420px;
     position: absolute;
-    left: 20px;
-    top: 130px;
+    left: 910px;
+    top: 55px;
     background-color: #a8cdff;
 }
 .information{
     position: absolute;
-    top: 30px;
+
     left: 30px;
     right: 30px;
 }
@@ -57,11 +58,17 @@
 }
 .viewData{
     height: 550px;
-    width: 720px;
+    width: 750px;
    background-color: #a8cdff;
     position: absolute;
-    left: 600px;
-    top: 60px;
+    left: 20px;
+    right:900px;
+    top: 55px;
+}
+#echartDemo{
+    background-color: #ffffff;
+    width:880px;
+    height:500px;
 }
 .query{
     height: 500px;

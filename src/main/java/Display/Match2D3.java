@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * @Author:lizhiyin；
- * @Description:将Neo4J数据库中的数据用可视化展现在页面上的代码；根据视频得到的部分代码；
+ * @Description:将Neo4J数据库中的数据用可视化展现在页面上的代码；根据视频得到的部分代码；这个代码先不用了；
  * @Date: Created in 2018/11/14 22:13
  * @Pram:
  */
@@ -43,7 +43,7 @@ public class Match2D3 {
 
     public static void main(String[] args) {
 
-       Match2D3 example = new Match2D3("jdbc:neo4j://202.199.6.64:7474/", "neo4j", "123456");
+       Match2D3 example = new Match2D3("bolt://202.199.6.64:7474/", "neo4j", "123456");
        example.gernerateJsonFiles();
     }
 }
