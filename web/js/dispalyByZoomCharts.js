@@ -1,4 +1,5 @@
-var chartContainer = document.getElementById("demo");
+$(function(){
+var chartContainer = document.getElementById("echartDemo");
 
 // dynamically create the element that will be used for the context menu.
 // an existing element can be used as well.
@@ -15,18 +16,20 @@ document.body.appendChild(menuElement);
 
 var chart = new ZoomCharts.NetChart({
     container: chartContainer,
-    data: {
-    "nodes":[
-        {"id":"n1", "loaded":true, "style":{ "fillColor": "rgba(236,46,46,0.8)", "label":"Node1"}},
-        {"id":"n2", "loaded":true, "style":{ "fillColor": "rgba(47,195,47,0.8)", "label":"Node2"}},
-        {"id":"n3", "loaded":true, "style":{ "fillColor": "rgba(28,124,213,0.8)", "label":"Node3"}}
-    ],
-        "links":[
-        {"id":"l1","from":"n1", "to":"n2", "style":{"fillColor":"rgba(236,46,46,1)", "toDecoration":"arrow"}},
-        {"id":"l2","from":"n2", "to":"n3", "style":{"fillColor":"rgba(47,195,47,1)", "toDecoration":"arrow"}},
-        {"id":"l3","from":"n3", "to":"n1", "style":{"fillColor":"rgba(28,124,213,1)", "toDecoration":"arrow"}}
-    ]
-},
+    data: { 
+        preloaded: {
+            "nodes":[
+                {"id":"n1", "loaded":true, "style":{ "fillColor": "rgba(236,46,46,0.8)", "label":"Node1"}},
+                {"id":"n2", "loaded":true, "style":{ "fillColor": "rgba(47,195,47,0.8)", "label":"Node2"}},
+                {"id":"n3", "loaded":true, "style":{ "fillColor": "rgba(28,124,213,0.8)", "label":"Node3"}}
+            ],
+                "links":[
+                {"id":"l1","from":"n1", "to":"n2", "style":{"fillColor":"rgba(236,46,46,1)", "toDecoration":"arrow"}},
+                {"id":"l2","from":"n2", "to":"n3", "style":{"fillColor":"rgba(47,195,47,1)", "toDecoration":"arrow"}},
+                {"id":"l3","from":"n3", "to":"n1", "style":{"fillColor":"rgba(28,124,213,1)", "toDecoration":"arrow"}}
+            ]
+        }
+    },
     events: {
         onRightClick: function (event, args) {
             // the menu element is positioned based on the mouse pointer coordinates.
@@ -86,3 +89,4 @@ function disposeDemo() {
     // only required for documentation page on zoomcharts.com
     disposeDemo = null;
 }
+});

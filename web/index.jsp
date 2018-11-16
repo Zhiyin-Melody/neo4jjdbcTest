@@ -13,6 +13,9 @@
     <script type="text/javascript" src="js/DatasetIntroduction.js"></script>
     <script type="text/javascript" src="js/zoomcharts.js"></script>
     <script type="text/javascript" src="js/dispalyByZoomCharts.js"></script>
+    <script type="text/javascript" src="js/jQuery.js"></script>
+    <script type="text/javascript" src="js/d3.js"></script>
+    <script type="text/javascript" src="js/d3.min.js"></script>
     <title>RDFt时序数据查询原型系统</title>
 </head>
 <body style="background: #e8eeed">
