@@ -70,9 +70,9 @@ import java.util.*;
                             relationBuffer.append("\"type\":");
                             relationBuffer.append("\""+relType+"\"");
                             relationBuffer.append(",");
-                            relationBuffer.append("\"style\":{\"fillColor\":\"rgba(28,124,213,1)\", \"toDecoration\":\"arrow\"}");
+                            relationBuffer.append("\"style\":{\"fillColor\":\"rgba(0,0,0,1)\", \"toDecoration\":\"arrow\"}");
 
-                            //这里处理关系属性
+                            //这里处理关系属性rgba(28,124,213,1);
                             while(relKeys.hasNext()){
                                 String relKey = relKeys.next();
                                 String relValue = relationship.get(relKey).asObject().toString();
@@ -169,7 +169,7 @@ import java.util.*;
                             relationNodesBuffer.append("\"type\":");
                             relationNodesBuffer.append("\""+nodeType+"\"");
                             relationNodesBuffer.append(",");
-                            relationNodesBuffer.append("\"style\":{ \"fillColor\": \"rgba(28,124,213,0.8)\"");
+                            relationNodesBuffer.append("\"loaded\":true,\"style\":{ \"fillColor\": \"rgba(28,124,213,0.8)\"}");//rgba(28,124,213,0.8)
 
                             //将节点添加到set集合中
                             nodeSet.add(node.id());
