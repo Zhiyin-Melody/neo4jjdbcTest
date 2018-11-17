@@ -134,8 +134,8 @@
     border-bottom: 1px solid #000000;
 }
 div.ResultView div{
-    width:260px;
-    height:260px;
+    width:580px;
+    height:360px;
     background:yellow;
     border:1px solid #ccc;
     display:none; /*这里把div块设置成不显示，如果不设置成隐藏话，页面显示时所有div块内容都显示在页面上，这不是我们想看到的*/
@@ -144,6 +144,8 @@ div.ResultView div{
     line-height:200%;
     margin:5px;
     padding:10px;
+    position: relative;
+    left: 20px;
 }
 
 .active{
