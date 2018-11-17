@@ -156,7 +156,7 @@
 
 <div class="query">
     <p>SPARQL[t]查询语言示例</p>
-       用户可以自己输入查询语句；
+
     <select id="selectStr" class="endpointText form-control selectized" onchange="showqueryString(this.value)">
         <option value="queryString" selected="selected">SPARQL[t]查询语言示例-请选择-</option>
         <div class="selectize-control endpointText form-control single plugin-allowRegularTextInput">
@@ -209,48 +209,48 @@
             </div>
 
             <div class="optgroup2">
-                <option value="queryString1">
-                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString1">
+                <option value="queryString10">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString10">
                         <div class="queryAnnotation">SELECT查询Fabio_Ongaro出生日期和地点。</div>
                     </div>
                 </option>
-                <option value="queryString2">
-                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString2">
+                <option value="queryString11">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString11">
                         <div class="queryAnnotation">SELECT查询2001年到2006年Mauricio_Soler的职业生涯信息。</div>
                     </div>
                 </option>
-                <option value="queryString3">
-                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString3">
+                <option value="queryString12">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString12">
                         <div class="queryAnnotation">SELECT查询Ricardo_Souza_Silva的信息,选取前15条记录。</div>
                     </div>
                 </option>
-                <option value="queryString4">
-                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString4">
+                <option value="queryString13">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString13">
                         <div class="queryAnnotation">SELECT查询在1977年居住在Mestre的运动员的效力的队伍。</div>
                     </div>
                 </option>
-                <option value="queryString5">
-                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString5">
+                <option value="queryString14">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString14">
                         <div class="queryAnnotation">SELECT查询运动员信息，出生城市作为可选属性（OPTIONAL），结果集约束到5-15条数据。</div>
                     </div>
                 </option>
-                <option value="queryString6">
-                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString6">
+                <option value="queryString15">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString15">
                         <div class="queryAnnotation">SELECT查询两种关联的事物中的状态信息；UNION查询Gustavo_Bou效力且所属的球队。</div>
                     </div>
                 </option>
-                <option value="queryString7">
-                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString7">
+                <option value="queryString16">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString16">
                         <div class="queryAnnotation">ASK查询The_Culture在1996到2005年是否效力Israel_national_football_team。</div>
                     </div>
                 </option>
-                <option value="queryString8">
-                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString8">
+                <option value="queryString17">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString17">
                         <div class="queryAnnotation">CONSTRUCT构建构造一个新的关系两个运动员是队友isTeammate。</div>
                     </div>
                 </option>
-                <option value="queryString9">
-                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString9">
+                <option value="queryString18">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString18">
                         <div class="queryAnnotation">DESCRIBE查询2018年Spandauer_SV的所有球员个人信息。</div>
                     </div>
                 </option>

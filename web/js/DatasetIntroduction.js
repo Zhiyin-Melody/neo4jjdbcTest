@@ -110,4 +110,72 @@ function showqueryString(){
             "FILTER ?ts >= \"2017-12-30\" and ?te <= \"2018-12-30\"\n" +
             "}\n";
     }
+    //yago数据集查询例子；
+    if(selectNode.value=="queryString10"){
+        queryStringTextarea.value=prefix+"SELECT ?t ?BirthCity\n" +
+            "WHERE {\n" +
+            "?People wasBornIn[?t]-1 ?BirthCity .\n" +
+            "FILTER ?People=\"Fabio_Ongaro\"}";
+    }
+    if(selectNode.value=="queryString11"){
+        queryStringTextarea.value=prefix+"SELECT ?ts ?te DISTINCT(?team) \n" +
+            "WHERE{\n" +
+            "?People info:playsFor[?ts,?te]-?n ?team .\n" +
+            "FILTER ?ts >= \"2001-01-01\" and ?te <= \"2006-01-01\"\n" +
+            "FILTER ?People=\"Mauricio_Soler\"}\n";
+    }
+    if(selectNode.value=="queryString12"){
+        queryStringTextarea.value=prefix+"SELECT ?s ?p ?ts ?te ?n ?o\n" +
+            "WHERE{\n" +
+            "?s ?p[?ts,?te]-?n ?o .\n" +
+            "FILTER ?s =\"Ricardo_Souza_Silva\"\n" +
+            "} \n" +
+            "LIMIT 15\n";
+    }
+    if(selectNode.value=="queryString13"){
+        queryStringTextarea.value=prefix+"SELECT DISTINCT(?Team) \n" +
+            "WHERE{\n" +
+            "{?People wasBornIn[?t]-1 \"Falkirk\" .\n" +
+            "FILTER ?t >= \"1988-01-01\" and ?t<=\"1988-12-31\" }\n" +
+            "{?People playsFor[?ts1,?te1]-?n1 ?Team .\n" +
+            "}}\n";
+    }
+    if(selectNode.value=="queryString14"){
+        queryStringTextarea.value=prefix+"SELECT ?People ?City \n" +
+            "WHERE{\n" +
+            "{?People hasGender \"male\" .}\n" +
+            +"OPTIONAL\n"
+            +"{?People wasBornIn[?t]-?n ?City .}}\n"
+            + "OFFSET 5\n"
+            +"LIMIT 15\n";
+    }
+
+    if(selectNode.value=="queryString15"){
+        queryStringTextarea.value=prefix+"SELECT DISTINCT(?Team)\n" +
+            "WHERE{\n" +
+            "{\"Gustavo_Bou\" playsFor[?ts1,?te1]-?n ?Team .}\n" +
+            "UNION\n" +
+            "{\"Gustavo_Bou\" isAffiliatedTo[?ts2,?te2]-?n ?Team .}\n" +
+            "}\n" +
+            "FILTER ?ts1=?ts2 and ?te1=?te2\n";
+    }
+    if(selectNode.value=="queryString16"){
+        queryStringTextarea.value=prefix+"ASK {\"The_Culture\" info:playsFor[?ts,?te]-?n \"Israel_national_football_team\" .\n" +
+            "FILTER ?ts >= \"1996-01-01\" and ?te <= \"2005-12-30\"\n" +
+            "}\n";
+    }
+    if(selectNode.value=="queryString17"){
+        queryStringTextarea.value=prefix+"CONSTRUCT {\"Mariano_Pavone\" isTeammate[?ts1,?te1]-1 \"Joao_Rojas\" .}\n" +
+            "WHERE{\n" +
+            "\"Mariano_Pavone\" isAffiliatedTo [?ts1,?te1]-?n1 \"Cruz_Azul\" .\n" +
+            "\"Joao_Rojas\" isAffiliatedTo [?ts2,?te2]-?n2 \"Cruz_Azul\" .\n" +
+            "FILTER (?ts1 >= ?ts2 and ?te1 <= ?te2) or (?ts1 <= ?ts2 and ?te1 >= ?te2)}\n";
+    }
+    if(selectNode.value=="queryString18"){
+        queryStringTextarea.value=prefix+"DESCRIBE ?People {?People info:playsFor[?ts,?te]-?n \"Spandauer_SV\" . \n" +
+            "FILTER ?ts >= \"2017-12-30\" and ?te <= \"2018-12-30\"\n" +
+            "}\n";
+    }
+
+
 }
