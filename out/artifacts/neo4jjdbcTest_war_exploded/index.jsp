@@ -22,6 +22,9 @@
     <script type="text/javascript" src="js/jQuery.js"></script>
     <script type="text/javascript" src="js/d3.js"></script>
     <script type="text/javascript" src="js/d3.min.js"></script>
+    <script type="text/javascript" src="js/SPARQLTQueryRunning.js"></script>
+
+    <script type="text/javascript" src="js/ResultMuiltyShow.js"></script>
 
     <title>RDFt时序数据查询原型系统</title>
 </head>
@@ -117,7 +120,6 @@
                 <tr>
                     <td>occursSince/Until2</td><td>9,840</td>
                 </tr>
-
                 <tr>
                     <td>wasBornIn</td><td>56,415</td>
                 </tr>
@@ -157,6 +159,7 @@
 
 <div class="query">
     <p>SPARQL[t]查询语言示例</p>
+
     <select id="selectStr" class="endpointText form-control selectized" onchange="showqueryString(this.value)">
         <option value="queryString" selected="selected">SPARQL[t]查询语言示例-请选择-</option>
         <div class="selectize-control endpointText form-control single plugin-allowRegularTextInput">
@@ -209,49 +212,49 @@
             </div>
 
             <div class="optgroup2">
-                <option value="queryString1">
-                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString1">
-                        <div class="queryAnnotation">SELECT</div>
+                <option value="queryString10">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString10">
+                        <div class="queryAnnotation">SELECT查询Fabio_Ongaro出生日期和地点。</div>
                     </div>
                 </option>
-                <option value="queryString2">
-                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString2">
-                        <div class="queryAnnotation">SELECT</div>
+                <option value="queryString11">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString11">
+                        <div class="queryAnnotation">SELECT查询2001年到2006年Mauricio_Soler的职业生涯信息。</div>
                     </div>
                 </option>
-                <option value="queryString3">
-                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString3">
-                        <div class="queryAnnotation">SELECT</div>
+                <option value="queryString12">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString12">
+                        <div class="queryAnnotation">SELECT查询Ricardo_Souza_Silva的信息,选取前15条记录。</div>
                     </div>
                 </option>
-                <option value="queryString4">
-                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString4">
-                        <div class="queryAnnotation">SELECT</div>
+                <option value="queryString13">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString13">
+                        <div class="queryAnnotation">SELECT查询在1977年居住在Mestre的运动员的效力的队伍。</div>
                     </div>
                 </option>
-                <option value="queryString5">
-                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString5">
-                        <div class="queryAnnotation">SELECT</div>
+                <option value="queryString14">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString14">
+                        <div class="queryAnnotation">SELECT查询运动员信息，出生城市作为可选属性（OPTIONAL），结果集约束到5-15条数据。</div>
                     </div>
                 </option>
-                <option value="queryString6">
-                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString6">
-                        <div class="queryAnnotation">SELECT</div>
+                <option value="queryString15">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString15">
+                        <div class="queryAnnotation">SELECT查询两种关联的事物中的状态信息；UNION查询Gustavo_Bou效力且所属的球队。</div>
                     </div>
                 </option>
-                <option value="queryString7">
-                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString7">
-                        <div class="queryAnnotation">ASK</div>
+                <option value="queryString16">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString16">
+                        <div class="queryAnnotation">ASK查询The_Culture在1996到2005年是否效力Israel_national_football_team。</div>
                     </div>
                 </option>
-                <option value="queryString8">
-                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString8">
-                        <div class="queryAnnotation">CONSTRUCT</div>
+                <option value="queryString17">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString17">
+                        <div class="queryAnnotation">CONSTRUCT构建构造一个新的关系两个运动员是队友isTeammate。</div>
                     </div>
                 </option>
-                <option value="queryString9">
-                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString9">
-                        <div class="queryAnnotation">DESCRIBE</div>
+                <option value="queryString18">
+                    <div class="endpointOptionRow selected" data-selectable="" data-value="queryString18">
+                        <div class="queryAnnotation">DESCRIBE查询2018年Spandauer_SV的所有球员个人信息。</div>
                     </div>
                 </option>
             </div>
@@ -273,8 +276,14 @@
 
 <div class="ResultView">
     <p>查询结果展示</p>
+
+    <input type="button" value="表格" class="active"><!--设置页面初始打开时显示的选项卡 -->
+    <input type="button" value="图" >
+    <div style="display:block">表格内容</div><!--设置页面初始打开时显示的div块内容 -->
+    <div>图内容</div>
+
 <%--<textarea id="resultViewtextarea" >--%>
-    <table class="restable">
+   <%-- <table class="restable">
         <tr><td>ts,te,n</td><td>Team</td></tr>
         <tr><td>[1992-03-15,1993-07-21]-8</td><td> "Los_Angeles_Lakers" .</td></tr>
 <tr><td>[1993-01-23,1994-11-16]-1 </td><td>"Phoenix_Sun" .</td></tr>
@@ -286,7 +295,7 @@
 <tr><td>[1998-03-22,1999-01-10]-3 </td><td>"Dallas_Mavericks" .</td></tr>
 <tr><td>[1999-02-08,2000-05-26]-9 </td><td>"Los_Angeles_Lakers" .</td></tr>
 <tr><td>[2000-03-24,2001-07-02]-1 </td><td>"Miami_Heat" .</td></tr>
-    </table>
+    </table>--%>
 <%--</textarea>--%>
 </div>
 </body>

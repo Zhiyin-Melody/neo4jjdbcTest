@@ -19,7 +19,7 @@ import java.util.regex.Pattern;
 public class Sparql2CypherQuery {
 
     public String Sparql2Cypher(String string){
-        System.out.println("传过来的查询语句是："+string);
+     //   System.out.println("传过来的查询语句是："+string);
         StringBuffer cypherString = new StringBuffer();//最终结果；
         StringBuffer startString  = new StringBuffer();//开始节点；
         StringBuffer matchString  = new StringBuffer();
@@ -273,15 +273,15 @@ public class Sparql2CypherQuery {
                 "SELECT ?s1 ?count1  \n" +
                 " WHERE { \n" +
                 "\t?s1 ?haspopulation1 ?count1 .\n" +
-                "\t?haspopulation1  rdf:type rdft:property .\n" +
-                "\t?haspopulation1  rdft:hasStartTime ?ts1 .\n" +
-                "\t?haspopulation1  rdft:hasEndTime ?te1 .\n" +
-                "\t?haspopulation1  rdft:hasNumUpdate ?n1 .\n" +
+                "\t?haspopulation1 rdf:type rdft:property .\n" +
+                "\t?haspopulation1 rdft:hasStartTime ?ts1 .\n" +
+                "\t?haspopulation1 rdft:hasEndTime ?te1 .\n" +
+                "\t?haspopulation1 rdft:hasNumUpdate ?n1 .\n" +
                 "\t?s2 ?haspopulation2 ?count2 .\n" +
-                "\t?haspopulation2  rdf:type rdft:property .\n" +
-                "\t?haspopulation2  rdft:hasStartTime ?ts2 .\n" +
-                "\t?haspopulation2  rdft:hasEndTime ?te2 .\n" +
-                "\t?haspopulation2  rdft:hasNumUpdate ?n2 .\n" +
+                "\t?haspopulation2 rdf:type rdft:property .\n" +
+                "\t?haspopulation2 rdft:hasStartTime ?ts2 .\n" +
+                "\t?haspopulation2 rdft:hasEndTime ?te2 .\n" +
+                "\t?haspopulation2 rdft:hasNumUpdate ?n2 .\n" +
                 " FILTER regex(str(?s), 'china')\n" +
                 " FILTER (?ts >= '2000-01-01'^^<http://www.w3.org/2001/XMLSchema#date> && ?te <= '2000-12-30'^^<http://www.w3.org/2001/XMLSchema#date>)\n" +
                 "} OFFSET 2 \n" +

@@ -22,6 +22,9 @@
     <script type="text/javascript" src="js/jQuery.js"></script>
     <script type="text/javascript" src="js/d3.js"></script>
     <script type="text/javascript" src="js/d3.min.js"></script>
+    <script type="text/javascript" src="js/SPARQLTQueryRunning.js"></script>
+
+    <script type="text/javascript" src="js/ResultMuiltyShow.js"></script>
 
     <title>RDFt时序数据查询原型系统</title>
 </head>
@@ -273,8 +276,14 @@
 
 <div class="ResultView">
     <p>查询结果展示</p>
+
+    <input type="button" value="表格" class="active"><!--设置页面初始打开时显示的选项卡 -->
+    <input type="button" value="图" >
+    <div style="display:block">表格内容</div><!--设置页面初始打开时显示的div块内容 -->
+    <div>图内容</div>
+
 <%--<textarea id="resultViewtextarea" >--%>
-    <table class="restable">
+   <%-- <table class="restable">
         <tr><td>ts,te,n</td><td>Team</td></tr>
         <tr><td>[1992-03-15,1993-07-21]-8</td><td> "Los_Angeles_Lakers" .</td></tr>
 <tr><td>[1993-01-23,1994-11-16]-1 </td><td>"Phoenix_Sun" .</td></tr>
@@ -286,7 +295,7 @@
 <tr><td>[1998-03-22,1999-01-10]-3 </td><td>"Dallas_Mavericks" .</td></tr>
 <tr><td>[1999-02-08,2000-05-26]-9 </td><td>"Los_Angeles_Lakers" .</td></tr>
 <tr><td>[2000-03-24,2001-07-02]-1 </td><td>"Miami_Heat" .</td></tr>
-    </table>
+    </table>--%>
 <%--</textarea>--%>
 </div>
 </body>

@@ -8,22 +8,8 @@ package TransTest;
 import java.util.ArrayList;
 
 public class SparqlT2SparqlQuery {
-    public StringBuilder SparqlT2SparqlMethod(){
-        String SPARQLTString = "prefix owl: <http://www.w3.org/2002/07/owl#> \r\n"
-                            + "prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> \r\n"
-                            + "prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> \r\n"
-                            +"SELECT ?count \r\n"
-                            + "WHERE {\r\n"
-                            +"        <http://yago-knowledge.org/resource/china> <http://yago-knowledge.org/resource/haspopulation[?ts,?te]-?n> ?count .\r\n"
-                            +"        <http://yago-knowledge.org/resource/America> <http://yago-knowledge.org/resource/haspopulation[?ts0,?te0]-?n0> ?count0 .\r\n"
-                            +"        <http://yago-knowledge.org/resource/uk> <http://yago-knowledge.org/resource/haspopulation-?n1> ?count1 .\r\n"
-                            +"        <http://yago-knowledge.org/resource/England> <http://yago-knowledge.org/resource/haspopulation> ?count2 .\r\n"
-                            +"FILTER regex(?country,\"china\") . "
-                            +"FILTER (?ts >= \"2000-01-01\"^^xsd:data && ?ts <= \"2000-12-30\"^^xsd:data) ."
-                            +"}\r\n"
-                            +"OFFSET 2\n"
-                            +"Order by DESC\n"
-                            +"LIMIT 10 ";
+    public StringBuilder SparqlT2SparqlMethod(String SPARQLTString){
+
 
         StringBuilder SPARQLString = new StringBuilder();//保存转换后的查询语言字符串形式；
         //不涉及多线程的情况下，用StringBuilder来存储字符串；比较好；单线程用比较快；
@@ -35,8 +21,8 @@ public class SparqlT2SparqlQuery {
         String whereRDFtStringHasPre = whereString.substring(0,new SparqlT2SparqlMatcher().SparqlT2SparqlMatcher(whereString,"FILTER"));//WHERE语句中的rdf graph中的部分；
         String whereFilterString = whereString.substring(new SparqlT2SparqlMatcher().SparqlT2SparqlMatcher(whereString,"FILTER"),whereString.length());//WHERE中的FILTER部分；这个函数先不管，以后细分的时候再写；
        // System.out.println(new SparqlT2SparqlMatcher().SparqlT2SparqlMatcher(whereString,"FILTER"));
-        System.out.print("whereRDFtStringHasPre语句是:"+whereRDFtStringHasPre);
-        System.out.print("whereFilterString语句是:"+whereFilterString);
+       // System.out.print("whereRDFtStringHasPre语句是:"+whereRDFtStringHasPre);
+       // System.out.print("whereFilterString语句是:"+whereFilterString);
         String whereRDFtString=whereRDFtStringHasPre.replace("\r\n"," ");//去掉换行符；
         String [] statementRDFt = whereRDFtString.trim().split(" \\.");
         //将RDFt graph中的每个三元组分割出来；因为每个三元组是用.分隔开的；每个三元组放在数组中的一个元素中表示；
@@ -67,16 +53,16 @@ public class SparqlT2SparqlQuery {
 
         for(int i = 0; i < statementRDFt.length; i++){
              if(statementRDFt[i].contains("[")&&statementRDFt[i].contains("]")){
-                 System.out.println("包含时间信息或者包含更新次数信息:");
-                 System.out.println(statementRDFt[i]);//这个包含了主谓宾的;这个块儿得考虑是否有时间信息或者只有n的情况；
+                 //System.out.println("包含时间信息或者包含更新次数信息:");
+                // System.out.println(statementRDFt[i]);//这个包含了主谓宾的;这个块儿得考虑是否有时间信息或者只有n的情况；
                   lsls.add(transPredicate(statementRDFt[i].trim()));//转换谓语部分,放到list中;
              }
              if(!(statementRDFt[i].contains("[")&&statementRDFt[i].contains("]"))&&statementRDFt[i].contains("-")){
-                 System.out.println("不包含时间信息");
+                // System.out.println("不包含时间信息");
                  lsls.add(transPredicateOnlyn(statementRDFt[i].trim()));//转换只包含n的，没有时间信息的谓语部分；
              }
              if(!(statementRDFt[i].contains("[")&&statementRDFt[i].contains("]"))||!(statementRDFt[i].contains("-"))){
-                 System.out.println("是正常的三元组的时候");
+                // System.out.println("是正常的三元组的时候");
                  lsls.add(transPredicateRDF(statementRDFt[i]));
              }
 
@@ -95,7 +81,7 @@ public class SparqlT2SparqlQuery {
         String ts = a[1].substring(a[1].indexOf("[")+1,a[1].indexOf(","));
         String te = a[1].substring(a[1].indexOf(",")+1,a[1].indexOf("]"));
         String n = a[1].substring(a[1].lastIndexOf("-")+1);
-        String predicate= p.substring(p.indexOf(":")+1,p.indexOf(">"));
+        String predicate= p.substring(p.lastIndexOf("/")+1,p.indexOf(">"));
         predicateString.add(" "+a[0]+" ?"+predicate+" "+a[2]+" .");
         predicateString.add(" ?"+predicate+" rdf:type rdft:property .");
         if(ts.equals(te)){  //当ts=te时，
@@ -131,8 +117,25 @@ public class SparqlT2SparqlQuery {
 
     //主函数；
     public static void main(String[] args) {
+
+        String SPARQLTString = "prefix owl: <http://www.w3.org/2002/07/owl#> \r\n"
+                + "prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> \r\n"
+                + "prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> \r\n"
+                +"SELECT ?count \r\n"
+                + "WHERE {\r\n"
+                +"        <http://yago-knowledge.org/resource/china> <http://yago-knowledge.org/resource/haspopulation[?ts,?te]-?n> ?count .\r\n"
+                +"        <http://yago-knowledge.org/resource/America> <http://yago-knowledge.org/resource/haspopulation[?ts0,?te0]-?n0> ?count0 .\r\n"
+                +"        <http://yago-knowledge.org/resource/uk> <http://yago-knowledge.org/resource/haspopulation-?n1> ?count1 .\r\n"
+                +"        <http://yago-knowledge.org/resource/England> <http://yago-knowledge.org/resource/haspopulation> ?count2 .\r\n"
+                +"FILTER regex(?country,\"china\") . "
+                +"FILTER (?ts >= \"2000-01-01\"^^xsd:data && ?ts <= \"2000-12-30\"^^xsd:data) ."
+                +"}\r\n"
+                +"OFFSET 2\n"
+              //  +"Order by DESC\n"
+                +"LIMIT 10 ";
+
         SparqlT2SparqlQuery sparqlT2SparqlQuery = new SparqlT2SparqlQuery();
-        StringBuilder S = sparqlT2SparqlQuery.SparqlT2SparqlMethod();
+        StringBuilder S = sparqlT2SparqlQuery.SparqlT2SparqlMethod(SPARQLTString);
         System.out.println("主函数执行结果SPARQL语句\n"+S);//return 回来得接收返回值才行。
     }
 }
