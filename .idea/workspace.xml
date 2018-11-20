@@ -10,10 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ba76624-19e3-41d5-9337-1c2678cd7d8a" name="Default" comment="Commit Success!!!">
+      <change afterPath="$PROJECT_DIR$/web/js/echartResultShow.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/neo4jjdbcTest_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/neo4jjdbcTest_war_exploded/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/dispalyByZoomCharts.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/dispalyByZoomCharts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/zoomcharts/assets/leaflet.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/zoomcharts/assets/leaflet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -120,11 +120,11 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
-          <entry key="css" value="16" />
+          <entry key="css" value="17" />
           <entry key="html" value="13" />
           <entry key="java" value="81" />
           <entry key="jpg" value="4" />
-          <entry key="js" value="30" />
+          <entry key="js" value="31" />
           <entry key="json" value="17" />
           <entry key="jsp" value="7" />
           <entry key="png" value="13" />
@@ -137,13 +137,13 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="CSS" value="16" />
+          <entry key="CSS" value="17" />
           <entry key="HTML" value="13" />
           <entry key="Image" value="17" />
           <entry key="JAVA" value="81" />
           <entry key="JSON" value="17" />
           <entry key="JSP" value="7" />
-          <entry key="JavaScript" value="30" />
+          <entry key="JavaScript" value="31" />
           <entry key="RNG Compact" value="1" />
           <entry key="SVG" value="1" />
           <entry key="TypeScript" value="1" />
@@ -156,8 +156,8 @@
           <entry key="dummy" value="15" />
           <entry key="html" value="6" />
           <entry key="java" value="8072" />
-          <entry key="js" value="630" />
-          <entry key="jsp" value="623" />
+          <entry key="js" value="744" />
+          <entry key="jsp" value="642" />
           <entry key="xml" value="25" />
         </counts>
       </usages-collector>
@@ -166,8 +166,8 @@
           <entry key="CSS" value="1098" />
           <entry key="HTML" value="6" />
           <entry key="JAVA" value="8071" />
-          <entry key="JSP" value="623" />
-          <entry key="JavaScript" value="630" />
+          <entry key="JSP" value="642" />
+          <entry key="JavaScript" value="744" />
           <entry key="PLAIN_TEXT" value="15" />
           <entry key="SQL" value="1" />
           <entry key="XML" value="25" />
@@ -185,34 +185,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="265" column="45" lean-forward="true" selection-start-line="265" selection-start-column="45" selection-end-line="265" selection-end-column="45" />
+            <state relative-caret-position="165">
+              <caret line="298" column="36" lean-forward="true" selection-start-line="298" selection-start-column="36" selection-end-line="298" selection-end-column="36" />
               <folding>
                 <element signature="n#style#0;n#textarea#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/DatasetIntroduction.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="665">
-              <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/SPARQLTQueryRunning.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -221,44 +201,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/ResultMuiltyShow.js">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/echartResultShow.js">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="57">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+              <caret line="57" column="30" lean-forward="true" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/dispalyByZoomCharts.js">
+        <entry file="file://$PROJECT_DIR$/web/js/DatasetIntroduction.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="105" column="1" lean-forward="true" selection-start-line="105" selection-start-column="1" selection-end-line="105" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/zoomcharts/assets/leaflet.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="223" column="1" lean-forward="true" selection-start-line="223" selection-start-column="1" selection-end-line="223" selection-end-column="1" />
+            <state relative-caret-position="-76">
+              <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/Data/NBAdata.json">
+        <entry file="file://$PROJECT_DIR$/web/js/SPARQLTQueryRunning.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="1" column="21" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/getDataToWeb.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+            <state relative-caret-position="76">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -267,19 +238,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/Data/demo.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/TransTest/TransString.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+            <state relative-caret-position="135">
+              <caret line="28" column="34" lean-forward="true" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -332,7 +294,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/TransTest/SparqlT2Sparql.java" />
         <option value="$PROJECT_DIR$/src/main/java/TransTest/Sparql2Cypher1.java" />
         <option value="$PROJECT_DIR$/src/main/java/TransTest/Sparql2Cypher.java" />
         <option value="$PROJECT_DIR$/src/main/java/Test/Mkuohao.java" />
@@ -380,9 +341,10 @@
         <option value="$PROJECT_DIR$/web/js/SPARQLTQueryRunning.js" />
         <option value="$PROJECT_DIR$/web/js/ResultMuiltyShow.js" />
         <option value="$PROJECT_DIR$/web/css/style.css" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/web/js/dispalyByZoomCharts.js" />
         <option value="$PROJECT_DIR$/web/zoomcharts/assets/leaflet.css" />
+        <option value="$PROJECT_DIR$/web/js/dispalyByZoomCharts.js" />
+        <option value="$PROJECT_DIR$/web/js/echartResultShow.js" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
       </list>
     </option>
   </component>
@@ -423,9 +385,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="376" />
-    <option name="y" value="14" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="20" />
+    <option name="y" value="34" />
     <option name="width" value="1331" />
     <option name="height" value="735" />
   </component>
@@ -586,13 +548,14 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\IDEA Workspace\neo4jjdbcTest\web" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Display" />
+      <recent name="org.neo4j.server.plugin.sparql" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IDEA Workspace\neo4jjdbcTest\web\js" />
       <recent name="D:\IDEA Workspace\neo4jjdbcTest\web" />
       <recent name="D:\IDEA Workspace\neo4jjdbcTest\web\Data" />
-      <recent name="D:\IDEA Workspace\neo4jjdbcTest\web\js" />
       <recent name="D:\IDEA Workspace\neo4jjdbcTest\libs" />
       <recent name="D:\IDEA Workspace\neo4jjdbcTest\web\css" />
     </key>
@@ -600,9 +563,8 @@
       <recent name="TransTest" />
       <recent name="DB" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="Display" />
-      <recent name="org.neo4j.server.plugin.sparql" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IDEA Workspace\neo4jjdbcTest\web" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -917,21 +879,7 @@
       <workItem from="1542442885910" duration="4948000" />
       <workItem from="1542459590186" duration="10092000" />
       <workItem from="1542524132822" duration="2107000" />
-      <workItem from="1542618295017" duration="14043000" />
-    </task>
-    <task id="LOCAL-00005" summary="Commit Success!!!">
-      <created>1538125815967</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1538125815967</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Commit Success!!!">
-      <created>1538465319131</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1538465319132</updated>
+      <workItem from="1542618295017" duration="16249000" />
     </task>
     <task id="LOCAL-00007" summary="Commit Success!!!">
       <created>1538465521591</created>
@@ -1262,7 +1210,21 @@
       <option name="project" value="LOCAL" />
       <updated>1542467593968</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Commit Success!!!">
+      <created>1542702913666</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1542702913669</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Commit Success!!!">
+      <created>1542703629190</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1542703629191</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1298,7 +1260,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="595112000" />
+    <option name="totallyTimeSpent" value="597318000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1310,10 +1272,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="376" y="14" width="1331" height="735" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4937656" visible="true" weight="0.19669552" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4937656" visible="true" weight="0.1860817" />
       <window_info id="Structure" order="1" sideWeight="0.5012285" side_tool="true" weight="0.29198185" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Web" order="3" sideWeight="0.5062344" side_tool="true" weight="0.19667171" />
@@ -1323,7 +1285,7 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290938" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49633968" visible="true" weight="0.33680555" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49633968" visible="true" weight="0.33504274" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.41367522" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1333,7 +1295,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.6043873" weight="0.45982906" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.4969743" weight="0.35726497" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.4969743" weight="0.22564103" />
       <window_info anchor="bottom" id="Dependency Viewer" order="13" sideWeight="0.49707174" weight="0.3296355" />
       <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.4977307" weight="0.36752138" />
       <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.3863275" />
@@ -1570,16 +1532,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/js/jquery-2.1.4.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/zoomcharts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-388">
-          <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/jQuery.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3290">
@@ -1764,13 +1716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TransTest/TransString.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/Data/demo.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -1785,40 +1730,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/DatasetIntroduction.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/SPARQLTQueryRunning.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/ResultMuiltyShow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/getDataToWeb.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/zoomcharts/examples/assets/images/dvsl.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -1829,34 +1740,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="265" column="45" lean-forward="true" selection-start-line="265" selection-start-column="45" selection-end-line="265" selection-end-column="45" />
-          <folding>
-            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/Data/NBAdata.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="111">
-          <caret line="1" column="21" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/dispalyByZoomCharts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="105" column="1" lean-forward="true" selection-start-line="105" selection-start-column="1" selection-end-line="105" selection-end-column="1" />
+          <caret line="1" column="37" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/zoomcharts/assets/leaflet.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="223" column="1" lean-forward="true" selection-start-line="223" selection-start-column="1" selection-end-line="223" selection-end-column="1" />
+        <state relative-caret-position="147">
+          <caret line="286" lean-forward="true" selection-start-line="286" selection-end-line="286" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/getDataToWeb.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-285">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/SPARQLTQueryRunning.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/DatasetIntroduction.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-76">
+          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/dispalyByZoomCharts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="107" column="26" lean-forward="true" selection-start-line="107" selection-start-column="26" selection-end-line="107" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/codemirror.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TransTest/TransString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="28" column="34" lean-forward="true" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/echartResultShow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="57" column="30" lean-forward="true" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/ResultMuiltyShow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="298" column="36" lean-forward="true" selection-start-line="298" selection-start-column="36" selection-end-line="298" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

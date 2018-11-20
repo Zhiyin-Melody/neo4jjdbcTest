@@ -297,9 +297,10 @@
 <tr><td>[2000-03-24,2001-07-02]-1 </td><td>"Miami_Heat" .</td></tr>
     </table>
     </div><!--设置页面初始打开时显示的div块内容 -->
-    <div id="echartDemo"> </div>
+    <div id="echartResulShow"style="width:580px;height:360px;"> </div>
 <%--</textarea>--%>
 
+</div>
 </div>
 </body>
 </html>
