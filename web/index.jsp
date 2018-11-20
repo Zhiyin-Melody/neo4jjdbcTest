@@ -301,7 +301,7 @@
     <div id="echartResulShow" >
         <table class="restable">
             <tr><td>ts,te,n</td><td>Team</td></tr>
-            <tr><td>[1992-03-15,1993-07-21]-8</td><td> "Los_Angeles_Lakers" .</td></tr>
+            <tr><td>[1992-03-15,1993-07-21]-8 </td><td>"Los_Angeles_Lakers" .</td></tr>
             <tr><td>[1993-01-23,1994-11-16]-1 </td><td>"Phoenix_Sun" .</td></tr>
             <tr><td>[1994-08-17,1995-10-21]-2 </td><td>"Phoenix_Sun" .</td></tr>
             <tr><td>[1995-03-21,1996-01-09]-3 </td><td>"Phoenix_Sun" .</td></tr>
