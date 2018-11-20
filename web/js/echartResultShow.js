@@ -109,15 +109,15 @@ function linkStyle(link) {
 if(link.data.type=="Stature"||link.data.type=="Weight"||link.data.type=="High_School"||link.data.type=="hasGender"){
     link.label = link.data.type;
 }
+
 //带有时间点的三元组；
 if(link.data.type=="wasBornIn"||link.data.type=="hasBirthCity"){
     link.label = link.data.type+"["+link.data.rdft_hasTime+"]-"+link.data.rdft_hasNumUpdate;
 }
+
 //带有时间段的三元组；
     if(link.data.type=="Plays_For"||link.data.type=="Rebound"||link.data.type=="Assist"||link.data.type=="Score1"||link.data.type=="playsFor"||link.data.type=="isAffiliatedTo"){
         link.label = link.data.type+"["+link.data.rdft_hasEndTime+","+link.data.rdft_hasStartTime+"]-"+link.data.rdft_hasNumUpdate;
     }
-
-
 
 }
