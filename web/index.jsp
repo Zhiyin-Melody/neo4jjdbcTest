@@ -288,18 +288,18 @@
     <table class="restable">
         <tr><td>ts,te,n</td><td>Team</td></tr>
         <tr><td>[1992-03-15,1993-07-21]-8</td><td> "Los_Angeles_Lakers" .</td></tr>
-<tr><td>[1993-01-23,1994-11-16]-1 </td><td>"Phoenix_Sun" .</td></tr>
-<tr><td>[1994-08-17,1995-10-21]-2 </td><td>"Phoenix_Sun" .</td></tr>
-<tr><td>[1995-03-21,1996-01-09]-3 </td><td>"Phoenix_Sun" .</td></tr>
-<tr><td>[1996-01-25,1997-06-13]-4 </td><td>"Phoenix_Sun" .</td></tr>
-<tr><td>[1996-03-07,1997-03-10]-1 </td><td>"Dallas_Mavericks" .</td></tr>
-<tr><td>[1997-08-27,1998-11-27]-2 </td><td>"Dallas_Mavericks" .</td></tr>
-<tr><td>[1998-03-22,1999-01-10]-3 </td><td>"Dallas_Mavericks" .</td></tr>
-<tr><td>[1999-02-08,2000-05-26]-9 </td><td>"Los_Angeles_Lakers" .</td></tr>
-<tr><td>[2000-03-24,2001-07-02]-1 </td><td>"Miami_Heat" .</td></tr>
+        <tr><td>[1993-01-23,1994-11-16]-1 </td><td>"Phoenix_Sun" .</td></tr>
+        <tr><td>[1994-08-17,1995-10-21]-2 </td><td>"Phoenix_Sun" .</td></tr>
+        <tr><td>[1995-03-21,1996-01-09]-3 </td><td>"Phoenix_Sun" .</td></tr>
+        <tr><td>[1996-01-25,1997-06-13]-4 </td><td>"Phoenix_Sun" .</td></tr>
+        <tr><td>[1996-03-07,1997-03-10]-1 </td><td>"Dallas_Mavericks" .</td></tr>
+        <tr><td>[1997-08-27,1998-11-27]-2 </td><td>"Dallas_Mavericks" .</td></tr>
+        <tr><td>[1998-03-22,1999-01-10]-3 </td><td>"Dallas_Mavericks" .</td></tr>
+        <tr><td>[1999-02-08,2000-05-26]-9 </td><td>"Los_Angeles_Lakers" .</td></tr>
+        <tr><td>[2000-03-24,2001-07-02]-1 </td><td>"Miami_Heat" .</td></tr>
     </table>
     </div><!--设置页面初始打开时显示的div块内容 -->
-    <div id="echartResultShow"style="width:580px;height:360px;">
+    <div id="echartResultShow" style="width:580px;height:360px;">
         <table class="restable">
             <tr><td>ts,te,n</td><td>Team</td></tr>
             <tr><td>[1992-03-15,1993-07-21]-8</td><td> "Los_Angeles_Lakers" .</td></tr>
