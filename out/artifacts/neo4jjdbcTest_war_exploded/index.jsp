@@ -25,6 +25,8 @@
     <script type="text/javascript" src="js/SPARQLTQueryRunning.js"></script>
 
     <script type="text/javascript" src="js/ResultMuiltyShow.js"></script>
+    <script type="text/javascript" src="js/echartResultShow.js"></script>
+
 
     <title>RDFt时序数据查询原型系统</title>
 </head>
@@ -297,9 +299,18 @@
 <tr><td>[2000-03-24,2001-07-02]-1 </td><td>"Miami_Heat" .</td></tr>
     </table>
     </div><!--设置页面初始打开时显示的div块内容 -->
-    <div id="echartResulShow"> </div>
+    <div id="echartResultShow"style="width:580px;height:360px;">
+        <table class="restable">
+            <tr><td>ts,te,n</td><td>Team</td></tr>
+            <tr><td>[1992-03-15,1993-07-21]-8</td><td> "Los_Angeles_Lakers" .</td></tr>
+            <tr><td>[1993-01-23,1994-11-16]-1 </td><td>"Phoenix_Sun" .</td></tr>
+            <tr><td>[1994-08-17,1995-10-21]-2 </td><td>"Phoenix_Sun" .</td></tr>
+            <tr><td>[1995-03-21,1996-01-09]-3 </td><td>"Phoenix_Sun" .</td></tr>
+
+        </table></div>
 <%--</textarea>--%>
 
+</div>
 </div>
 </body>
 </html>

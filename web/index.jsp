@@ -306,7 +306,6 @@
             <tr><td>[1993-01-23,1994-11-16]-1 </td><td>"Phoenix_Sun" .</td></tr>
             <tr><td>[1994-08-17,1995-10-21]-2 </td><td>"Phoenix_Sun" .</td></tr>
             <tr><td>[1995-03-21,1996-01-09]-3 </td><td>"Phoenix_Sun" .</td></tr>
-
         </table></div>
 <%--</textarea>--%>
 
