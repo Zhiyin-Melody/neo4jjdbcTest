@@ -152,3 +152,7 @@ div.ResultView div{
     background:blue;
     color:white;
 }
+#echartResulShow{
+    width:580px;
+    height:360px;
+}
