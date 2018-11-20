@@ -1,5 +1,5 @@
 $(function(){
-var chartContainer = document.getElementById("echartResulShow");
+var chartContainer = document.getElementById("echartResultShow");
 
 // dynamically create the element that will be used for the context menu.
 // an existing element can be used as well.
