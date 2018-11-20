@@ -298,7 +298,7 @@
         <tr><td>[2000-03-24,2001-07-02]-1 </td><td>"Miami_Heat" .</td></tr>
     </table>
     </div><!--设置页面初始打开时显示的div块内容id="echartResultShow" -->
-    <div id="echartResulShow" >
+    <div id="echartResultShow" >
         <table class="restable">
             <tr><td>ts,te,n</td><td>Team</td></tr>
             <tr><td>[1992-03-15,1993-07-21]-8 </td><td>"Los_Angeles_Lakers" .</td></tr>
