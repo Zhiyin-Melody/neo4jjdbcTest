@@ -74,6 +74,9 @@
     background-color: #ffffff;
     width:880px;
     height:500px;
+    position:relative;
+    top:0px;
+    left:0px;
 }
 .query{
     height: 500px;

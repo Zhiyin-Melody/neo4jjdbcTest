@@ -16,6 +16,7 @@
     <script type="text/javascript" src="js/DatasetIntroduction.js"></script>
 
     <script type="text/javascript" src="js/jquery-2.1.4.js"></script><%--记住最先引用--%>
+    <script type="text/javascript" src="js/ResultMuiltyShow.js"></script>
     <script type="text/javascript" src="zoomcharts/zoomcharts.js"></script>
     <script type="text/javascript" src="js/dispalyByZoomCharts.js"></script>
     <script type="text/javascript" src="js/dispalyByZoomCharts1.js"></script>
@@ -27,6 +28,7 @@
 
     <script type="text/javascript" src="js/ResultMuiltyShow.js"></script>
     <script type="text/javascript" src="js/echartResultShow.js"></script>
+    <link href="css/tableorchartshow.css" rel="stylesheet" />
 
 
     <title>RDFt时序数据查询原型系统</title>
@@ -155,7 +157,7 @@
         <div id="echartDemo" >
 
         </div>
-        <div id="echartDemo1" style="display: none">
+        <div id="echartDemo1" >
 
         </div>
 
@@ -283,29 +285,31 @@
 
 <div class="ResultView">
     <p>查询结果展示</p>
-
-    <input type="button" value="表格展示" class="active"><!--设置页面初始打开时显示的选项卡 -->
-    <input type="button" value="图形展示" >
-    <div id="tableDispaly" style="display:block">
-
-<%--<textarea id="resultViewtextarea" >--%>
-    <table class="restable">
-        <tr><td>ts,te,n</td><td>Team</td></tr>
-        <tr><td>[1992-03-15,1993-07-21]-8 </td><td>"Los_Angeles_Lakers" .</td></tr>
-        <tr><td>[1993-01-23,1994-11-16]-1 </td><td>"Phoenix_Sun" .</td></tr>
-        <tr><td>[1994-08-17,1995-10-21]-2 </td><td>"Phoenix_Sun" .</td></tr>
-        <tr><td>[1995-03-21,1996-01-09]-3 </td><td>"Phoenix_Sun" .</td></tr>
-        <tr><td>[1996-01-25,1997-06-13]-4 </td><td>"Phoenix_Sun" .</td></tr>
-        <tr><td>[1996-03-07,1997-03-10]-1 </td><td>"Dallas_Mavericks" .</td></tr>
-        <tr><td>[1997-08-27,1998-11-27]-2 </td><td>"Dallas_Mavericks" .</td></tr>
-        <tr><td>[1998-03-22,1999-01-10]-3 </td><td>"Dallas_Mavericks" .</td></tr>
-        <tr><td>[1999-02-08,2000-05-26]-9 </td><td>"Los_Angeles_Lakers" .</td></tr>
-        <tr><td>[2000-03-24,2001-07-02]-1 </td><td>"Miami_Heat" .</td></tr>
-    </table>
-    </div><!--设置页面初始打开时显示的div块内容id="echartResultShow" -->
-    <div id="echartResultShow" style="width:580px;height:360px;">
+    <div class="clearfix">
+        <ul class="w_ulList">
+            <li class="active">图形展示</li>
+            <li>表格展示</li>
+        </ul>
     </div>
-<%--</textarea>--%>
+
+    <div class="w_tableDemo">
+        <table class="restable">
+            <tr><td>ts,te,n</td><td>Team</td></tr>
+            <tr><td>[1992-03-15,1993-07-21]-8</td><td> "Los_Angeles_Lakers" .</td></tr>
+            <tr><td>[1993-01-23,1994-11-16]-1 </td><td>"Phoenix_Sun" .</td></tr>
+            <tr><td>[1994-08-17,1995-10-21]-2 </td><td>"Phoenix_Sun" .</td></tr>
+            <tr><td>[1995-03-21,1996-01-09]-3 </td><td>"Phoenix_Sun" .</td></tr>
+            <tr><td>[1996-01-25,1997-06-13]-4 </td><td>"Phoenix_Sun" .</td></tr>
+            <tr><td>[1996-03-07,1997-03-10]-1 </td><td>"Dallas_Mavericks" .</td></tr>
+            <tr><td>[1997-08-27,1998-11-27]-2 </td><td>"Dallas_Mavericks" .</td></tr>
+            <tr><td>[1998-03-22,1999-01-10]-3 </td><td>"Dallas_Mavericks" .</td></tr>
+            <tr><td>[1999-02-08,2000-05-26]-9 </td><td>"Los_Angeles_Lakers" .</td></tr>
+            <tr><td>[2000-03-24,2001-07-02]-1 </td><td>"Miami_Heat" .</td></tr>
+        </table>
+    </div>
+    <div class="w_zoomEchart">
+        <div id="echartResultShow" style="width:600px;height:330px"></div>
+    </div>
 
 </div>
 </div>
