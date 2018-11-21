@@ -23,7 +23,6 @@ window.onload=function(){
                 this.className="active";//设置当前className为active
                 graphdiv.style.display="block";
             }
-
         }
     }
     /*for(var i=0;i<aInput.length;i++){  //循环，给input加上点击事件，在点击时循环让所有选项卡的所有样式去掉，所有内容隐藏，然后让所点击的选项卡及对应内容显示。
