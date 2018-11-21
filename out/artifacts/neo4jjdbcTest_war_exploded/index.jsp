@@ -281,13 +281,12 @@
 
     <input type="button" value="表格展示" class="active"><!--设置页面初始打开时显示的选项卡 -->
     <input type="button" value="图形展示" >
-    <div style="display:block">
-
+    <div id="tableDispaly" style="display:block">
 
 <%--<textarea id="resultViewtextarea" >--%>
     <table class="restable">
         <tr><td>ts,te,n</td><td>Team</td></tr>
-        <tr><td>[1992-03-15,1993-07-21]-8</td><td> "Los_Angeles_Lakers" .</td></tr>
+        <tr><td>[1992-03-15,1993-07-21]-8 </td><td>"Los_Angeles_Lakers" .</td></tr>
         <tr><td>[1993-01-23,1994-11-16]-1 </td><td>"Phoenix_Sun" .</td></tr>
         <tr><td>[1994-08-17,1995-10-21]-2 </td><td>"Phoenix_Sun" .</td></tr>
         <tr><td>[1995-03-21,1996-01-09]-3 </td><td>"Phoenix_Sun" .</td></tr>
@@ -299,14 +298,8 @@
         <tr><td>[2000-03-24,2001-07-02]-1 </td><td>"Miami_Heat" .</td></tr>
     </table>
     </div><!--设置页面初始打开时显示的div块内容id="echartResultShow" -->
-    <div  style="width:580px;height:360px;">
-        <table class="restable">
-            <tr><td>ts,te,n</td><td>Team</td></tr>
-            <tr><td>[1992-03-15,1993-07-21]-8</td><td> "Los_Angeles_Lakers" .</td></tr>
-            <tr><td>[1993-01-23,1994-11-16]-1 </td><td>"Phoenix_Sun" .</td></tr>
-            <tr><td>[1994-08-17,1995-10-21]-2 </td><td>"Phoenix_Sun" .</td></tr>
-            <tr><td>[1995-03-21,1996-01-09]-3 </td><td>"Phoenix_Sun" .</td></tr>
-        </table></div>
+    <div id="echartResultShow" style="width:580px;height:360px;">
+    </div>
 <%--</textarea>--%>
 
 </div>

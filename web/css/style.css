@@ -133,12 +133,12 @@
     border-right: 1px solid #000000;
     border-bottom: 1px solid #000000;
 }
-div.ResultView div{
+.ResultView #tableDispaly{
     width:580px;
     height:360px;
-    background:yellow;
+    background: #ffffff;
     border:1px solid #ccc;
-    display:none; /*这里把div块设置成不显示，如果不设置成隐藏话，页面显示时所有div块内容都显示在页面上，这不是我们想看到的*/
+    /*display:none;*/ /*这里把div块设置成不显示，如果不设置成隐藏话，页面显示时所有div块内容都显示在页面上，这不是我们想看到的*/
     text-align:center;
     font-size:30px;
     line-height:200%;
@@ -152,7 +152,7 @@ div.ResultView div{
     background:blue;
     color:white;
 }
-#echartResultShow{
-    width:580px;
-    height:360px;
-}
+/*#echartResultShow{*/
+    /*width:580px;*/
+    /*height:360px;*/
+/*}*/
