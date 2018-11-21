@@ -2,22 +2,18 @@ function show(){
     var selectNode=document.getElementById("select");
     var info1=document.getElementById("info1");
     var info2=document.getElementById("info2");
-    var NBA=document.getElementById("NBA");
-    var YAGO=document.getElementById("YAGO");
-    var optGroup1=document.getElementsByClassName("optgroup1");
-    var optGroup2=document.getElementsByClassName("optgroup2");
         info1.style.display="none";
         info2.style.display="none";
 
     if(selectNode.value=="dataset1"){
         info1.style.display="block";
-        NBA.style.display="block";
-        YAGO.style.display="none";
+        echartDemo.style.display="block";
+        echartDemo1.style.display="none";
     }
     if(selectNode.value=="dataset2"){
         info2.style.display="block";
-        YAGO.style.display="block";
-        NBA.style.display="none";
+        echartDemo1.style.display="block";
+        echartDemo.style.display="none";
     }
 }
 function showqueryString(){
