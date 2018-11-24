@@ -13,13 +13,14 @@
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/codemirror.css">
-    <script type="text/javascript" src="js/DatasetIntroduction.js"></script>
+
 
     <script type="text/javascript" src="js/jquery-2.1.4.js"></script><%--记住最先引用--%>
     <script type="text/javascript" src="js/ResultMuiltyShow.js"></script>
     <script type="text/javascript" src="zoomcharts/zoomcharts.js"></script>
     <script type="text/javascript" src="js/dispalyByZoomCharts.js"></script>
     <script type="text/javascript" src="js/dispalyByZoomCharts1.js"></script>
+    <script type="text/javascript" src="js/DatasetIntroduction.js"></script>
 
     <script type="text/javascript" src="js/jQuery.js"></script>
     <script type="text/javascript" src="js/d3.js"></script>
@@ -157,7 +158,7 @@
         <div id="echartDemo" >
 
         </div>
-        <div id="echartDemo1" >
+        <div id="echartDemo1" style="display: none">
 
         </div>
 

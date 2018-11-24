@@ -13,13 +13,14 @@
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/codemirror.css">
-    <script type="text/javascript" src="js/DatasetIntroduction.js"></script>
+
 
     <script type="text/javascript" src="js/jquery-2.1.4.js"></script><%--记住最先引用--%>
     <script type="text/javascript" src="js/ResultMuiltyShow.js"></script>
     <script type="text/javascript" src="zoomcharts/zoomcharts.js"></script>
     <script type="text/javascript" src="js/dispalyByZoomCharts.js"></script>
     <script type="text/javascript" src="js/dispalyByZoomCharts1.js"></script>
+    <script type="text/javascript" src="js/DatasetIntroduction.js"></script>
 
     <script type="text/javascript" src="js/jQuery.js"></script>
     <script type="text/javascript" src="js/d3.js"></script>
@@ -154,7 +155,7 @@
         <img id="YAGO" src="img/运动员数据集图片.png" style="display: none">--%>
 
         <%--Neo4J数据库展示部分；style="background: #e8eeed"--%>
-        <div id="echartDemo" style="display: none">
+        <div id="echartDemo" >
 
         </div>
         <div id="echartDemo1" style="display: none">

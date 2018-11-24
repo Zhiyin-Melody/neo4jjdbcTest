@@ -12,10 +12,11 @@ function show(){
        // getEchart();
     }
     if(selectNode.value=="dataset2"){
+        //getEchart1();
         info2.style.display="block";
         echartDemo1.style.display="block";
         echartDemo.style.display="none";
-       // getEchart1();
+
     }
 }
 function showqueryString(){
