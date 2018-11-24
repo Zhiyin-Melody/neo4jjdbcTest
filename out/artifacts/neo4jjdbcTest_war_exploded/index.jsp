@@ -154,10 +154,10 @@
         <img id="YAGO" src="img/运动员数据集图片.png" style="display: none">--%>
 
         <%--Neo4J数据库展示部分；style="background: #e8eeed"--%>
-        <div id="echartDemo" >
+        <div id="echartDemo" style="display: none">
 
         </div>
-        <div id="echartDemo1" >
+        <div id="echartDemo1" style="display: none">
 
         </div>
 

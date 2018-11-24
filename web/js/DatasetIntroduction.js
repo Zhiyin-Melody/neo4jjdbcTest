@@ -9,11 +9,13 @@ function show(){
         info1.style.display="block";
         echartDemo.style.display="block";
         echartDemo1.style.display="none";
+       // getEchart();
     }
     if(selectNode.value=="dataset2"){
         info2.style.display="block";
         echartDemo1.style.display="block";
         echartDemo.style.display="none";
+       // getEchart1();
     }
 }
 function showqueryString(){

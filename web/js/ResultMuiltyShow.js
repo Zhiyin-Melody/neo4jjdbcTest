@@ -12,6 +12,7 @@ $(function(){
         }else{
             $('.w_tableDemo').hide();
             $('.w_zoomEchart').show();
+            //getEchart();
         }
     });
 });
