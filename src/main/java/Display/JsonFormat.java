@@ -198,9 +198,15 @@ import java.util.*;
         public static void main(String... args){
 
             String cypher = "match p=(n)-[*..1]-(m) return p";
-
-            StringBuffer relationBuffer = executeFindRelationCypher(cypher);
-            StringBuffer relationNodesBuffer = executeFindRelationNodesCypher(cypher);
+            String cypherQ2 = "match p=MATCH (AC_Green_Jr:AC_Green_Jr)-[Relationship:Plays_For]->(Team)\n" +
+                    "WHERE Relationship.rdft_hasStartTime >= '1992-01-01' and Relationship.rdft_hasEndTime <= '2001-01-01' \n" +
+                    "RETURN p";
+/*这个是可以查询的东西；
+MATCH (AC_Green_Jr:AC_Green_Jr)-[Relationship:Plays_For]->(Team)
+WHERE Relationship.rdft_hasStartTime >= '1992-01-01' and Relationship.rdft_hasEndTime <= '2001-01-01'
+RETURN AC_Green_Jr,Relationship,Team*/
+            StringBuffer relationBuffer = executeFindRelationCypher(cypherQ2);
+            StringBuffer relationNodesBuffer = executeFindRelationNodesCypher(cypherQ2);
             System.out.println("关系是："+relationBuffer);
             System.out.println("节点是："+relationNodesBuffer);
             ToJson toJson = new ToJson(relationNodesBuffer,relationBuffer);
