@@ -19,7 +19,7 @@ import java.util.*;
         static Driver driver = null;
 
         public static void getDriver(){
-            String uri = "bolt://202.199.6.64:7687";
+            String uri = "bolt://202.199.6.215:7687";
             String user = "neo4j";//写你自己的neo4j的用户名
             String password = "123456";//写你自己的neo4j的密码
             driver = GraphDatabase.driver(uri, AuthTokens.basic(user,password));
@@ -197,16 +197,20 @@ import java.util.*;
 
         public static void main(String... args){
 
-            String cypher = "match p=(n)-[*..1]-(m) return p";
+            String cypher = "match p=(n)-[*..1]-(m) return p";//这个适用于确定数据路径的；
+            //这个需要有约束条件的查询语句；
             String cypherQ2 = "match p=MATCH (AC_Green_Jr:AC_Green_Jr)-[Relationship:Plays_For]->(Team)\n" +
                     "WHERE Relationship.rdft_hasStartTime >= '1992-01-01' and Relationship.rdft_hasEndTime <= '2001-01-01' \n" +
                     "RETURN p";
+            //代替查询结果的查询；
+            String cypherQ2_01="match p=(AC_Green_Jr:AC_Green_Jr)-[Relationship:Plays_For]->(Team)\n" +
+                     "RETURN p";
 /*这个是可以查询的东西；
 MATCH (AC_Green_Jr:AC_Green_Jr)-[Relationship:Plays_For]->(Team)
 WHERE Relationship.rdft_hasStartTime >= '1992-01-01' and Relationship.rdft_hasEndTime <= '2001-01-01'
 RETURN AC_Green_Jr,Relationship,Team*/
-            StringBuffer relationBuffer = executeFindRelationCypher(cypherQ2);
-            StringBuffer relationNodesBuffer = executeFindRelationNodesCypher(cypherQ2);
+            StringBuffer relationBuffer = executeFindRelationCypher(cypherQ2_01);
+            StringBuffer relationNodesBuffer = executeFindRelationNodesCypher(cypherQ2_01);
             System.out.println("关系是："+relationBuffer);
             System.out.println("节点是："+relationNodesBuffer);
             ToJson toJson = new ToJson(relationNodesBuffer,relationBuffer);

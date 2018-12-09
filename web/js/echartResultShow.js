@@ -16,49 +16,217 @@ document.body.appendChild(menuElement);
 
 var chart = new ZoomCharts.NetChart({
     container: chartContainer,
-    data: { 
-        preloaded:
-        {
-            "nodes":[
-                {"name":"Ricardo_Souza_Silva","id":5011,"type":"Ricardo_Souza_Silva", "loaded":true, "style":{ "fillColor": "rgba(236,46,46,0.8)", "label":"Node1"}},
-                {"name":"de_Luisa_Iovane","id":1554,"type":"de_Luisa_Iovane", "loaded":true, "style":{ "fillColor": "rgba(47,195,47,0.8)", "label":"Node2"}},
-                {"name":"Karsten_Nied","id":1555,"type":"Karsten_Nied", "loaded":true, "style":{ "fillColor": "rgba(28,124,213,0.8)", "label":"Node3"}}
+    data: {
+        preloaded: {
+
+            "nodes": [
+                {
+                    "name": "AC_Green_Jr",
+                    "id": 5097,
+                    "type": "AC_Green_Jr",
+                    "loaded": true,
+                    "style": {
+                        "fillColor": "rgba(28,124,213,0.8)"
+                    }
+                },
+                {
+                    "name": "Dallas_Mavericks",
+                    "id": 5106,
+                    "type": "Dallas_Mavericks",
+                    "loaded": true,
+                    "style": {
+                        "fillColor": "rgba(28,124,213,0.8)"
+                    }
+                },
+                {
+                    "name": "Los_Angeles_Lakers",
+                    "id": 6201,
+                    "type": "Los_Angeles_Lakers",
+                    "loaded": true,
+                    "style": {
+                        "fillColor": "rgba(28,124,213,0.8)"
+                    }
+                },
+                {
+                    "name": "Phoenix_Sun",
+                    "id": 6192,
+                    "type": "Phoenix_Sun",
+                    "loaded": true,
+                    "style": {
+                        "fillColor": "rgba(28,124,213,0.8)"
+                    }
+                },
+                {
+                    "name": "Miami_Heat",
+                    "id": 6211,
+                    "type": "Miami_Heat",
+                    "loaded": true,
+                    "style": {
+                        "fillColor": "rgba(28,124,213,0.8)"
+                    }
+                }
             ],
-                "links":[
-                {"id":"l1","from":"5011", "to":"1554", "style":{"fillColor":"rgba(236,46,46,1)", "toDecoration":"arrow"}},
-                {"id":"l2","from":"1554", "to":"5011", "style":{"fillColor":"rgba(47,195,47,1)", "toDecoration":"arrow"}},
-                {"id":"l3","from":"1555", "to":"5011", "style":{"fillColor":"rgba(28,124,213,1)", "toDecoration":"arrow"}}
+            "links": [
+                {
+                    "from": 5097,
+                    "to": 5106,
+                    "type": "Plays_For",
+                    "style": {
+                        "fillColor": "rgba(0,0,0,1)",
+                        "toDecoration": "arrow"
+                    },
+                    "rdf_type": "rdft_property",
+                    "rdft_hasEndTime": "1997-03-10",
+                    "rdft_hasStartTime": "1996-03-07",
+                    "rdft_hasNumUpdate": "1"
+                },
+                {
+                    "from": 5097,
+                    "to": 6192,
+                    "type": "Plays_For",
+                    "style": {
+                        "fillColor": "rgba(0,0,0,1)",
+                        "toDecoration": "arrow"
+                    },
+                    "rdf_type": "rdft_property",
+                    "rdft_hasEndTime": "1997-06-13",
+                    "rdft_hasStartTime": "1996-01-25",
+                    "rdft_hasNumUpdate": "4"
+                },
+                {
+                    "from": 5097,
+                    "to": 5106,
+                    "type": "Plays_For",
+                    "style": {
+                        "fillColor": "rgba(0,0,0,1)",
+                        "toDecoration": "arrow"
+                    },
+                    "rdf_type": "rdft_property",
+                    "rdft_hasEndTime": "1999-01-10",
+                    "rdft_hasStartTime": "1998-03-22",
+                    "rdft_hasNumUpdate": "3"
+                },
+                {
+                    "from": 5097,
+                    "to": 6192,
+                    "type": "Plays_For",
+                    "style": {
+                        "fillColor": "rgba(0,0,0,1)",
+                        "toDecoration": "arrow"
+                    },
+                    "rdf_type": "rdft_property",
+                    "rdft_hasEndTime": "1994-11-16",
+                    "rdft_hasStartTime": "1993-01-23",
+                    "rdft_hasNumUpdate": "1"
+                },
+                {
+                    "from": 5097,
+                    "to": 6201,
+                    "type": "Plays_For",
+                    "style": {
+                        "fillColor": "rgba(0,0,0,1)",
+                        "toDecoration": "arrow"
+                    },
+                    "rdf_type": "rdft_property",
+                    "rdft_hasEndTime": "2000-05-26",
+                    "rdft_hasStartTime": "1999-02-08",
+                    "rdft_hasNumUpdate": "9"
+                },
+                {
+                    "from": 5097,
+                    "to": 6192,
+                    "type": "Plays_For",
+                    "style": {
+                        "fillColor": "rgba(0,0,0,1)",
+                        "toDecoration": "arrow"
+                    },
+                    "rdf_type": "rdft_property",
+                    "rdft_hasEndTime": "1995-10-21",
+                    "rdft_hasStartTime": "1994-08-17",
+                    "rdft_hasNumUpdate": "2"
+                },
+                {
+                    "from": 5097,
+                    "to": 6201,
+                    "type": "Plays_For",
+                    "style": {
+                        "fillColor": "rgba(0,0,0,1)",
+                        "toDecoration": "arrow"
+                    },
+                    "rdf_type": "rdft_property",
+                    "rdft_hasEndTime": "1993-07-21",
+                    "rdft_hasStartTime": "1992-03-15",
+                    "rdft_hasNumUpdate": "8"
+                },
+                {
+                    "from": 5097,
+                    "to": 5106,
+                    "type": "Plays_For",
+                    "style": {
+                        "fillColor": "rgba(0,0,0,1)",
+                        "toDecoration": "arrow"
+                    },
+                    "rdf_type": "rdft_property",
+                    "rdft_hasEndTime": "1998-11-27",
+                    "rdft_hasStartTime": "1997-08-27",
+                    "rdft_hasNumUpdate": "2"
+                },
+                {
+                    "from": 5097,
+                    "to": 6211,
+                    "type": "Plays_For",
+                    "style": {
+                        "fillColor": "rgba(0,0,0,1)",
+                        "toDecoration": "arrow"
+                    },
+                    "rdf_type": "rdft_property",
+                    "rdft_hasEndTime": "2001-07-02",
+                    "rdft_hasStartTime": "2000-03-24",
+                    "rdft_hasNumUpdate": "1"
+                },
+                {
+                    "from": 5097,
+                    "to": 6192,
+                    "type": "Plays_For",
+                    "style": {
+                        "fillColor": "rgba(0,0,0,1)",
+                        "toDecoration": "arrow"
+                    },
+                    "rdf_type": "rdft_property",
+                    "rdft_hasEndTime": "1996-01-09",
+                    "rdft_hasStartTime": "1995-03-21",
+                    "rdft_hasNumUpdate": "3"
+                }
             ]
+
         }
-
-
         },
-    style: {
-        nodeStyleFunction: nodeStyle,
-        linkStyleFunction: linkStyle
-    },
-    events: {
-        onRightClick: function (event, args) {
-            // the menu element is positioned based on the mouse pointer coordinates.
-            // if you need to position it based on the node, use NetChart.getNodeDimensions() method.
-            menuElement.style.display = "block";
-            menuElement.style.left = event.pageX + "px";
-            menuElement.style.top = event.pageY + "px";
+        style: {
+            nodeStyleFunction: nodeStyle,
+            linkStyleFunction: linkStyle
+        },
+        events: {
+            onRightClick: function (event, args) {
+                // the menu element is positioned based on the mouse pointer coordinates.
+                // if you need to position it based on the node, use NetChart.getNodeDimensions() method.
+                menuElement.style.display = "block";
+                menuElement.style.left = event.pageX + "px";
+                menuElement.style.top = event.pageY + "px";
 
-            // fill the menu element based on the node that was clicked.
-            if (args.clickNode) {
-                menuElement.innerHTML = "Node menu";
-            } else if (args.clickLink) {
-                menuElement.innerHTML = "Link menu";
-            } else {
-                hidePopup();
+                // fill the menu element based on the node that was clicked.
+                if (args.clickNode) {
+                    menuElement.innerHTML = "Node menu";
+                } else if (args.clickLink) {
+                    menuElement.innerHTML = "Link menu";
+                } else {
+                    hidePopup();
+                }
+
+                // disable the default context menu
+                event.preventDefault();
             }
-
-            // disable the default context menu
-            event.preventDefault();
         }
-    }
-});
+    });
 
 function hidePopup() {
     menuElement.style.display = "none";

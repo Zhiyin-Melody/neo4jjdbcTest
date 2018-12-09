@@ -21,7 +21,7 @@ public class ConnectNeo4J {
         forName("org.neo4j.jdbc.Driver").newInstance();
         //Connection con = DriverManager.getConnection("jdbc:neo4j://219.216.65.123:7474/", "neo4j", "123456");  //这里是实验室服务器的数据库,原来的；
 
-       Connection con = DriverManager.getConnection("jdbc:neo4j://202.199.6.64:7474/", "neo4j", "123456");  //这里是实验室服务器的数据库,
+       Connection con = DriverManager.getConnection("jdbc:neo4j://202.199.6.215:7474/", "neo4j", "123456");  //这里是实验室服务器的数据库,
         Statement statement = con.createStatement();
         return statement;
     }

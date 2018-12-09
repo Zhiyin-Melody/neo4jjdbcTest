@@ -87,7 +87,7 @@ public class RDFtSaveToNeo4J {
     //连接Neo4J数据库；
         private static Statement connectNeo4j () throws ClassNotFoundException, IllegalAccessException, InstantiationException, SQLException {
             forName("org.neo4j.jdbc.Driver").newInstance();
-            Connection con = DriverManager.getConnection("jdbc:neo4j://202.199.6.64:7474/", "neo4j", "123456");  //这里是实验室服务器的数据库,
+            Connection con = DriverManager.getConnection("jdbc:neo4j://202.199.6.215:7474/", "neo4j", "123456");  //这里是实验室服务器的数据库,
             java.sql.Statement statement = con.createStatement();
             return statement;
         }
