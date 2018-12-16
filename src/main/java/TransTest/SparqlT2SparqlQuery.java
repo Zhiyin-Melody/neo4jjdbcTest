@@ -133,9 +133,13 @@ public class SparqlT2SparqlQuery {
                 +"OFFSET 2\n"
               //  +"Order by DESC\n"
                 +"LIMIT 10 ";
+        long startTime=System.nanoTime();   //获取开始时间
 
         SparqlT2SparqlQuery sparqlT2SparqlQuery = new SparqlT2SparqlQuery();
         StringBuilder S = sparqlT2SparqlQuery.SparqlT2SparqlMethod(SPARQLTString);
         System.out.println("主函数执行结果SPARQL语句\n"+S);//return 回来得接收返回值才行。
+
+        long endTime=System.nanoTime(); //获取结束时间
+        System.out.println("程序运行时间： "+(endTime-startTime)+"ns");
     }
 }
